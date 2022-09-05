@@ -9,13 +9,12 @@
 /* Begin PBXBuildFile section */
 		B9B55FF028C6235E00B37ED4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B55FEF28C6235E00B37ED4 /* AppDelegate.swift */; };
 		B9B55FF228C6235E00B37ED4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B55FF128C6235E00B37ED4 /* SceneDelegate.swift */; };
-		B9B55FF428C6235E00B37ED4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B55FF328C6235E00B37ED4 /* ViewController.swift */; };
-		B9B55FF728C6235E00B37ED4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9B55FF528C6235E00B37ED4 /* Main.storyboard */; };
 		B9B55FF928C6235F00B37ED4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9B55FF828C6235F00B37ED4 /* Assets.xcassets */; };
 		B9B55FFC28C6235F00B37ED4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9B55FFA28C6235F00B37ED4 /* LaunchScreen.storyboard */; };
 		B9B5600728C6235F00B37ED4 /* LazylessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B5600628C6235F00B37ED4 /* LazylessTests.swift */; };
 		B9B5601128C6235F00B37ED4 /* LazylessUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B5601028C6235F00B37ED4 /* LazylessUITests.swift */; };
 		B9B5601328C6235F00B37ED4 /* LazylessUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B5601228C6235F00B37ED4 /* LazylessUITestsLaunchTests.swift */; };
+		B9B5602228C62BF100B37ED4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B5602128C62BF100B37ED4 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +38,6 @@
 		B9B55FEC28C6235E00B37ED4 /* Lazyless.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lazyless.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9B55FEF28C6235E00B37ED4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9B55FF128C6235E00B37ED4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B9B55FF328C6235E00B37ED4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B9B55FF628C6235E00B37ED4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B9B55FF828C6235F00B37ED4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B9B55FFB28C6235F00B37ED4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B9B55FFD28C6235F00B37ED4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +46,7 @@
 		B9B5600C28C6235F00B37ED4 /* LazylessUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LazylessUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9B5601028C6235F00B37ED4 /* LazylessUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazylessUITests.swift; sourceTree = "<group>"; };
 		B9B5601228C6235F00B37ED4 /* LazylessUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazylessUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B9B5602128C62BF100B37ED4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +97,15 @@
 		B9B55FEE28C6235E00B37ED4 /* Lazyless */ = {
 			isa = PBXGroup;
 			children = (
+				B9B5602528C6329000B37ED4 /* ViewModel */,
+				B9B5602428C6306B00B37ED4 /* View */,
+				B9B5602328C6306300B37ED4 /* Model */,
 				B9B55FEF28C6235E00B37ED4 /* AppDelegate.swift */,
 				B9B55FF128C6235E00B37ED4 /* SceneDelegate.swift */,
-				B9B55FF328C6235E00B37ED4 /* ViewController.swift */,
-				B9B55FF528C6235E00B37ED4 /* Main.storyboard */,
 				B9B55FF828C6235F00B37ED4 /* Assets.xcassets */,
 				B9B55FFA28C6235F00B37ED4 /* LaunchScreen.storyboard */,
 				B9B55FFD28C6235F00B37ED4 /* Info.plist */,
+				B9B5602128C62BF100B37ED4 /* HomeViewController.swift */,
 			);
 			path = Lazyless;
 			sourceTree = "<group>";
@@ -125,6 +125,27 @@
 				B9B5601228C6235F00B37ED4 /* LazylessUITestsLaunchTests.swift */,
 			);
 			path = LazylessUITests;
+			sourceTree = "<group>";
+		};
+		B9B5602328C6306300B37ED4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B9B5602428C6306B00B37ED4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B9B5602528C6329000B37ED4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +254,6 @@
 			files = (
 				B9B55FFC28C6235F00B37ED4 /* LaunchScreen.storyboard in Resources */,
 				B9B55FF928C6235F00B37ED4 /* Assets.xcassets in Resources */,
-				B9B55FF728C6235E00B37ED4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +278,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9B55FF428C6235E00B37ED4 /* ViewController.swift in Sources */,
 				B9B55FF028C6235E00B37ED4 /* AppDelegate.swift in Sources */,
 				B9B55FF228C6235E00B37ED4 /* SceneDelegate.swift in Sources */,
+				B9B5602228C62BF100B37ED4 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +317,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B9B55FF528C6235E00B37ED4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B9B55FF628C6235E00B37ED4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B9B55FFA28C6235F00B37ED4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -442,7 +454,6 @@
 				INFOPLIST_FILE = Lazyless/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -470,7 +481,6 @@
 				INFOPLIST_FILE = Lazyless/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
