@@ -1,0 +1,607 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B9B55FF028C6235E00B37ED4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B55FEF28C6235E00B37ED4 /* AppDelegate.swift */; };
+		B9B55FF228C6235E00B37ED4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B55FF128C6235E00B37ED4 /* SceneDelegate.swift */; };
+		B9B55FF428C6235E00B37ED4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B55FF328C6235E00B37ED4 /* ViewController.swift */; };
+		B9B55FF728C6235E00B37ED4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9B55FF528C6235E00B37ED4 /* Main.storyboard */; };
+		B9B55FF928C6235F00B37ED4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9B55FF828C6235F00B37ED4 /* Assets.xcassets */; };
+		B9B55FFC28C6235F00B37ED4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9B55FFA28C6235F00B37ED4 /* LaunchScreen.storyboard */; };
+		B9B5600728C6235F00B37ED4 /* LazylessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B5600628C6235F00B37ED4 /* LazylessTests.swift */; };
+		B9B5601128C6235F00B37ED4 /* LazylessUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B5601028C6235F00B37ED4 /* LazylessUITests.swift */; };
+		B9B5601328C6235F00B37ED4 /* LazylessUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B5601228C6235F00B37ED4 /* LazylessUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B9B5600328C6235F00B37ED4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B9B55FE428C6235E00B37ED4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B9B55FEB28C6235E00B37ED4;
+			remoteInfo = Lazyless;
+		};
+		B9B5600D28C6235F00B37ED4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B9B55FE428C6235E00B37ED4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B9B55FEB28C6235E00B37ED4;
+			remoteInfo = Lazyless;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B9B55FEC28C6235E00B37ED4 /* Lazyless.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lazyless.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9B55FEF28C6235E00B37ED4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B9B55FF128C6235E00B37ED4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B9B55FF328C6235E00B37ED4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B9B55FF628C6235E00B37ED4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B9B55FF828C6235F00B37ED4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B9B55FFB28C6235F00B37ED4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B9B55FFD28C6235F00B37ED4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9B5600228C6235F00B37ED4 /* LazylessTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LazylessTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9B5600628C6235F00B37ED4 /* LazylessTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazylessTests.swift; sourceTree = "<group>"; };
+		B9B5600C28C6235F00B37ED4 /* LazylessUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LazylessUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9B5601028C6235F00B37ED4 /* LazylessUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazylessUITests.swift; sourceTree = "<group>"; };
+		B9B5601228C6235F00B37ED4 /* LazylessUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazylessUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B9B55FE928C6235E00B37ED4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9B55FFF28C6235F00B37ED4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9B5600928C6235F00B37ED4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B9B55FE328C6235E00B37ED4 = {
+			isa = PBXGroup;
+			children = (
+				B9B55FEE28C6235E00B37ED4 /* Lazyless */,
+				B9B5600528C6235F00B37ED4 /* LazylessTests */,
+				B9B5600F28C6235F00B37ED4 /* LazylessUITests */,
+				B9B55FED28C6235E00B37ED4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B9B55FED28C6235E00B37ED4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B9B55FEC28C6235E00B37ED4 /* Lazyless.app */,
+				B9B5600228C6235F00B37ED4 /* LazylessTests.xctest */,
+				B9B5600C28C6235F00B37ED4 /* LazylessUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B9B55FEE28C6235E00B37ED4 /* Lazyless */ = {
+			isa = PBXGroup;
+			children = (
+				B9B55FEF28C6235E00B37ED4 /* AppDelegate.swift */,
+				B9B55FF128C6235E00B37ED4 /* SceneDelegate.swift */,
+				B9B55FF328C6235E00B37ED4 /* ViewController.swift */,
+				B9B55FF528C6235E00B37ED4 /* Main.storyboard */,
+				B9B55FF828C6235F00B37ED4 /* Assets.xcassets */,
+				B9B55FFA28C6235F00B37ED4 /* LaunchScreen.storyboard */,
+				B9B55FFD28C6235F00B37ED4 /* Info.plist */,
+			);
+			path = Lazyless;
+			sourceTree = "<group>";
+		};
+		B9B5600528C6235F00B37ED4 /* LazylessTests */ = {
+			isa = PBXGroup;
+			children = (
+				B9B5600628C6235F00B37ED4 /* LazylessTests.swift */,
+			);
+			path = LazylessTests;
+			sourceTree = "<group>";
+		};
+		B9B5600F28C6235F00B37ED4 /* LazylessUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B9B5601028C6235F00B37ED4 /* LazylessUITests.swift */,
+				B9B5601228C6235F00B37ED4 /* LazylessUITestsLaunchTests.swift */,
+			);
+			path = LazylessUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B9B55FEB28C6235E00B37ED4 /* Lazyless */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9B5601628C6235F00B37ED4 /* Build configuration list for PBXNativeTarget "Lazyless" */;
+			buildPhases = (
+				B9B55FE828C6235E00B37ED4 /* Sources */,
+				B9B55FE928C6235E00B37ED4 /* Frameworks */,
+				B9B55FEA28C6235E00B37ED4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Lazyless;
+			productName = Lazyless;
+			productReference = B9B55FEC28C6235E00B37ED4 /* Lazyless.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B9B5600128C6235F00B37ED4 /* LazylessTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9B5601928C6235F00B37ED4 /* Build configuration list for PBXNativeTarget "LazylessTests" */;
+			buildPhases = (
+				B9B55FFE28C6235F00B37ED4 /* Sources */,
+				B9B55FFF28C6235F00B37ED4 /* Frameworks */,
+				B9B5600028C6235F00B37ED4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B9B5600428C6235F00B37ED4 /* PBXTargetDependency */,
+			);
+			name = LazylessTests;
+			productName = LazylessTests;
+			productReference = B9B5600228C6235F00B37ED4 /* LazylessTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B9B5600B28C6235F00B37ED4 /* LazylessUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9B5601C28C6235F00B37ED4 /* Build configuration list for PBXNativeTarget "LazylessUITests" */;
+			buildPhases = (
+				B9B5600828C6235F00B37ED4 /* Sources */,
+				B9B5600928C6235F00B37ED4 /* Frameworks */,
+				B9B5600A28C6235F00B37ED4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B9B5600E28C6235F00B37ED4 /* PBXTargetDependency */,
+			);
+			name = LazylessUITests;
+			productName = LazylessUITests;
+			productReference = B9B5600C28C6235F00B37ED4 /* LazylessUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B9B55FE428C6235E00B37ED4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					B9B55FEB28C6235E00B37ED4 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					B9B5600128C6235F00B37ED4 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = B9B55FEB28C6235E00B37ED4;
+					};
+					B9B5600B28C6235F00B37ED4 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = B9B55FEB28C6235E00B37ED4;
+					};
+				};
+			};
+			buildConfigurationList = B9B55FE728C6235E00B37ED4 /* Build configuration list for PBXProject "Lazyless" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B9B55FE328C6235E00B37ED4;
+			productRefGroup = B9B55FED28C6235E00B37ED4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B9B55FEB28C6235E00B37ED4 /* Lazyless */,
+				B9B5600128C6235F00B37ED4 /* LazylessTests */,
+				B9B5600B28C6235F00B37ED4 /* LazylessUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B9B55FEA28C6235E00B37ED4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9B55FFC28C6235F00B37ED4 /* LaunchScreen.storyboard in Resources */,
+				B9B55FF928C6235F00B37ED4 /* Assets.xcassets in Resources */,
+				B9B55FF728C6235E00B37ED4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9B5600028C6235F00B37ED4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9B5600A28C6235F00B37ED4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B9B55FE828C6235E00B37ED4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9B55FF428C6235E00B37ED4 /* ViewController.swift in Sources */,
+				B9B55FF028C6235E00B37ED4 /* AppDelegate.swift in Sources */,
+				B9B55FF228C6235E00B37ED4 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9B55FFE28C6235F00B37ED4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9B5600728C6235F00B37ED4 /* LazylessTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9B5600828C6235F00B37ED4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9B5601328C6235F00B37ED4 /* LazylessUITestsLaunchTests.swift in Sources */,
+				B9B5601128C6235F00B37ED4 /* LazylessUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B9B5600428C6235F00B37ED4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B9B55FEB28C6235E00B37ED4 /* Lazyless */;
+			targetProxy = B9B5600328C6235F00B37ED4 /* PBXContainerItemProxy */;
+		};
+		B9B5600E28C6235F00B37ED4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B9B55FEB28C6235E00B37ED4 /* Lazyless */;
+			targetProxy = B9B5600D28C6235F00B37ED4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B9B55FF528C6235E00B37ED4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B9B55FF628C6235E00B37ED4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B9B55FFA28C6235F00B37ED4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B9B55FFB28C6235F00B37ED4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B9B5601428C6235F00B37ED4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B9B5601528C6235F00B37ED4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B9B5601728C6235F00B37ED4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 949BRFMFQG;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Lazyless/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ifce.academy.Lazyless;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B9B5601828C6235F00B37ED4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 949BRFMFQG;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Lazyless/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ifce.academy.Lazyless;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B9B5601A28C6235F00B37ED4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 949BRFMFQG;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ifce.academy.LazylessTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lazyless.app/Lazyless";
+			};
+			name = Debug;
+		};
+		B9B5601B28C6235F00B37ED4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 949BRFMFQG;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ifce.academy.LazylessTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lazyless.app/Lazyless";
+			};
+			name = Release;
+		};
+		B9B5601D28C6235F00B37ED4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 949BRFMFQG;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ifce.academy.LazylessUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Lazyless;
+			};
+			name = Debug;
+		};
+		B9B5601E28C6235F00B37ED4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 949BRFMFQG;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ifce.academy.LazylessUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Lazyless;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B9B55FE728C6235E00B37ED4 /* Build configuration list for PBXProject "Lazyless" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9B5601428C6235F00B37ED4 /* Debug */,
+				B9B5601528C6235F00B37ED4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B9B5601628C6235F00B37ED4 /* Build configuration list for PBXNativeTarget "Lazyless" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9B5601728C6235F00B37ED4 /* Debug */,
+				B9B5601828C6235F00B37ED4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B9B5601928C6235F00B37ED4 /* Build configuration list for PBXNativeTarget "LazylessTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9B5601A28C6235F00B37ED4 /* Debug */,
+				B9B5601B28C6235F00B37ED4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B9B5601C28C6235F00B37ED4 /* Build configuration list for PBXNativeTarget "LazylessUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9B5601D28C6235F00B37ED4 /* Debug */,
+				B9B5601E28C6235F00B37ED4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B9B55FE428C6235E00B37ED4 /* Project object */;
+}
