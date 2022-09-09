@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4FA74FA528CB65D8005387CF /* ViewCoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA74FA428CB65D8005387CF /* ViewCoding.swift */; };
+		4FA74FA928CB6658005387CF /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA74FA828CB6658005387CF /* MainController.swift */; };
+		4FA74FAB28CB6778005387CF /* MainBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA74FAA28CB6778005387CF /* MainBackgroundView.swift */; };
 		B9B55FF028C6235E00B37ED4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B55FEF28C6235E00B37ED4 /* AppDelegate.swift */; };
 		B9B55FF228C6235E00B37ED4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B55FF128C6235E00B37ED4 /* SceneDelegate.swift */; };
 		B9B55FF928C6235F00B37ED4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9B55FF828C6235F00B37ED4 /* Assets.xcassets */; };
@@ -35,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4FA74FA428CB65D8005387CF /* ViewCoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCoding.swift; sourceTree = "<group>"; };
+		4FA74FA828CB6658005387CF /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
+		4FA74FAA28CB6778005387CF /* MainBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBackgroundView.swift; sourceTree = "<group>"; };
 		B9B55FEC28C6235E00B37ED4 /* Lazyless.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lazyless.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9B55FEF28C6235E00B37ED4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9B55FF128C6235E00B37ED4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +80,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4FA74FA228CB65B7005387CF /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				4FA74FA428CB65D8005387CF /* ViewCoding.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		4FA74FA628CB6639005387CF /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4FA74FA828CB6658005387CF /* MainController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		B9B55FE328C6235E00B37ED4 = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +119,8 @@
 		B9B55FEE28C6235E00B37ED4 /* Lazyless */ = {
 			isa = PBXGroup;
 			children = (
+				4FA74FA628CB6639005387CF /* ViewController */,
+				4FA74FA228CB65B7005387CF /* Protocols */,
 				B9B5602528C6329000B37ED4 /* ViewModel */,
 				B9B5602428C6306B00B37ED4 /* View */,
 				B9B5602328C6306300B37ED4 /* Model */,
@@ -137,6 +161,7 @@
 		B9B5602428C6306B00B37ED4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4FA74FAA28CB6778005387CF /* MainBackgroundView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -280,7 +305,10 @@
 			files = (
 				B9B55FF028C6235E00B37ED4 /* AppDelegate.swift in Sources */,
 				B9B55FF228C6235E00B37ED4 /* SceneDelegate.swift in Sources */,
+				4FA74FA528CB65D8005387CF /* ViewCoding.swift in Sources */,
 				B9B5602228C62BF100B37ED4 /* HomeViewController.swift in Sources */,
+				4FA74FA928CB6658005387CF /* MainController.swift in Sources */,
+				4FA74FAB28CB6778005387CF /* MainBackgroundView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
