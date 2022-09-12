@@ -10,6 +10,7 @@
 		4FA74FA528CB65D8005387CF /* ViewCoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA74FA428CB65D8005387CF /* ViewCoding.swift */; };
 		4FA74FA928CB6658005387CF /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA74FA828CB6658005387CF /* MainController.swift */; };
 		4FA74FAB28CB6778005387CF /* MainBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA74FAA28CB6778005387CF /* MainBackgroundView.swift */; };
+		B935552728C78B1A00ADDC4C /* BoxComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B935552628C78B1A00ADDC4C /* BoxComponent.swift */; };
 		B9B55FF028C6235E00B37ED4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B55FEF28C6235E00B37ED4 /* AppDelegate.swift */; };
 		B9B55FF228C6235E00B37ED4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B55FF128C6235E00B37ED4 /* SceneDelegate.swift */; };
 		B9B55FF928C6235F00B37ED4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9B55FF828C6235F00B37ED4 /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 		4FA74FA428CB65D8005387CF /* ViewCoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCoding.swift; sourceTree = "<group>"; };
 		4FA74FA828CB6658005387CF /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		4FA74FAA28CB6778005387CF /* MainBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBackgroundView.swift; sourceTree = "<group>"; };
+		B935552628C78B1A00ADDC4C /* BoxComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxComponent.swift; sourceTree = "<group>"; };
 		B9B55FEC28C6235E00B37ED4 /* Lazyless.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lazyless.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9B55FEF28C6235E00B37ED4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9B55FF128C6235E00B37ED4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -129,7 +131,6 @@
 				B9B55FF828C6235F00B37ED4 /* Assets.xcassets */,
 				B9B55FFA28C6235F00B37ED4 /* LaunchScreen.storyboard */,
 				B9B55FFD28C6235F00B37ED4 /* Info.plist */,
-				B9B5602128C62BF100B37ED4 /* HomeViewController.swift */,
 			);
 			path = Lazyless;
 			sourceTree = "<group>";
@@ -162,6 +163,8 @@
 			isa = PBXGroup;
 			children = (
 				4FA74FAA28CB6778005387CF /* MainBackgroundView.swift */,
+				B9B5602128C62BF100B37ED4 /* HomeViewController.swift */,
+				B935552628C78B1A00ADDC4C /* BoxComponent.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9B55FF028C6235E00B37ED4 /* AppDelegate.swift in Sources */,
+				B935552728C78B1A00ADDC4C /* BoxComponent.swift in Sources */,
 				B9B55FF228C6235E00B37ED4 /* SceneDelegate.swift in Sources */,
 				4FA74FA528CB65D8005387CF /* ViewCoding.swift in Sources */,
 				B9B5602228C62BF100B37ED4 /* HomeViewController.swift in Sources */,
