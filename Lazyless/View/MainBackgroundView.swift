@@ -16,6 +16,7 @@ class MainBackgroundView: UIView {
         rectView.backgroundColor = UIColor(named: "mainColor")
         return rectView
     }()
+    
 
     override init(frame: CGRect) {
         super.init(frame: UIScreen.main.bounds)

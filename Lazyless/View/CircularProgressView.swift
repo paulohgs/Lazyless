@@ -53,14 +53,15 @@ class CircularProgressView: UIView {
 
 
     fileprivate func createProgressView(){
-
+//    startAngle: CGFloat(0.75*CGFloat.pi),
+//    endAngle: CGFloat(CGFloat.pi/4),
         self.backgroundColor = .clear
         self.layer.cornerRadius = frame.size.width / 2
         let circularPath = UIBezierPath(
             arcCenter: center,
             radius: frame.width / 2,
-            startAngle: CGFloat(0.75*CGFloat.pi),
-            endAngle: CGFloat(CGFloat.pi/4),
+            startAngle: CGFloat(0),
+            endAngle: CGFloat(2*CGFloat.pi),
             clockwise: true
         )
         trackLayer.fillColor = UIColor.blue.cgColor
