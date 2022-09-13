@@ -10,6 +10,7 @@ import Foundation
 struct Persona {
     var personaName: String
     var personaImageName: String
+    var heart: String
 }
 
-var preguicaModel = Persona(personaName: "Preguica-Oneswan", personaImageName: "preguica")
+var preguicaModel = Persona(personaName: "Preguica-Oneswan", personaImageName: "preguica", heart: "h")
