@@ -9,13 +9,14 @@ import UIKit
 
 class MainBackgroundView: UIView {
 
-    private lazy var rectBar: UIView = {
+     lazy var rectBar: UIView = {
         let rect = CGRect()
         let rectView = UIView(frame: rect)
         rectView.translatesAutoresizingMaskIntoConstraints = false
         rectView.backgroundColor = UIColor(named: "mainColor")
         return rectView
     }()
+    
 
     override init(frame: CGRect) {
         super.init(frame: UIScreen.main.bounds)
