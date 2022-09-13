@@ -11,6 +11,9 @@
 		4FA74FA928CB6658005387CF /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA74FA828CB6658005387CF /* MainController.swift */; };
 		4FA74FAB28CB6778005387CF /* MainBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA74FAA28CB6778005387CF /* MainBackgroundView.swift */; };
 		4FA74FAD28CF721C005387CF /* PersonaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA74FAC28CF721C005387CF /* PersonaModel.swift */; };
+		4FA74FAF28CF730C005387CF /* ab.json in Resources */ = {isa = PBXBuildFile; fileRef = 4FA74FAE28CF730C005387CF /* ab.json */; };
+		4FA74FB228CF732D005387CF /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 4FA74FB128CF732D005387CF /* Lottie */; };
+		4FA74FB428CF75D7005387CF /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA74FB328CF75D7005387CF /* CircularProgressView.swift */; };
 		B9B55FF028C6235E00B37ED4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B55FEF28C6235E00B37ED4 /* AppDelegate.swift */; };
 		B9B55FF228C6235E00B37ED4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B55FF128C6235E00B37ED4 /* SceneDelegate.swift */; };
 		B9B55FF928C6235F00B37ED4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9B55FF828C6235F00B37ED4 /* Assets.xcassets */; };
@@ -44,6 +47,8 @@
 		4FA74FA828CB6658005387CF /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		4FA74FAA28CB6778005387CF /* MainBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBackgroundView.swift; sourceTree = "<group>"; };
 		4FA74FAC28CF721C005387CF /* PersonaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonaModel.swift; sourceTree = "<group>"; };
+		4FA74FAE28CF730C005387CF /* ab.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = ab.json; path = ../../../../../Downloads/ab.json; sourceTree = "<group>"; };
+		4FA74FB328CF75D7005387CF /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		B9B55FEC28C6235E00B37ED4 /* Lazyless.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lazyless.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9B55FEF28C6235E00B37ED4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9B55FF128C6235E00B37ED4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FA74FB228CF732D005387CF /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +130,7 @@
 		B9B55FEE28C6235E00B37ED4 /* Lazyless */ = {
 			isa = PBXGroup;
 			children = (
+				4FA74FAE28CF730C005387CF /* ab.json */,
 				FC8481CD28CF70BB009FFC06 /* ViewModel */,
 				FC8481C828CF5CD7009FFC06 /* Model */,
 				4FA74FA628CB6639005387CF /* ViewController */,
@@ -158,6 +165,7 @@
 		B9B5602428C6306B00B37ED4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4FA74FB328CF75D7005387CF /* CircularProgressView.swift */,
 				4FA74FAA28CB6778005387CF /* MainBackgroundView.swift */,
 			);
 			path = View;
@@ -195,6 +203,9 @@
 			dependencies = (
 			);
 			name = Lazyless;
+			packageProductDependencies = (
+				4FA74FB128CF732D005387CF /* Lottie */,
+			);
 			productName = Lazyless;
 			productReference = B9B55FEC28C6235E00B37ED4 /* Lazyless.app */;
 			productType = "com.apple.product-type.application";
@@ -267,6 +278,9 @@
 				Base,
 			);
 			mainGroup = B9B55FE328C6235E00B37ED4;
+			packageReferences = (
+				4FA74FB028CF732D005387CF /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = B9B55FED28C6235E00B37ED4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -283,6 +297,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FA74FAF28CF730C005387CF /* ab.json in Resources */,
 				B9B55FFC28C6235F00B37ED4 /* LaunchScreen.storyboard in Resources */,
 				B9B55FF928C6235F00B37ED4 /* Assets.xcassets in Resources */,
 			);
@@ -316,6 +331,7 @@
 				FC8481CF28CF70CC009FFC06 /* File.swift in Sources */,
 				4FA74FA928CB6658005387CF /* MainController.swift in Sources */,
 				4FA74FAD28CF721C005387CF /* PersonaModel.swift in Sources */,
+				4FA74FB428CF75D7005387CF /* CircularProgressView.swift in Sources */,
 				4FA74FAB28CB6778005387CF /* MainBackgroundView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -648,6 +664,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4FA74FB028CF732D005387CF /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4FA74FB128CF732D005387CF /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4FA74FB028CF732D005387CF /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B9B55FE428C6235E00B37ED4 /* Project object */;
 }
