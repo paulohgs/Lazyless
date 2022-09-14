@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F31D5C828D1FD480092A2FC /* ActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F31D5C728D1FD480092A2FC /* ActivityModel.swift */; };
+		4F31D5CA28D200730092A2FC /* database.json in Resources */ = {isa = PBXBuildFile; fileRef = 4F31D5C928D200730092A2FC /* database.json */; };
 		4FA74FA528CB65D8005387CF /* ViewCoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA74FA428CB65D8005387CF /* ViewCoding.swift */; };
 		4FA74FA928CB6658005387CF /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA74FA828CB6658005387CF /* MainController.swift */; };
 		4FA74FAB28CB6778005387CF /* MainBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA74FAA28CB6778005387CF /* MainBackgroundView.swift */; };
@@ -20,7 +22,6 @@
 		B9B5600728C6235F00B37ED4 /* LazylessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B5600628C6235F00B37ED4 /* LazylessTests.swift */; };
 		B9B5601128C6235F00B37ED4 /* LazylessUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B5601028C6235F00B37ED4 /* LazylessUITests.swift */; };
 		B9B5601328C6235F00B37ED4 /* LazylessUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B5601228C6235F00B37ED4 /* LazylessUITestsLaunchTests.swift */; };
-		B9B5602228C62BF100B37ED4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B5602128C62BF100B37ED4 /* HomeViewController.swift */; };
 		FC8481CF28CF70CC009FFC06 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8481CE28CF70CC009FFC06 /* File.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4F31D5C728D1FD480092A2FC /* ActivityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityModel.swift; sourceTree = "<group>"; };
+		4F31D5C928D200730092A2FC /* database.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = database.json; sourceTree = "<group>"; };
 		4FA74FA428CB65D8005387CF /* ViewCoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCoding.swift; sourceTree = "<group>"; };
 		4FA74FA828CB6658005387CF /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		4FA74FAA28CB6778005387CF /* MainBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBackgroundView.swift; sourceTree = "<group>"; };
@@ -58,7 +61,6 @@
 		B9B5600C28C6235F00B37ED4 /* LazylessUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LazylessUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9B5601028C6235F00B37ED4 /* LazylessUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazylessUITests.swift; sourceTree = "<group>"; };
 		B9B5601228C6235F00B37ED4 /* LazylessUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazylessUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		B9B5602128C62BF100B37ED4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FC8481CE28CF70CC009FFC06 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,7 +101,6 @@
 		4FA74FA628CB6639005387CF /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				B9B5602128C62BF100B37ED4 /* HomeViewController.swift */,
 				4FA74FA828CB6658005387CF /* MainController.swift */,
 			);
 			path = ViewController;
@@ -138,6 +139,7 @@
 				B9B55FF828C6235F00B37ED4 /* Assets.xcassets */,
 				B9B55FFA28C6235F00B37ED4 /* LaunchScreen.storyboard */,
 				B9B55FFD28C6235F00B37ED4 /* Info.plist */,
+				4F31D5C928D200730092A2FC /* database.json */,
 			);
 			path = Lazyless;
 			sourceTree = "<group>";
@@ -172,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				4FA74FAC28CF721C005387CF /* PersonaModel.swift */,
+				4F31D5C728D1FD480092A2FC /* ActivityModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9B55FFC28C6235F00B37ED4 /* LaunchScreen.storyboard in Resources */,
+				4F31D5CA28D200730092A2FC /* database.json in Resources */,
 				B9B55FF928C6235F00B37ED4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,10 +324,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F31D5C828D1FD480092A2FC /* ActivityModel.swift in Sources */,
 				B9B55FF028C6235E00B37ED4 /* AppDelegate.swift in Sources */,
 				B9B55FF228C6235E00B37ED4 /* SceneDelegate.swift in Sources */,
 				4FA74FA528CB65D8005387CF /* ViewCoding.swift in Sources */,
-				B9B5602228C62BF100B37ED4 /* HomeViewController.swift in Sources */,
 				FC8481CF28CF70CC009FFC06 /* File.swift in Sources */,
 				4FA74FA928CB6658005387CF /* MainController.swift in Sources */,
 				4FA74FAD28CF721C005387CF /* PersonaModel.swift in Sources */,

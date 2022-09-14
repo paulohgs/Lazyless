@@ -10,7 +10,13 @@ import Foundation
 struct Persona {
     var personaName: String
     var personaImageName: String
-    var heart: String
+    var heartLevel: Int
+    var heartImageName: String
 }
 
-var preguicaModel = Persona(personaName: "Preguica-Oneswan", personaImageName: "preguica", heart: "h")
+var preguicaModel = Persona(
+    personaName: "Preguica-Oneswan",
+    personaImageName: "preguica",
+    heartLevel: 1 ,
+    heartImageName: "h"
+)
