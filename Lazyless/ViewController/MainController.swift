@@ -72,7 +72,8 @@ extension MainController: ViewCoding {
     //  MARK: -objc funcs
     @objc func imageTapped(sender: UITapGestureRecognizer) {
         if sender.state == .ended {
-            print("UIImageView tapped")
+            let ActivityViewController = ActivityViewController()
+            present(ActivityViewController, animated: true, completion: nil)
         }
     }
 

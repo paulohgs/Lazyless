@@ -23,6 +23,7 @@
 		B9B5601128C6235F00B37ED4 /* LazylessUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B5601028C6235F00B37ED4 /* LazylessUITests.swift */; };
 		B9B5601328C6235F00B37ED4 /* LazylessUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B5601228C6235F00B37ED4 /* LazylessUITestsLaunchTests.swift */; };
 		FC8481CF28CF70CC009FFC06 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8481CE28CF70CC009FFC06 /* File.swift */; };
+		FCCEC7AC28D0CA93001C3BE2 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCEC7AB28D0CA93001C3BE2 /* ActivityViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		B9B5601028C6235F00B37ED4 /* LazylessUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazylessUITests.swift; sourceTree = "<group>"; };
 		B9B5601228C6235F00B37ED4 /* LazylessUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazylessUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FC8481CE28CF70CC009FFC06 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		FCCEC7AB28D0CA93001C3BE2 /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				4FA74FA828CB6658005387CF /* MainController.swift */,
+				FCCEC7AB28D0CA93001C3BE2 /* ActivityViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 				B9B55FF028C6235E00B37ED4 /* AppDelegate.swift in Sources */,
 				B9B55FF228C6235E00B37ED4 /* SceneDelegate.swift in Sources */,
 				4FA74FA528CB65D8005387CF /* ViewCoding.swift in Sources */,
+				FCCEC7AC28D0CA93001C3BE2 /* ActivityViewController.swift in Sources */,
 				FC8481CF28CF70CC009FFC06 /* File.swift in Sources */,
 				4FA74FA928CB6658005387CF /* MainController.swift in Sources */,
 				4FA74FAD28CF721C005387CF /* PersonaModel.swift in Sources */,
