@@ -10,14 +10,14 @@ import Foundation
 
 protocol ViewCoding {
     func setupView()
-    func setupContrainsts()
     func setupHierarchy()
+    func setupContrainsts()
 }
 
 extension ViewCoding{
     func buildLayout(){
         setupView()
-        setupContrainsts()
         setupHierarchy()
+        setupContrainsts()
     }
 }

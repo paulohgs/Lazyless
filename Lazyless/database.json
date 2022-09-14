@@ -1,0 +1,20 @@
+{
+    "nome": "Thiago",
+    "idade": 22
+    "cachorros": {
+        "nome": "Billy",
+        "idade": 12
+    }
+}
+
+{
+    "preguica"{
+        "falas"{
+            "falaBemVindo" {
+                "frase" : "loren impsun"
+                "quantidade" : 1
+            }
+        }
+    }
+
+}
