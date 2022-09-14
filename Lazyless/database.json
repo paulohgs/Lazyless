@@ -10,9 +10,9 @@
 {
     "preguica"{
         "falas"{
-            falaBemVindo{
-                frase
-                quantidade
+            "falaBemVindo" {
+                "frase" : "loren impsun"
+                "quantidade" : 1
             }
         }
     }
