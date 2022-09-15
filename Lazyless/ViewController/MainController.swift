@@ -27,7 +27,6 @@ class MainController: UIViewController {
         )
         personaImage.addGestureRecognizer(tapGR)
         personaImage.isUserInteractionEnabled = true
-
         // MARK: -Barra de progresso circular config
         //        circularProgressBar.progressColor = .blue
         //        circularProgressBar.trackColor = .lightGray
@@ -57,9 +56,9 @@ extension MainController: ViewCoding {
 
         NSLayoutConstraint.activate([
             personaImage.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            personaImage.topAnchor.constraint(equalToSystemSpacingBelow: self.view.topAnchor, multiplier: 3),
-            personaImage.widthAnchor.constraint(equalTo: view.widthAnchor ,multiplier: 0.75),
-            personaImage.heightAnchor.constraint(equalTo: self.personaImage.widthAnchor, multiplier: 0.85),
+            personaImage.centerYAnchor.constraint(equalTo: self.backgroundView.rectBar.bottomAnchor, constant: -25),
+            personaImage.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.60),
+            personaImage.heightAnchor.constraint(equalTo: self.personaImage.widthAnchor),
 
 
             imageHeart.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
