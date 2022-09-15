@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4F31D5C828D1FD480092A2FC /* ActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F31D5C728D1FD480092A2FC /* ActivityModel.swift */; };
 		4F31D5CA28D200730092A2FC /* database.json in Resources */ = {isa = PBXBuildFile; fileRef = 4F31D5C928D200730092A2FC /* database.json */; };
+		4F31D5CC28D2215C0092A2FC /* HeartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F31D5CB28D2215C0092A2FC /* HeartView.swift */; };
 		4FA74FA528CB65D8005387CF /* ViewCoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA74FA428CB65D8005387CF /* ViewCoding.swift */; };
 		4FA74FA928CB6658005387CF /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA74FA828CB6658005387CF /* MainController.swift */; };
 		4FA74FAB28CB6778005387CF /* MainBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA74FAA28CB6778005387CF /* MainBackgroundView.swift */; };
@@ -45,6 +46,7 @@
 /* Begin PBXFileReference section */
 		4F31D5C728D1FD480092A2FC /* ActivityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityModel.swift; sourceTree = "<group>"; };
 		4F31D5C928D200730092A2FC /* database.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = database.json; sourceTree = "<group>"; };
+		4F31D5CB28D2215C0092A2FC /* HeartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartView.swift; sourceTree = "<group>"; };
 		4FA74FA428CB65D8005387CF /* ViewCoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCoding.swift; sourceTree = "<group>"; };
 		4FA74FA828CB6658005387CF /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		4FA74FAA28CB6778005387CF /* MainBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBackgroundView.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 			children = (
 				4FA74FB328CF75D7005387CF /* CircularProgressView.swift */,
 				4FA74FAA28CB6778005387CF /* MainBackgroundView.swift */,
+				4F31D5CB28D2215C0092A2FC /* HeartView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				4F31D5C828D1FD480092A2FC /* ActivityModel.swift in Sources */,
 				B9B55FF028C6235E00B37ED4 /* AppDelegate.swift in Sources */,
 				B9B55FF228C6235E00B37ED4 /* SceneDelegate.swift in Sources */,
+				4F31D5CC28D2215C0092A2FC /* HeartView.swift in Sources */,
 				4FA74FA528CB65D8005387CF /* ViewCoding.swift in Sources */,
 				FC8481CF28CF70CC009FFC06 /* File.swift in Sources */,
 				4FA74FA928CB6658005387CF /* MainController.swift in Sources */,
