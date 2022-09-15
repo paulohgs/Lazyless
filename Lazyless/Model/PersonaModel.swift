@@ -18,5 +18,5 @@ var preguicaModel = Persona(
     personaName: "Preguica-Oneswan",
     personaImageName: "preguica",
     heartLevel: 1 ,
-    heartImageName: "h"
+    heartImageName: "heart"
 )
