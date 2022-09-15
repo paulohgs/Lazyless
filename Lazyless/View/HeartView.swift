@@ -17,8 +17,8 @@ class HeartView: UIView {
     lazy var label: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "10"
-        label.font = .systemFont(ofSize: UIScreen.main.bounds.width/18.5)
+        label.text = "1"
+        label.font = .systemFont(ofSize: UIScreen.main.bounds.width/19)
         return label
     }()
 
