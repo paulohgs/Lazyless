@@ -9,13 +9,14 @@ import UIKit
 import Lottie
 
 class MainController: UIViewController {
-    
+ 
     private let backgroundView: MainBackgroundView = MainBackgroundView()
     private var personaImage: UIImageView = UIImageView(image: UIImage(named: preguicaModel.personaImageName))
 //    private var imageHeart: UIImageView = UIImageView(image: UIImage(named: preguicaModel.heartImageName))
     private var imageHeart: HeartView = HeartView()
     //    private var circularProgressBar: CircularProgressView = CircularProgressView(frame: CGRect(x: 0, y: 0, width: 250, height: 250), lineWidth: 5, rounded: true)
-
+    private let speakView: SpeakView = SpeakView()
+  
     override func loadView() {
         super.loadView()
         //        circularProgressBar.translatesAutoresizingMaskIntoConstraints = false
@@ -44,6 +45,7 @@ extension MainController: ViewCoding {
         
         self.view.addSubview(personaImage)
         self.view.addSubview(imageHeart)
+        self.view.addSubview(speakView)
     }
 
     func setupContrainsts() {
