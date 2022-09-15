@@ -11,6 +11,8 @@
 		4F31D5CA28D200730092A2FC /* database.json in Resources */ = {isa = PBXBuildFile; fileRef = 4F31D5C928D200730092A2FC /* database.json */; };
 		4F31D5CC28D2215C0092A2FC /* HeartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F31D5CB28D2215C0092A2FC /* HeartView.swift */; };
 		4F5076E128D3766000DAEF80 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA74FA828CB6658005387CF /* MainController.swift */; };
+		4F5076DC28D36EAD00DAEF80 /* SpeakView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5076DB28D36EAD00DAEF80 /* SpeakView.swift */; };
+		4F5076DE28D36EC000DAEF80 /* SpeakModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5076DD28D36EC000DAEF80 /* SpeakModel.swift */; };
 		4FA74FA528CB65D8005387CF /* ViewCoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA74FA428CB65D8005387CF /* ViewCoding.swift */; };
 		4FA74FAB28CB6778005387CF /* MainBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA74FAA28CB6778005387CF /* MainBackgroundView.swift */; };
 		4FA74FAD28CF721C005387CF /* PersonaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA74FAC28CF721C005387CF /* PersonaModel.swift */; };
@@ -47,6 +49,8 @@
 		4F31D5C728D1FD480092A2FC /* ActivityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityModel.swift; sourceTree = "<group>"; };
 		4F31D5C928D200730092A2FC /* database.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = database.json; sourceTree = "<group>"; };
 		4F31D5CB28D2215C0092A2FC /* HeartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartView.swift; sourceTree = "<group>"; };
+		4F5076DB28D36EAD00DAEF80 /* SpeakView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakView.swift; sourceTree = "<group>"; };
+		4F5076DD28D36EC000DAEF80 /* SpeakModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakModel.swift; sourceTree = "<group>"; };
 		4FA74FA428CB65D8005387CF /* ViewCoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCoding.swift; sourceTree = "<group>"; };
 		4FA74FA828CB6658005387CF /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		4FA74FAA28CB6778005387CF /* MainBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBackgroundView.swift; sourceTree = "<group>"; };
@@ -63,6 +67,7 @@
 		B9B5600C28C6235F00B37ED4 /* LazylessUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LazylessUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9B5601028C6235F00B37ED4 /* LazylessUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazylessUITests.swift; sourceTree = "<group>"; };
 		B9B5601228C6235F00B37ED4 /* LazylessUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazylessUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B9C90BA928D0BD39007AE6F9 /* SpeakViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakViewModel.swift; sourceTree = "<group>"; };
 		FC8481CE28CF70CC009FFC06 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -166,6 +171,7 @@
 		B9B5602428C6306B00B37ED4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4F5076DB28D36EAD00DAEF80 /* SpeakView.swift */,
 				4FA74FB328CF75D7005387CF /* CircularProgressView.swift */,
 				4FA74FAA28CB6778005387CF /* MainBackgroundView.swift */,
 				4F31D5CB28D2215C0092A2FC /* HeartView.swift */,
@@ -176,6 +182,7 @@
 		FC8481C828CF5CD7009FFC06 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4F5076DD28D36EC000DAEF80 /* SpeakModel.swift */,
 				4FA74FAC28CF721C005387CF /* PersonaModel.swift */,
 				4F31D5C728D1FD480092A2FC /* ActivityModel.swift */,
 			);
@@ -185,6 +192,7 @@
 		FC8481CD28CF70BB009FFC06 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				B9C90BA928D0BD39007AE6F9 /* SpeakViewModel.swift */,
 				FC8481CE28CF70CC009FFC06 /* File.swift */,
 			);
 			path = ViewModel;
@@ -328,6 +336,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F5076E128D3766000DAEF80 /* MainController.swift in Sources */,
+				4F5076DE28D36EC000DAEF80 /* SpeakModel.swift in Sources */,
+				4F5076DC28D36EAD00DAEF80 /* SpeakView.swift in Sources */,
 				4F31D5C828D1FD480092A2FC /* ActivityModel.swift in Sources */,
 				B9B55FF028C6235E00B37ED4 /* AppDelegate.swift in Sources */,
 				B9B55FF228C6235E00B37ED4 /* SceneDelegate.swift in Sources */,
