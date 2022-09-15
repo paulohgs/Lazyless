@@ -7,13 +7,14 @@
 
 import UIKit
 
-class SpeakviewModel {
+struct SpeakviewModel {
     
     let speak: SpeakModel
     
-    var title: String = ""
-    var textSpeak: String = ""
+    var title: String
+    var textSpeak: String
     var speakButton: UIButton
     var cancelButton: UIButton
+
     
 }

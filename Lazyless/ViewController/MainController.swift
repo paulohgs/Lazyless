@@ -10,10 +10,13 @@ import UIKit
 class MainController: UIViewController {
 
     private let background: MainBackgroundView = MainBackgroundView()
+    private let speakView: SpeakView = SpeakView()
 
     override func loadView() {
         super.loadView()
         self.view = background
+        self.view.addSubview(speakView)
+       
     }
 
 }
