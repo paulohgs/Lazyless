@@ -33,10 +33,15 @@ class SpeakView: UIView {
     private lazy var speakButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Falar...", for: .normal)
-        button.setTitleColor(UIColor(named: "darkGrey"), for: .normal)
+        var configuration = UIButton.Configuration.borderedProminent()
+        configuration.title = "Falar..."
+        configuration.baseForegroundColor = UIColor(named: "darkGrey")
+        configuration.baseBackgroundColor = UIColor(named: "secondColor")
+        button.configuration = configuration
+//        button.setTitleColor(UIColor(named: "darkGrey"), for: .normal)
         button.layer.cornerRadius = 10
-        button.backgroundColor = UIColor(named: "secondColor")
+//        button.backgroundColor = UIColor(named: "secondColor")
+        button.addTarget(self, action: #selector(actionButton), for: .touchDown)
         return button
     }()
     private lazy var habitButton: UIButton = {
@@ -72,12 +77,17 @@ class SpeakView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
+    @objc func actionButton() {
+        print(#function)
+    }
+
 }
 
 extension SpeakView: ViewCoding {
     func setupView() {
         self.addSubview(stackView)
+
     }
     
     func setupContrainsts() {
@@ -85,7 +95,7 @@ extension SpeakView: ViewCoding {
         NSLayoutConstraint.activate([
             stackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
             stackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
-            stackView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor)
+            stackView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
         ])
         
     }

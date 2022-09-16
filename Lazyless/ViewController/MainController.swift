@@ -50,6 +50,7 @@ extension MainController: ViewCoding {
     func setupContrainsts() {
         personaImage.translatesAutoresizingMaskIntoConstraints = false
         imageHeart.translatesAutoresizingMaskIntoConstraints = false
+        speakView.translatesAutoresizingMaskIntoConstraints = false
 
         imageHeart.contentMode = .scaleAspectFit
         personaImage.contentMode = .scaleAspectFit
@@ -66,6 +67,9 @@ extension MainController: ViewCoding {
             imageHeart.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.15),
             imageHeart.heightAnchor.constraint(equalTo: self.imageHeart.widthAnchor),
 
+            speakView.topAnchor.constraint(equalTo: imageHeart.bottomAnchor),
+            speakView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width),
+            speakView.heightAnchor.constraint(equalToConstant: 250)
         ])
     }
     func setupView() {
