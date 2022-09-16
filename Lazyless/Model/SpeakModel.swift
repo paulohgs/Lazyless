@@ -8,4 +8,9 @@
 struct SpeakModel {
     var title: String
     var textSpeak: String
+    
+    init(title: String, textSpeak: String) {
+        self.title = title
+        self.textSpeak = textSpeak
+    }
 }

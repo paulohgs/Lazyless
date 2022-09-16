@@ -10,19 +10,19 @@
 		4F31D5C828D1FD480092A2FC /* ActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F31D5C728D1FD480092A2FC /* ActivityModel.swift */; };
 		4F31D5CA28D200730092A2FC /* database.json in Resources */ = {isa = PBXBuildFile; fileRef = 4F31D5C928D200730092A2FC /* database.json */; };
 		4F31D5CC28D2215C0092A2FC /* HeartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F31D5CB28D2215C0092A2FC /* HeartView.swift */; };
-		4F5076E128D3766000DAEF80 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA74FA828CB6658005387CF /* MainController.swift */; };
 		4F5076DC28D36EAD00DAEF80 /* SpeakView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5076DB28D36EAD00DAEF80 /* SpeakView.swift */; };
 		4F5076DE28D36EC000DAEF80 /* SpeakModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5076DD28D36EC000DAEF80 /* SpeakModel.swift */; };
+		4F5076E128D3766000DAEF80 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA74FA828CB6658005387CF /* MainController.swift */; };
 		4FA74FA528CB65D8005387CF /* ViewCoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA74FA428CB65D8005387CF /* ViewCoding.swift */; };
 		4FA74FAB28CB6778005387CF /* MainBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA74FAA28CB6778005387CF /* MainBackgroundView.swift */; };
 		4FA74FAD28CF721C005387CF /* PersonaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA74FAC28CF721C005387CF /* PersonaModel.swift */; };
 		4FA74FB228CF732D005387CF /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 4FA74FB128CF732D005387CF /* Lottie */; };
 		4FA74FB428CF75D7005387CF /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA74FB328CF75D7005387CF /* CircularProgressView.swift */; };
+		B936347A28D4A79300BDC4E6 /* SpeakModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B936347928D4A79300BDC4E6 /* SpeakModelTests.swift */; };
 		B9B55FF028C6235E00B37ED4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B55FEF28C6235E00B37ED4 /* AppDelegate.swift */; };
 		B9B55FF228C6235E00B37ED4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B55FF128C6235E00B37ED4 /* SceneDelegate.swift */; };
 		B9B55FF928C6235F00B37ED4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9B55FF828C6235F00B37ED4 /* Assets.xcassets */; };
 		B9B55FFC28C6235F00B37ED4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9B55FFA28C6235F00B37ED4 /* LaunchScreen.storyboard */; };
-		B9B5600728C6235F00B37ED4 /* LazylessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B5600628C6235F00B37ED4 /* LazylessTests.swift */; };
 		B9B5601128C6235F00B37ED4 /* LazylessUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B5601028C6235F00B37ED4 /* LazylessUITests.swift */; };
 		B9B5601328C6235F00B37ED4 /* LazylessUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B5601228C6235F00B37ED4 /* LazylessUITestsLaunchTests.swift */; };
 		FC8481CF28CF70CC009FFC06 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8481CE28CF70CC009FFC06 /* File.swift */; };
@@ -56,6 +56,7 @@
 		4FA74FAA28CB6778005387CF /* MainBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBackgroundView.swift; sourceTree = "<group>"; };
 		4FA74FAC28CF721C005387CF /* PersonaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonaModel.swift; sourceTree = "<group>"; };
 		4FA74FB328CF75D7005387CF /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
+		B936347928D4A79300BDC4E6 /* SpeakModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakModelTests.swift; sourceTree = "<group>"; };
 		B9B55FEC28C6235E00B37ED4 /* Lazyless.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lazyless.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9B55FEF28C6235E00B37ED4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9B55FF128C6235E00B37ED4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,7 +64,6 @@
 		B9B55FFB28C6235F00B37ED4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B9B55FFD28C6235F00B37ED4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9B5600228C6235F00B37ED4 /* LazylessTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LazylessTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B9B5600628C6235F00B37ED4 /* LazylessTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazylessTests.swift; sourceTree = "<group>"; };
 		B9B5600C28C6235F00B37ED4 /* LazylessUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LazylessUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9B5601028C6235F00B37ED4 /* LazylessUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazylessUITests.swift; sourceTree = "<group>"; };
 		B9B5601228C6235F00B37ED4 /* LazylessUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazylessUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -113,6 +113,21 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		B936347B28D4A79900BDC4E6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B936347928D4A79300BDC4E6 /* SpeakModelTests.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B936347C28D4A7AB00BDC4E6 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		B9B55FE328C6235E00B37ED4 = {
 			isa = PBXGroup;
 			children = (
@@ -154,7 +169,8 @@
 		B9B5600528C6235F00B37ED4 /* LazylessTests */ = {
 			isa = PBXGroup;
 			children = (
-				B9B5600628C6235F00B37ED4 /* LazylessTests.swift */,
+				B936347C28D4A7AB00BDC4E6 /* ViewModels */,
+				B936347B28D4A79900BDC4E6 /* Models */,
 			);
 			path = LazylessTests;
 			sourceTree = "<group>";
@@ -354,7 +370,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9B5600728C6235F00B37ED4 /* LazylessTests.swift in Sources */,
+				B936347A28D4A79300BDC4E6 /* SpeakModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
