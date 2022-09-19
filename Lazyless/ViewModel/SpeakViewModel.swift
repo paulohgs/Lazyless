@@ -16,4 +16,6 @@ struct SpeakviewModel {
     var speakButton: UIButton
     var cancelButton: UIButton
     
+    
+    
 }
