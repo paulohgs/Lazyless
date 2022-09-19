@@ -12,6 +12,13 @@ struct Persona {
     var personaImageName: String
     var heartLevel: Int
     var heartImageName: String
+    
+    init(personaName: String, personaImageName: String, heartLevel: Int, heartImageName: String) {
+        self.personaName = personaName
+        self.personaImageName = personaImageName
+        self.heartLevel = heartLevel
+        self.heartImageName = heartImageName
+    }
 }
 
 var preguicaModel = Persona(
