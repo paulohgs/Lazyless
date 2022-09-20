@@ -20,6 +20,9 @@ class MainController: UIViewController {
     private let cardActivityView: CardActivityView = CardActivityView()
     private let tableView: CustomTableViewController = CustomTableViewController()
     private lazy var viewTabelView = tableView.view
+    private let tableView: CustomTableViewController = CustomTableViewController()
+    private lazy var viewTabelView = tableView.view
+
 
     override func loadView() {
         super.loadView()
@@ -60,7 +63,6 @@ extension MainController: ViewCoding {
         speakView.translatesAutoresizingMaskIntoConstraints = false
         cardActivityView.translatesAutoresizingMaskIntoConstraints = false
 //        viewTabelView?.translatesAutoresizingMaskIntoConstraints = false
-
 
         imageHeart.contentMode = .scaleAspectFit
         personaImage.contentMode = .scaleAspectFit
