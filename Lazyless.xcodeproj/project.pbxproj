@@ -121,13 +121,6 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		B936347C28D4A7AB00BDC4E6 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
 		B9B55FE328C6235E00B37ED4 = {
 			isa = PBXGroup;
 			children = (
@@ -169,7 +162,6 @@
 		B9B5600528C6235F00B37ED4 /* LazylessTests */ = {
 			isa = PBXGroup;
 			children = (
-				B936347C28D4A7AB00BDC4E6 /* ViewModels */,
 				B936347B28D4A79900BDC4E6 /* Models */,
 			);
 			path = LazylessTests;
