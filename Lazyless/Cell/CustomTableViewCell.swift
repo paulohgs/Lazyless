@@ -1,13 +1,13 @@
 //
-//  CustomCell.swift
+//  CustomTableViewCell.swift
 //  Lazyless
 //
-//  Created by Luiz Sena on 19/09/22.
+//  Created by Luiz Sena on 20/09/22.
 //
 
 import UIKit
 
-class CustomCell: UITableViewCell {
+class CustomTableViewCell: UITableViewCell {
     private let speak: SpeakView = {
         let speak: SpeakView = SpeakView()
         speak.translatesAutoresizingMaskIntoConstraints = false
@@ -24,7 +24,7 @@ class CustomCell: UITableViewCell {
     }
 }
 
-extension CustomCell: ViewCoding {
+extension CustomTableViewCell: ViewCoding {
     func setupView() {
     }
 
@@ -36,9 +36,7 @@ extension CustomCell: ViewCoding {
         NSLayoutConstraint.activate([
             speak.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             speak.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-
         ])
     }
-
-
 }
+

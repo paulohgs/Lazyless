@@ -2,13 +2,16 @@
 //  CustomTableViewController.swift
 //  Lazyless
 //
-//  Created by Luiz Sena on 19/09/22.
+//  Created by Luiz Sena on 20/09/22.
 //
 
 import UIKit
 
 class CustomTableViewController: UIViewController {
-    private lazy var tableView = UITableView()
+    private lazy var tableViewController: UITableView = {
+        let tvc = UITableView(frame: .zero, style: .plain)
+        return tvc
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,24 +20,24 @@ class CustomTableViewController: UIViewController {
     }
 
     func configureTableView() {
-        view.addSubview(tableView)
+        view.addSubview(tableViewController)
         setTableViewDelegate()
-        tableView.rowHeight = 300
+        tableViewController.rowHeight = 250
         doConstraints()
     }
 
     func setTableViewDelegate() {
-        tableView.delegate = self
-        tableView.dataSource = self
+        tableViewController.delegate = self
+        tableViewController.dataSource = self
     }
 
     func doConstraints() {
-        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableViewController.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: view.topAnchor),
-            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            tableViewController.topAnchor.constraint(equalTo: view.topAnchor),
+            tableViewController.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableViewController.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            tableViewController.bottomAnchor.constraint(equalTo: view.bottomAnchor),
         ])
     }
 }
@@ -45,8 +48,10 @@ extension CustomTableViewController: UITableViewDelegate, UITableViewDataSource 
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return CustomCell()
+        return CustomTableViewCell()
     }
 
 
 }
+
+
