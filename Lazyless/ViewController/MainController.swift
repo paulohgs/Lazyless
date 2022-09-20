@@ -9,15 +9,18 @@ import UIKit
 import Lottie
 
 class MainController: UIViewController {
- 
+
+
     private let backgroundView: MainBackgroundView = MainBackgroundView()
     private var personaImage: UIImageView = UIImageView(image: UIImage(named: preguicaModel.personaImageName))
-//    private var imageHeart: UIImageView = UIImageView(image: UIImage(named: preguicaModel.heartImageName))
+    //    private var imageHeart: UIImageView = UIImageView(image: UIImage(named: preguicaModel.heartImageName))
     private var imageHeart: HeartView = HeartView()
     //    private var circularProgressBar: CircularProgressView = CircularProgressView(frame: CGRect(x: 0, y: 0, width: 250, height: 250), lineWidth: 5, rounded: true)
     private let speakView: SpeakView = SpeakView()
     private let cardActivityView: CardActivityView = CardActivityView()
-  
+    private let tableView: CustomTableViewController = CustomTableViewController()
+    private lazy var viewTabelView = tableView.view
+
     override func loadView() {
         super.loadView()
         //        circularProgressBar.translatesAutoresizingMaskIntoConstraints = false
@@ -43,12 +46,12 @@ extension MainController: ViewCoding {
 
 
     func setupHierarchy() {
-        
+        self.addChild(tableView)
         self.view.addSubview(personaImage)
         self.view.addSubview(imageHeart)
         self.view.addSubview(cardActivityView)
         self.view.addSubview(speakView)
-        
+//        self.view.addSubview(viewTabelView!)
     }
 
     func setupContrainsts() {
@@ -56,14 +59,17 @@ extension MainController: ViewCoding {
         imageHeart.translatesAutoresizingMaskIntoConstraints = false
         speakView.translatesAutoresizingMaskIntoConstraints = false
         cardActivityView.translatesAutoresizingMaskIntoConstraints = false
+//        viewTabelView?.translatesAutoresizingMaskIntoConstraints = false
+
 
         imageHeart.contentMode = .scaleAspectFit
         personaImage.contentMode = .scaleAspectFit
 
+
         NSLayoutConstraint.activate([
             personaImage.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
             personaImage.centerYAnchor.constraint(equalTo: self.backgroundView.rectBar.bottomAnchor, constant: -25),
-            personaImage.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.60),
+            personaImage.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.50),
             personaImage.heightAnchor.constraint(equalTo: self.personaImage.widthAnchor),
 
 
@@ -74,13 +80,20 @@ extension MainController: ViewCoding {
 
             speakView.topAnchor.constraint(equalTo: imageHeart.bottomAnchor),
             speakView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width),
-            speakView.heightAnchor.constraint(equalToConstant: 250),
             
             cardActivityView.topAnchor.constraint(equalTo: speakView.bottomAnchor, constant: 50),
             cardActivityView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height/10),
             cardActivityView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 10),
             cardActivityView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -10)
 
+//            speakView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.width/2.5),
+            speakView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            speakView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+
+//            viewTabelView!.topAnchor.constraint(equalTo: speakView.bottomAnchor, constant: 20),
+//            viewTabelView!.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+//            viewTabelView!.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+//            viewTabelView!.leadingAnchor.constraint(equalTo: view.leadingAnchor),
         ])
     }
     func setupView() {
@@ -93,3 +106,4 @@ extension MainController: ViewCoding {
         }
     }
 }
+

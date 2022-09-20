@@ -12,6 +12,10 @@ class HeartView: UIView {
         let heart: UIImageView = UIImageView(image: UIImage(named: "heart"))
         heart.translatesAutoresizingMaskIntoConstraints = false
         heart.contentMode = .scaleToFill
+        heart.layer.shadowColor = UIColor.black.cgColor
+        heart.layer.shadowOpacity = 0.75
+        heart.layer.shadowOffset = CGSize(width: 0, height: -2)
+        heart.layer.shadowRadius = 5
         return heart
     }()
     lazy var label: UILabel = {

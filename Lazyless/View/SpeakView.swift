@@ -8,13 +8,14 @@
 import UIKit
 
 class SpeakView: UIView {
+
     
     private lazy var title: UILabel = {
         var label = UILabel()
         label.text = "Preguiça-swan:"
         label.textAlignment = .left
         label.textColor = UIColor.darkGray
-        label.font = UIFont.systemFont(ofSize: 22)
+        label.font = UIFont.systemFont(ofSize: UIScreen.main.bounds.width/20)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -24,7 +25,7 @@ class SpeakView: UIView {
         label.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ante dolor, vestibulum vel ex sit amet, dignissim vulputate ante. Integer lobortis ante ut risus molestie imperdiet."
         label.textColor = UIColor.gray
         label.textAlignment = .justified
-        label.font = UIFont.systemFont(ofSize: 18)
+        label.font = UIFont.systemFont(ofSize: UIScreen.main.bounds.width/28)
         label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -87,7 +88,6 @@ class SpeakView: UIView {
 extension SpeakView: ViewCoding {
     func setupView() {
         self.addSubview(stackView)
-
     }
     
     func setupContrainsts() {
@@ -95,7 +95,8 @@ extension SpeakView: ViewCoding {
         NSLayoutConstraint.activate([
             stackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
             stackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
-            stackView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
+            stackView.topAnchor.constraint(equalTo: self.topAnchor),
+            stackView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
         ])
         
     }
@@ -106,3 +107,7 @@ extension SpeakView: ViewCoding {
     
     
 }
+
+//protocol SpeakFunctions {
+//    func returnHeight
+//}
