@@ -16,6 +16,7 @@ class MainController: UIViewController {
     private var imageHeart: HeartView = HeartView()
     //    private var circularProgressBar: CircularProgressView = CircularProgressView(frame: CGRect(x: 0, y: 0, width: 250, height: 250), lineWidth: 5, rounded: true)
     private let speakView: SpeakView = SpeakView()
+    private let cardActivityView: CardActivityView = CardActivityView()
   
     override func loadView() {
         super.loadView()
@@ -25,6 +26,7 @@ class MainController: UIViewController {
             target: self,
             action: #selector(imageTapped)
         )
+        
         personaImage.addGestureRecognizer(tapGR)
         personaImage.isUserInteractionEnabled = true
         // MARK: -Barra de progresso circular config
@@ -44,13 +46,16 @@ extension MainController: ViewCoding {
         
         self.view.addSubview(personaImage)
         self.view.addSubview(imageHeart)
+        self.view.addSubview(cardActivityView)
         self.view.addSubview(speakView)
+        
     }
 
     func setupContrainsts() {
         personaImage.translatesAutoresizingMaskIntoConstraints = false
         imageHeart.translatesAutoresizingMaskIntoConstraints = false
         speakView.translatesAutoresizingMaskIntoConstraints = false
+        cardActivityView.translatesAutoresizingMaskIntoConstraints = false
 
         imageHeart.contentMode = .scaleAspectFit
         personaImage.contentMode = .scaleAspectFit
@@ -69,7 +74,13 @@ extension MainController: ViewCoding {
 
             speakView.topAnchor.constraint(equalTo: imageHeart.bottomAnchor),
             speakView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width),
-            speakView.heightAnchor.constraint(equalToConstant: 250)
+            speakView.heightAnchor.constraint(equalToConstant: 250),
+            
+            cardActivityView.topAnchor.constraint(equalTo: speakView.bottomAnchor, constant: 50),
+            cardActivityView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height/10),
+            cardActivityView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 10),
+            cardActivityView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -10)
+
         ])
     }
     func setupView() {
@@ -81,5 +92,4 @@ extension MainController: ViewCoding {
             print("UIImageView tapped")
         }
     }
-
 }
