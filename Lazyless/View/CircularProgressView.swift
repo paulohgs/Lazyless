@@ -49,9 +49,6 @@ class CircularProgressView: UIView {
         }
     }
 
-
-
-
     fileprivate func createProgressView(){
 //    startAngle: CGFloat(0.75*CGFloat.pi),
 //    endAngle: CGFloat(CGFloat.pi/4),
