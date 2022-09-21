@@ -118,7 +118,23 @@ extension MainController: ViewCoding {
     //  MARK: -objc funcs
     @objc func imageTapped(sender: UITapGestureRecognizer) {
         if sender.state == .ended {
-            print("UIImageView tapped")
+             
+            let activityViewController = ActivityViewController()
+            navigationController?.pushViewController(activityViewController , animated: true)
+            
+            
+            activityViewController.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Confirmar", style: .done, target: self, action: nil)
+//            self.present(UINavigationController(rootViewController: ActivityViewController()), animated: true, completion: nil)
+//
+//            activityViewController.loadViewIfNeeded()
+            
+            let appearance = UINavigationBarAppearance()
+            appearance.configureWithOpaqueBackground()
+            appearance.backgroundColor = .brown
+            
+            
+            
+            
             if amount == 0 {
                 view.insertSubview(speakView, belowSubview: personaImage)
                 view.insertSubview(opaqueView, belowSubview: speakView)
@@ -138,5 +154,9 @@ extension MainController: ViewCoding {
             }
             amount += 1
         }
+            else if amount == 5 {
+                opaqueView.removeFromSuperview()
+                speakView.removeFromSuperview()
+                amount = -2
     }
 }
