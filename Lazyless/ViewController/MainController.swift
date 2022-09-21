@@ -119,21 +119,18 @@ extension MainController: ViewCoding {
     @objc func imageTapped(sender: UITapGestureRecognizer) {
         if sender.state == .ended {
              
-            let activityViewController = ActivityViewController()
-            navigationController?.pushViewController(activityViewController , animated: true)
-            
-            
-            activityViewController.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Confirmar", style: .done, target: self, action: nil)
-//            self.present(UINavigationController(rootViewController: ActivityViewController()), animated: true, completion: nil)
+//            let activityViewController = ActivityViewController()
+//            navigationController?.pushViewController(activityViewController , animated: true)
 //
-//            activityViewController.loadViewIfNeeded()
-            
-            let appearance = UINavigationBarAppearance()
-            appearance.configureWithOpaqueBackground()
-            appearance.backgroundColor = .brown
-            
-            
-            
+//
+//            activityViewController.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Confirmar", style: .done, target: self, action: nil)
+////            self.present(UINavigationController(rootViewController: ActivityViewController()), animated: true, completion: nil)
+////
+////            activityViewController.loadViewIfNeeded()
+//
+//            let appearance = UINavigationBarAppearance()
+//            appearance.configureWithOpaqueBackground()
+//            appearance.backgroundColor = .brown
             
             if amount == 0 {
                 view.insertSubview(speakView, belowSubview: personaImage)
@@ -158,5 +155,6 @@ extension MainController: ViewCoding {
                 opaqueView.removeFromSuperview()
                 speakView.removeFromSuperview()
                 amount = -2
+            }
     }
 }

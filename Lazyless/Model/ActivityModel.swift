@@ -17,12 +17,12 @@ struct ActivityModel {
         self.affectionPoint = affectionPoint
         self.date = date
     }
-    let completed: Bool
+//    let completed: Bool
 }
 
 let activityModelMock = ActivityModel(
     name: "mock",
     affectionPoint: 10,
-    date: Date(),
-    completed: false
+    date: Date()
+//    completed: false
 )
