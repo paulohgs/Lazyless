@@ -29,15 +29,15 @@ extension CustomTableViewCell: ViewCoding {
     }
 
     func setupHierarchy() {
-        self.addSubview(cardActivity)
+        self.contentView.addSubview(cardActivity)
     }
 
     func setupContrainsts() {
         NSLayoutConstraint.activate([
-            cardActivity.leadingAnchor.constraint(equalTo: self.leadingAnchor,constant: 10),
-            cardActivity.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
-            cardActivity.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
-            cardActivity.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            cardActivity.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor,constant: 10),
+            cardActivity.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor, constant: -10),
+            cardActivity.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 10),
+            cardActivity.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: -10),
         ])
     }
 }

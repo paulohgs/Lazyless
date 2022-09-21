@@ -72,28 +72,36 @@ extension CardActivityView: ViewCoding {
     }
     
     func setupHierarchy() {
+        self.addSubview(checkboxButton)
         self.addSubview(activityLabel)
         self.addSubview(pontuacaoLabel)
-        self.addSubview(checkboxButton)
     }
     
     func setupContrainsts() {
         NSLayoutConstraint.activate([
-            // Constraints do texto da atividae
-            activityLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
-            activityLabel.bottomAnchor.constraint(equalTo: self.centerYAnchor, constant: -5),
-            activityLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 15),
-            
-            // Constraints da pontuacao
-            pontuacaoLabel.topAnchor.constraint(equalTo: self.centerYAnchor, constant: 5),
-            pontuacaoLabel.leadingAnchor.constraint(equalTo: activityLabel.leadingAnchor),
-            pontuacaoLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 10),
-            
             // Constraints do botao
             checkboxButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -25),
             checkboxButton.centerYAnchor.constraint(equalTo: self.centerYAnchor),
             checkboxButton.heightAnchor.constraint(equalToConstant: 35),
-            checkboxButton.widthAnchor.constraint(equalToConstant: 35)
+            checkboxButton.widthAnchor.constraint(equalToConstant: 35),
+
+            // Constraints do texto da atividae
+//            activityLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
+//            activityLabel.bottomAnchor.constraint(equalTo: self.centerYAnchor, constant: -5),
+//            activityLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 15),
+            activityLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
+            activityLabel.bottomAnchor.constraint(equalTo: self.centerYAnchor),
+            activityLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
+            activityLabel.trailingAnchor.constraint(equalTo: checkboxButton.leadingAnchor),
+            
+            // Constraints da pontuacao
+//            pontuacaoLabel.topAnchor.constraint(equalTo: self.centerYAnchor, constant: 5),
+//            pontuacaoLabel.leadingAnchor.constraint(equalTo: activityLabel.leadingAnchor),
+//            pontuacaoLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 10),
+            pontuacaoLabel.topAnchor.constraint(equalTo: activityLabel.bottomAnchor),
+            pontuacaoLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            pontuacaoLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
+            pontuacaoLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor),
         ])
     }
 }
