@@ -9,20 +9,20 @@ import UIKit
 
 class SpeakView: UIView {
     
-    private lazy var title: UILabel = {
+    private var title: UILabel = {
         var label = UILabel()
         label.text = "Preguiça-swan:"
         label.textAlignment = .left
-        label.textColor = UIColor.darkGray
+        label.textColor = UIColor(named: "titleColor")
         label.font = UIFont.systemFont(ofSize: 22)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
-    private lazy var textSpeak: UILabel = {
+    private var textSpeak: UILabel = {
         var label = UILabel()
         label.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ante dolor, vestibulum vel ex sit amet, dignissim vulputate ante. Integer lobortis ante ut risus molestie imperdiet."
-        label.textColor = UIColor.gray
+        label.textColor = UIColor(named: "textColor")
         label.textAlignment = .justified
         label.font = UIFont.systemFont(ofSize: 18)
         label.numberOfLines = 0
@@ -30,7 +30,7 @@ class SpeakView: UIView {
         return label
     }()
     
-    private lazy var speakButton: UIButton = {
+    private var speakButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         var configuration = UIButton.Configuration.borderedProminent()
@@ -38,13 +38,11 @@ class SpeakView: UIView {
         configuration.baseForegroundColor = UIColor(named: "darkGrey")
         configuration.baseBackgroundColor = UIColor(named: "secondColor")
         button.configuration = configuration
-//        button.setTitleColor(UIColor(named: "darkGrey"), for: .normal)
         button.layer.cornerRadius = 10
-//        button.backgroundColor = UIColor(named: "secondColor")
         button.addTarget(self, action: #selector(actionButton), for: .touchDown)
         return button
     }()
-    private lazy var habitButton: UIButton = {
+    private var habitButton: UIButton = {
         let button = UIButton()
         button.setTitle("Cancelar", for: .normal)
         button.setTitleColor(UIColor.systemGray, for: .normal)
@@ -59,7 +57,7 @@ class SpeakView: UIView {
         stack.alignment = .fill
         stack.distribution = .fillProportionally
         stack.layer.cornerRadius = 10
-        stack.backgroundColor = UIColor.white
+        stack.backgroundColor = UIColor(named: "cardColor")
         stack.isLayoutMarginsRelativeArrangement = true
         stack.directionalLayoutMargins = NSDirectionalEdgeInsets(top: 10, leading: 15, bottom: 10, trailing: 15)
         stack.layer.shadowColor = UIColor.black.cgColor
