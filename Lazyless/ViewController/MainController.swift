@@ -9,16 +9,50 @@ import UIKit
 import Lottie
 
 class MainController: UIViewController {
-    private var tableView: CustomTableViewController = CustomTableViewController()
-    private let backgroundView: MainBackgroundView = MainBackgroundView()
-    private var personaImage: UIImageView = UIImageView(image: UIImage(named: preguicaModel.personaImageName))
-    private var imageHeart: HeartView = HeartView()
-    //    private var circularProgressBar: CircularProgressView = CircularProgressView(frame: CGRect(x: 0, y: 0, width: 250, height: 250), lineWidth: 5, rounded: true)
-    private let speakView: SpeakView = SpeakView()
-  
+    private var amount: Int = 0
+
+    private var tableView: CustomTableViewController = {
+        var tvc = CustomTableViewController()
+        tvc.view.translatesAutoresizingMaskIntoConstraints = false
+        return tvc
+    }()
+
+    private let backgroundView: MainBackgroundView = {
+        let root = MainBackgroundView()
+        return root
+    }()
+
+    private lazy var personaImage: UIImageView = {
+        var imagev = UIImageView(image: UIImage(named: preguicaModel.personaImageName))
+        imagev.translatesAutoresizingMaskIntoConstraints = false
+        return imagev
+    }()
+
+    private var imageHeart: HeartView = {
+        var heart = HeartView()
+        heart.layer.shadowOpacity = 0.70
+        heart.layer.shadowRadius = 8
+        heart.layer.shadowOffset = CGSize(width: 0, height: 5)
+        heart.translatesAutoresizingMaskIntoConstraints = false
+        return heart
+    }()
+
+    private let speakView: SpeakView = {
+        var speakView = SpeakView()
+        speakView.translatesAutoresizingMaskIntoConstraints = false
+        return speakView
+    }()
+
+    private let opaqueView: UIView = {
+        var opaque = UIView()
+        opaque.translatesAutoresizingMaskIntoConstraints = false
+        opaque.backgroundColor = .black
+        opaque.layer.opacity = 0.5
+        return opaque
+    }()
+
     override func loadView() {
         super.loadView()
-        //        circularProgressBar.translatesAutoresizingMaskIntoConstraints = false
         
         let tapGR = UITapGestureRecognizer(
             target: self,
@@ -26,36 +60,23 @@ class MainController: UIViewController {
         )
         personaImage.addGestureRecognizer(tapGR)
         personaImage.isUserInteractionEnabled = true
-        // MARK: -Barra de progresso circular config
-        //        circularProgressBar.progressColor = .blue
-        //        circularProgressBar.trackColor = .lightGray
-        //        circularProgressBar.progress = 0.98
-        // MARK: -----------------------------------------------
         
         buildLayout()
     }
+
 }
 
 extension MainController: ViewCoding {
-
 
     func setupHierarchy() {
         print(#function)
         self.addChild(tableView)
         self.view.addSubview(tableView.view!)
-        self.view.addSubview(speakView)
         self.view.addSubview(personaImage)
         self.view.addSubview(imageHeart)
-
-
     }
 
     func setupContrainsts() {
-        print(#function)
-        personaImage.translatesAutoresizingMaskIntoConstraints = false
-        imageHeart.translatesAutoresizingMaskIntoConstraints = false
-        speakView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.view.translatesAutoresizingMaskIntoConstraints = false
 
         imageHeart.contentMode = .scaleAspectFit
         personaImage.contentMode = .scaleAspectFit
@@ -71,24 +92,46 @@ extension MainController: ViewCoding {
             imageHeart.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.15),
             imageHeart.heightAnchor.constraint(equalTo: self.imageHeart.widthAnchor),
 
-            speakView.topAnchor.constraint(equalTo: imageHeart.bottomAnchor),
-            speakView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            speakView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+//            speakView.topAnchor.constraint(equalTo: imageHeart.bottomAnchor),
+//            speakView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+//            speakView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
 
-            tableView.view.topAnchor.constraint(equalTo: speakView.bottomAnchor),
+            tableView.view.topAnchor.constraint(equalTo: imageHeart.bottomAnchor, constant: 12),
             tableView.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             tableView.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             tableView.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+
+//            opaqueView.topAnchor.constraint(equalTo: view.topAnchor),
+//            opaqueView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+//            opaqueView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+//            opaqueView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
         ])
     }
     func setupView() {
-        print(#function)
         self.view = backgroundView
     }
     //  MARK: -objc funcs
     @objc func imageTapped(sender: UITapGestureRecognizer) {
         if sender.state == .ended {
             print("UIImageView tapped")
+            if amount == 0 {
+                view.insertSubview(speakView, belowSubview: personaImage)
+                view.insertSubview(opaqueView, belowSubview: speakView)
+                NSLayoutConstraint.activate([
+                    speakView.topAnchor.constraint(equalTo: imageHeart.bottomAnchor),
+                    speakView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+                    speakView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+                ])
+                opaqueView.pin(to: view) //Contraints
+            }else if amount < 5 {
+                print(amount)
+            }
+            else if amount == 5 {
+                opaqueView.removeFromSuperview()
+                speakView.removeFromSuperview()
+                amount = -2
+            }
+            amount += 1
         }
     }
 

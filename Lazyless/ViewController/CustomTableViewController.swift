@@ -8,6 +8,7 @@
 import UIKit
 
 class CustomTableViewController: UIViewController {
+
     private lazy var tableViewController: UITableView = {
         let tvc = UITableView(frame: .zero, style: .plain)
         return tvc
@@ -15,14 +16,13 @@ class CustomTableViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
         configureTableView()
     }
 
     func configureTableView() {
         view.addSubview(tableViewController)
         setTableViewDelegate()
-        tableViewController.rowHeight = 250
+        tableViewController.rowHeight = 100
         doConstraints()
     }
 
@@ -48,7 +48,7 @@ extension CustomTableViewController: UITableViewDelegate, UITableViewDataSource 
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return CustomTableViewCell()
+        return  UITableViewCell()
     }
 
 

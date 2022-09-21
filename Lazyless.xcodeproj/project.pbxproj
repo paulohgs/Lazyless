@@ -20,6 +20,7 @@
 		4FA74FB428CF75D7005387CF /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA74FB328CF75D7005387CF /* CircularProgressView.swift */; };
 		4FBB7CCC28DA188500648580 /* CustomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBB7CCB28DA188500648580 /* CustomTableViewController.swift */; };
 		4FBB7CCE28DA18BD00648580 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBB7CCD28DA18BD00648580 /* CustomTableViewCell.swift */; };
+		4FBB7CD228DA98D100648580 /* PinFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBB7CD128DA98D100648580 /* PinFunction.swift */; };
 		B936347A28D4A79300BDC4E6 /* SpeakModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B936347928D4A79300BDC4E6 /* SpeakModelTests.swift */; };
 		B9B55FF028C6235E00B37ED4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B55FEF28C6235E00B37ED4 /* AppDelegate.swift */; };
 		B9B55FF228C6235E00B37ED4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B55FF128C6235E00B37ED4 /* SceneDelegate.swift */; };
@@ -60,6 +61,7 @@
 		4FA74FB328CF75D7005387CF /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		4FBB7CCB28DA188500648580 /* CustomTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewController.swift; sourceTree = "<group>"; };
 		4FBB7CCD28DA18BD00648580 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		4FBB7CD128DA98D100648580 /* PinFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinFunction.swift; sourceTree = "<group>"; };
 		B936347928D4A79300BDC4E6 /* SpeakModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakModelTests.swift; sourceTree = "<group>"; };
 		B9B55FEC28C6235E00B37ED4 /* Lazyless.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lazyless.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9B55FEF28C6235E00B37ED4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +129,14 @@
 			path = ../Cell;
 			sourceTree = "<group>";
 		};
+		4FBB7CD028DA98C000648580 /* Extensions  */ = {
+			isa = PBXGroup;
+			children = (
+				4FBB7CD128DA98D100648580 /* PinFunction.swift */,
+			);
+			path = "Extensions ";
+			sourceTree = "<group>";
+		};
 		B936347B28D4A79900BDC4E6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,10 +168,11 @@
 		B9B55FEE28C6235E00B37ED4 /* Lazyless */ = {
 			isa = PBXGroup;
 			children = (
+				4FBB7CD028DA98C000648580 /* Extensions  */,
+				4FA74FA228CB65B7005387CF /* Protocols */,
 				FC8481CD28CF70BB009FFC06 /* ViewModel */,
 				FC8481C828CF5CD7009FFC06 /* Model */,
 				4FA74FA628CB6639005387CF /* ViewController */,
-				4FA74FA228CB65B7005387CF /* Protocols */,
 				B9B5602428C6306B00B37ED4 /* View */,
 				B9B55FEF28C6235E00B37ED4 /* AppDelegate.swift */,
 				B9B55FF128C6235E00B37ED4 /* SceneDelegate.swift */,
@@ -359,6 +370,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F5076E128D3766000DAEF80 /* MainController.swift in Sources */,
+				4FBB7CD228DA98D100648580 /* PinFunction.swift in Sources */,
 				4F5076DE28D36EC000DAEF80 /* SpeakModel.swift in Sources */,
 				4F5076DC28D36EAD00DAEF80 /* SpeakView.swift in Sources */,
 				4F31D5C828D1FD480092A2FC /* ActivityModel.swift in Sources */,
