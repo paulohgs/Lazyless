@@ -64,8 +64,8 @@ class SpeakView: UIView {
         stack.directionalLayoutMargins = NSDirectionalEdgeInsets(top: 10, leading: 15, bottom: 10, trailing: 15)
         stack.layer.shadowColor = UIColor.black.cgColor
         stack.layer.shadowOpacity = 0.2
-        stack.layer.shadowOffset = CGSize(width: 10, height: 10)
-        stack.layer.shadowRadius = 10
+        stack.layer.shadowOffset = CGSize(width: 5, height: 5)
+        stack.layer.shadowRadius = 8
         return stack
     }()
     
@@ -96,6 +96,7 @@ extension SpeakView: ViewCoding {
             stackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
             stackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
             stackView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
+            stackView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor),
         ])
         
     }
