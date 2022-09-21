@@ -12,6 +12,7 @@ class CustomTableViewController: UIViewController {
     private lazy var tableViewController: UITableView = {
         let tvc = UITableView(frame: .zero, style: .plain)
         tvc.backgroundColor = UIColor(named: "bgColor")
+        tvc.allowsSelection = false
         return tvc
     }()
 
