@@ -18,11 +18,11 @@
 		4FA74FAD28CF721C005387CF /* PersonaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA74FAC28CF721C005387CF /* PersonaModel.swift */; };
 		4FA74FB228CF732D005387CF /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 4FA74FB128CF732D005387CF /* Lottie */; };
 		4FA74FB428CF75D7005387CF /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA74FB328CF75D7005387CF /* CircularProgressView.swift */; };
-		B90B6B2328D9E56900E999E1 /* CustomButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90B6B2228D9E56900E999E1 /* CustomButtonView.swift */; };
-		B92300A928D89863001D8C99 /* CardActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92300A828D89863001D8C99 /* CardActivityView.swift */; };
 		4FBB7CCC28DA188500648580 /* CustomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBB7CCB28DA188500648580 /* CustomTableViewController.swift */; };
 		4FBB7CCE28DA18BD00648580 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBB7CCD28DA18BD00648580 /* CustomTableViewCell.swift */; };
 		4FBB7CD228DA98D100648580 /* PinFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBB7CD128DA98D100648580 /* PinFunction.swift */; };
+		B90B6B2328D9E56900E999E1 /* CustomButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90B6B2228D9E56900E999E1 /* CustomButtonView.swift */; };
+		B92300A928D89863001D8C99 /* CardActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92300A828D89863001D8C99 /* CardActivityView.swift */; };
 		B936347A28D4A79300BDC4E6 /* SpeakModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B936347928D4A79300BDC4E6 /* SpeakModelTests.swift */; };
 		B9B55FF028C6235E00B37ED4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B55FEF28C6235E00B37ED4 /* AppDelegate.swift */; };
 		B9B55FF228C6235E00B37ED4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B55FF128C6235E00B37ED4 /* SceneDelegate.swift */; };
@@ -30,6 +30,9 @@
 		B9B55FFC28C6235F00B37ED4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9B55FFA28C6235F00B37ED4 /* LaunchScreen.storyboard */; };
 		B9B5601128C6235F00B37ED4 /* LazylessUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B5601028C6235F00B37ED4 /* LazylessUITests.swift */; };
 		B9B5601328C6235F00B37ED4 /* LazylessUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B5601228C6235F00B37ED4 /* LazylessUITestsLaunchTests.swift */; };
+		FC82C2FC28D88FC4009FBAE5 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		FC82C30028DB4BE2009FBAE5 /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC82C2FF28DB4BE2009FBAE5 /* SliderView.swift */; };
+		FC82C30228DB4BFB009FBAE5 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC82C30128DB4BFB009FBAE5 /* ActivityViewController.swift */; };
 		FC8481CF28CF70CC009FFC06 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8481CE28CF70CC009FFC06 /* File.swift */; };
 /* End PBXBuildFile section */
 
@@ -61,11 +64,11 @@
 		4FA74FAA28CB6778005387CF /* MainBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBackgroundView.swift; sourceTree = "<group>"; };
 		4FA74FAC28CF721C005387CF /* PersonaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonaModel.swift; sourceTree = "<group>"; };
 		4FA74FB328CF75D7005387CF /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
-		B90B6B2228D9E56900E999E1 /* CustomButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonView.swift; sourceTree = "<group>"; };
-		B92300A828D89863001D8C99 /* CardActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardActivityView.swift; sourceTree = "<group>"; };
 		4FBB7CCB28DA188500648580 /* CustomTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewController.swift; sourceTree = "<group>"; };
 		4FBB7CCD28DA18BD00648580 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		4FBB7CD128DA98D100648580 /* PinFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinFunction.swift; sourceTree = "<group>"; };
+		B90B6B2228D9E56900E999E1 /* CustomButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonView.swift; sourceTree = "<group>"; };
+		B92300A828D89863001D8C99 /* CardActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardActivityView.swift; sourceTree = "<group>"; };
 		B936347928D4A79300BDC4E6 /* SpeakModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakModelTests.swift; sourceTree = "<group>"; };
 		B9B55FEC28C6235E00B37ED4 /* Lazyless.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lazyless.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9B55FEF28C6235E00B37ED4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,7 +81,10 @@
 		B9B5601028C6235F00B37ED4 /* LazylessUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazylessUITests.swift; sourceTree = "<group>"; };
 		B9B5601228C6235F00B37ED4 /* LazylessUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazylessUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B9C90BA928D0BD39007AE6F9 /* SpeakViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakViewModel.swift; sourceTree = "<group>"; };
+		FC82C2FF28DB4BE2009FBAE5 /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
+		FC82C30128DB4BFB009FBAE5 /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 		FC8481CE28CF70CC009FFC06 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		FCCEC7AB28D0CA93001C3BE2 /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +124,7 @@
 		4FA74FA628CB6639005387CF /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				FC82C30128DB4BFB009FBAE5 /* ActivityViewController.swift */,
 				4FA74FA828CB6658005387CF /* MainController.swift */,
 				4FBB7CCB28DA188500648580 /* CustomTableViewController.swift */,
 			);
@@ -156,6 +163,7 @@
 				B9B5600528C6235F00B37ED4 /* LazylessTests */,
 				B9B5600F28C6235F00B37ED4 /* LazylessUITests */,
 				B9B55FED28C6235E00B37ED4 /* Products */,
+				FC82C2FE28DB4BBC009FBAE5 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -208,6 +216,7 @@
 		B9B5602428C6306B00B37ED4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FC82C2FF28DB4BE2009FBAE5 /* SliderView.swift */,
 				4FBB7CCF28DA18C700648580 /* Cell */,
 				4F5076DB28D36EAD00DAEF80 /* SpeakView.swift */,
 				4FA74FB328CF75D7005387CF /* CircularProgressView.swift */,
@@ -217,6 +226,14 @@
 				B90B6B2228D9E56900E999E1 /* CustomButtonView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		FC82C2FE28DB4BBC009FBAE5 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				FCCEC7AB28D0CA93001C3BE2 /* ActivityViewController.swift */,
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		FC8481C828CF5CD7009FFC06 /* Model */ = {
@@ -375,6 +392,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC82C30228DB4BFB009FBAE5 /* ActivityViewController.swift in Sources */,
+				FC82C30028DB4BE2009FBAE5 /* SliderView.swift in Sources */,
 				4F5076E128D3766000DAEF80 /* MainController.swift in Sources */,
 				4FBB7CD228DA98D100648580 /* PinFunction.swift in Sources */,
 				4F5076DE28D36EC000DAEF80 /* SpeakModel.swift in Sources */,
@@ -389,6 +408,7 @@
 				FC8481CF28CF70CC009FFC06 /* File.swift in Sources */,
 				4FBB7CCE28DA18BD00648580 /* CustomTableViewCell.swift in Sources */,
 				4FA74FAD28CF721C005387CF /* PersonaModel.swift in Sources */,
+				FC82C2FC28D88FC4009FBAE5 /* (null) in Sources */,
 				4FA74FB428CF75D7005387CF /* CircularProgressView.swift in Sources */,
 				B92300A928D89863001D8C99 /* CardActivityView.swift in Sources */,
 				4FA74FAB28CB6778005387CF /* MainBackgroundView.swift in Sources */,

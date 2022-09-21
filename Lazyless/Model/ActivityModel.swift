@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ActvityModel {
+struct ActivityModel {
     let name: String
     let affectionPoint: Int
     let date: Date?
@@ -17,10 +17,12 @@ struct ActvityModel {
         self.affectionPoint = affectionPoint
         self.date = date
     }
+//    let completed: Bool
 }
 
-let activityModelMock = ActvityModel(
+let activityModelMock = ActivityModel(
     name: "mock",
     affectionPoint: 10,
     date: Date()
+//    completed: false
 )
