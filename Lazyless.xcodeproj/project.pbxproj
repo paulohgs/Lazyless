@@ -18,6 +18,8 @@
 		4FA74FAD28CF721C005387CF /* PersonaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA74FAC28CF721C005387CF /* PersonaModel.swift */; };
 		4FA74FB228CF732D005387CF /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 4FA74FB128CF732D005387CF /* Lottie */; };
 		4FA74FB428CF75D7005387CF /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA74FB328CF75D7005387CF /* CircularProgressView.swift */; };
+		B90B6B2328D9E56900E999E1 /* CustomButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90B6B2228D9E56900E999E1 /* CustomButtonView.swift */; };
+		B92300A928D89863001D8C99 /* CardActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92300A828D89863001D8C99 /* CardActivityView.swift */; };
 		4FBB7CCC28DA188500648580 /* CustomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBB7CCB28DA188500648580 /* CustomTableViewController.swift */; };
 		4FBB7CCE28DA18BD00648580 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBB7CCD28DA18BD00648580 /* CustomTableViewCell.swift */; };
 		4FBB7CD228DA98D100648580 /* PinFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBB7CD128DA98D100648580 /* PinFunction.swift */; };
@@ -59,6 +61,8 @@
 		4FA74FAA28CB6778005387CF /* MainBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBackgroundView.swift; sourceTree = "<group>"; };
 		4FA74FAC28CF721C005387CF /* PersonaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonaModel.swift; sourceTree = "<group>"; };
 		4FA74FB328CF75D7005387CF /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
+		B90B6B2228D9E56900E999E1 /* CustomButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonView.swift; sourceTree = "<group>"; };
+		B92300A828D89863001D8C99 /* CardActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardActivityView.swift; sourceTree = "<group>"; };
 		4FBB7CCB28DA188500648580 /* CustomTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewController.swift; sourceTree = "<group>"; };
 		4FBB7CCD28DA18BD00648580 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		4FBB7CD128DA98D100648580 /* PinFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinFunction.swift; sourceTree = "<group>"; };
@@ -209,6 +213,8 @@
 				4FA74FB328CF75D7005387CF /* CircularProgressView.swift */,
 				4FA74FAA28CB6778005387CF /* MainBackgroundView.swift */,
 				4F31D5CB28D2215C0092A2FC /* HeartView.swift */,
+				B92300A828D89863001D8C99 /* CardActivityView.swift */,
+				B90B6B2228D9E56900E999E1 /* CustomButtonView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -378,11 +384,13 @@
 				4FBB7CCC28DA188500648580 /* CustomTableViewController.swift in Sources */,
 				B9B55FF228C6235E00B37ED4 /* SceneDelegate.swift in Sources */,
 				4F31D5CC28D2215C0092A2FC /* HeartView.swift in Sources */,
+				B90B6B2328D9E56900E999E1 /* CustomButtonView.swift in Sources */,
 				4FA74FA528CB65D8005387CF /* ViewCoding.swift in Sources */,
 				FC8481CF28CF70CC009FFC06 /* File.swift in Sources */,
 				4FBB7CCE28DA18BD00648580 /* CustomTableViewCell.swift in Sources */,
 				4FA74FAD28CF721C005387CF /* PersonaModel.swift in Sources */,
 				4FA74FB428CF75D7005387CF /* CircularProgressView.swift in Sources */,
+				B92300A928D89863001D8C99 /* CardActivityView.swift in Sources */,
 				4FA74FAB28CB6778005387CF /* MainBackgroundView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
