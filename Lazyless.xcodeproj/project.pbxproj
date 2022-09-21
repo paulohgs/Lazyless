@@ -22,6 +22,7 @@
 		B9B5600728C6235F00B37ED4 /* LazylessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B5600628C6235F00B37ED4 /* LazylessTests.swift */; };
 		B9B5601128C6235F00B37ED4 /* LazylessUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B5601028C6235F00B37ED4 /* LazylessUITests.swift */; };
 		B9B5601328C6235F00B37ED4 /* LazylessUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B5601228C6235F00B37ED4 /* LazylessUITestsLaunchTests.swift */; };
+		FC82C2FC28D88FC4009FBAE5 /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC82C2FB28D88FC4009FBAE5 /* SliderView.swift */; };
 		FC8481CF28CF70CC009FFC06 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8481CE28CF70CC009FFC06 /* File.swift */; };
 		FCCEC7AC28D0CA93001C3BE2 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCEC7AB28D0CA93001C3BE2 /* ActivityViewController.swift */; };
 /* End PBXBuildFile section */
@@ -62,6 +63,7 @@
 		B9B5600C28C6235F00B37ED4 /* LazylessUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LazylessUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9B5601028C6235F00B37ED4 /* LazylessUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazylessUITests.swift; sourceTree = "<group>"; };
 		B9B5601228C6235F00B37ED4 /* LazylessUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazylessUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FC82C2FB28D88FC4009FBAE5 /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
 		FC8481CE28CF70CC009FFC06 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		FCCEC7AB28D0CA93001C3BE2 /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -169,6 +171,7 @@
 			children = (
 				4FA74FB328CF75D7005387CF /* CircularProgressView.swift */,
 				4FA74FAA28CB6778005387CF /* MainBackgroundView.swift */,
+				FC82C2FB28D88FC4009FBAE5 /* SliderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				FC8481CF28CF70CC009FFC06 /* File.swift in Sources */,
 				4FA74FA928CB6658005387CF /* MainController.swift in Sources */,
 				4FA74FAD28CF721C005387CF /* PersonaModel.swift in Sources */,
+				FC82C2FC28D88FC4009FBAE5 /* SliderView.swift in Sources */,
 				4FA74FB428CF75D7005387CF /* CircularProgressView.swift in Sources */,
 				4FA74FAB28CB6778005387CF /* MainBackgroundView.swift in Sources */,
 			);

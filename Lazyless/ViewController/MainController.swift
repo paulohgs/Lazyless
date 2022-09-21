@@ -13,6 +13,8 @@ class MainController: UIViewController {
     private let backgroundView: MainBackgroundView = MainBackgroundView()
     private var personaImage: UIImageView = UIImageView(image: UIImage(named: preguicaModel.personaImageName))
     private var imageHeart: UIImageView = UIImageView(image: UIImage(named: preguicaModel.heartImageName))
+    
+    
     //    private var circularProgressBar: CircularProgressView = CircularProgressView(frame: CGRect(x: 0, y: 0, width: 250, height: 250), lineWidth: 5, rounded: true)
 
     override func loadView() {
@@ -25,6 +27,7 @@ class MainController: UIViewController {
         )
         personaImage.addGestureRecognizer(tapGR)
         personaImage.isUserInteractionEnabled = true
+        
 
         // MARK: -Barra de progresso circular config
         //        circularProgressBar.progressColor = .blue
@@ -72,8 +75,23 @@ extension MainController: ViewCoding {
     //  MARK: -objc funcs
     @objc func imageTapped(sender: UITapGestureRecognizer) {
         if sender.state == .ended {
-            let ActivityViewController = ActivityViewController()
-            present(ActivityViewController, animated: true, completion: nil)
+             
+            let activityViewController = ActivityViewController()
+            navigationController?.pushViewController(activityViewController , animated: true)
+            
+            
+            activityViewController.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Confirmar", style: .done, target: self, action: nil)
+//            self.present(UINavigationController(rootViewController: ActivityViewController()), animated: true, completion: nil)
+//
+//            activityViewController.loadViewIfNeeded()
+            
+            let appearance = UINavigationBarAppearance()
+            appearance.configureWithOpaqueBackground()
+            appearance.backgroundColor = .brown
+            
+            
+            
+            
         }
     }
 
