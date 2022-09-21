@@ -96,6 +96,7 @@ extension SpeakView: ViewCoding {
             stackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
             stackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
             stackView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
+            stackView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor),
         ])
         
     }
