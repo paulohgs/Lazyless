@@ -11,7 +11,6 @@ import Lottie
 class MainController: UIViewController {
     
     private var amount: Int = 0
-    
     private let cardActivityView: CardActivityView = CardActivityView()
 
     private var tableView: CustomTableViewController = {
@@ -77,10 +76,7 @@ extension MainController: ViewCoding {
         self.addChild(tableView)
         self.view.addSubview(tableView.view!)
         self.view.addSubview(personaImage)
-        self.view.addSubview(imageHeart)
-        self.view.addSubview(cardActivityView)
-
-        
+        self.view.addSubview(imageHeart) 
     }
 
   
@@ -100,11 +96,6 @@ extension MainController: ViewCoding {
             imageHeart.centerYAnchor.constraint(equalTo: self.personaImage.bottomAnchor),
             imageHeart.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.15),
             imageHeart.heightAnchor.constraint(equalTo: self.imageHeart.widthAnchor),
-            
-            cardActivityView.topAnchor.constraint(equalTo: speakView.bottomAnchor, constant: 50),
-            cardActivityView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height/10),
-            cardActivityView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 10),
-            cardActivityView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -10)
 
 //            speakView.topAnchor.constraint(equalTo: imageHeart.bottomAnchor),
 //            speakView.leadingAnchor.constraint(equalTo: view.leadingAnchor),

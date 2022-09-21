@@ -80,12 +80,14 @@ extension CardActivityView: ViewCoding {
     func setupContrainsts() {
         NSLayoutConstraint.activate([
             // Constraints do texto da atividae
+            activityLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
             activityLabel.bottomAnchor.constraint(equalTo: self.centerYAnchor, constant: -5),
             activityLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 15),
             
             // Constraints da pontuacao
             pontuacaoLabel.topAnchor.constraint(equalTo: self.centerYAnchor, constant: 5),
             pontuacaoLabel.leadingAnchor.constraint(equalTo: activityLabel.leadingAnchor),
+            pontuacaoLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 10),
             
             // Constraints do botao
             checkboxButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -25),

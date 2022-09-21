@@ -8,10 +8,10 @@
 import UIKit
 
 class CustomTableViewCell: UITableViewCell {
-    private let speak: SpeakView = {
-        let speak: SpeakView = SpeakView()
-        speak.translatesAutoresizingMaskIntoConstraints = false
-        return speak
+    private let cardActivity: CardActivityView = {
+        let card: CardActivityView = CardActivityView()
+        card.translatesAutoresizingMaskIntoConstraints = false
+        return card
     }()
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -29,13 +29,15 @@ extension CustomTableViewCell: ViewCoding {
     }
 
     func setupHierarchy() {
-        self.addSubview(speak)
+        self.addSubview(cardActivity)
     }
 
     func setupContrainsts() {
         NSLayoutConstraint.activate([
-            speak.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            speak.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            cardActivity.leadingAnchor.constraint(equalTo: self.leadingAnchor,constant: 10),
+            cardActivity.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
+            cardActivity.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
+            cardActivity.bottomAnchor.constraint(equalTo: self.bottomAnchor),
         ])
     }
 }
