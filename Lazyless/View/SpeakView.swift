@@ -9,6 +9,11 @@ import UIKit
 
 class SpeakView: UIView {
     
+    private lazy var speak = ReadJsonDatabase().loadJson()
+    
+    private lazy var arrayViews: [UIView] = [title, textSpeak, speakButton, cancelButton]
+//    private var textos: String = JSONDecoder().decode(String.self, from: database.json)
+    
     private var title: UILabel = {
         var label = UILabel()
         label.text = "Preguiça-swan:"
@@ -19,9 +24,9 @@ class SpeakView: UIView {
         return label
     }()
     
-    private var textSpeak: UILabel = {
+    private lazy var textSpeak: UILabel = {
         var label = UILabel()
-        label.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ante dolor, vestibulum vel ex sit amet, dignissim vulputate ante. Integer lobortis ante ut risus molestie imperdiet."
+        label.text = speak?.level0[0].talk
         label.textColor = UIColor(named: "textColor")
         label.textAlignment = .justified
         label.font = UIFont.systemFont(ofSize: 18)
@@ -30,11 +35,11 @@ class SpeakView: UIView {
         return label
     }()
     
-    private var speakButton: UIButton = {
+    private lazy var speakButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         var configuration = UIButton.Configuration.borderedProminent()
-        configuration.title = "Falar..."
+        configuration.title = speak?.level0[0].buttonLabel
         configuration.baseForegroundColor = UIColor(named: "darkGrey")
         configuration.baseBackgroundColor = UIColor(named: "secondColor")
         button.configuration = configuration
@@ -42,7 +47,7 @@ class SpeakView: UIView {
         button.addTarget(self, action: #selector(actionButton), for: .touchDown)
         return button
     }()
-    private var habitButton: UIButton = {
+    private var cancelButton: UIButton = {
         let button = UIButton()
         button.setTitle("Cancelar", for: .normal)
         button.setTitleColor(UIColor.systemGray, for: .normal)
@@ -50,7 +55,7 @@ class SpeakView: UIView {
     }()
     
     private lazy var stackView: UIStackView = {
-        let stack = UIStackView(arrangedSubviews: [title, textSpeak, speakButton, habitButton])
+        let stack = UIStackView(arrangedSubviews: [arrayViews[0], arrayViews[1], arrayViews[2], arrayViews[3]])
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.axis = .vertical
         stack.spacing = 15
@@ -77,7 +82,12 @@ class SpeakView: UIView {
     }
 
     @objc func actionButton() {
-        print(#function)
+        textSpeak.text = speak?.level0[1].talk
+        speakButton.setTitle(speak?.level0[1].buttonLabel, for: .normal)
+        speakButton.addTarget(self, action: #selector(createActivity), for: .touchDown)
+    }
+    @objc func createActivity() {
+        print("Tela de Criar Atividades")
     }
 
 }
@@ -105,3 +115,11 @@ extension SpeakView: ViewCoding {
     
     
 }
+
+extension SpeakView: SpeakDelegate {
+    func sendSpeakArray(speak: SpeakModel?) {
+        //
+    }
+    
+}
+

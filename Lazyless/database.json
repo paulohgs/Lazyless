@@ -1,26 +1,22 @@
 {
-    "preguica"{
-        "falasBemVindo"{
-            "fala" {
-                "frase" : "loren impsun"
-                "quantidade" : 1
-            }
-            
+    "level0":[
+        {
+            "talk":"Oiii, tudo bem? Como vc tá? Nao como vc, mas gostariaaaa!",
+            "buttonLabel":"Falar..."
+        },
+        {
+            "talk":"Vamos criar uma atividade? Que tal?",
+            "buttonLabel":"Criar Atividade"
         }
-        "falasAtividadeFeitas"{
-            "fala" {
-                "frase" : "loren impsun"
-                "quantidade" : 1
-            }
-            
+    ],
+    "level1":[
+        {
+            "talk":"loren impsun 4",
+            "buttonLabel":"Falar..."
+        },
+        {
+            "talk":"loren impsun 5",
+            "buttonLabel":"Criar Atividade"
         }
-        "falasAtividadeNaoFeitas"{
-            "fala" {
-                "frase" : "loren impsun"
-                "quantidade" : 1
-            }
-            
-        }
-    }
-
+    ]
 }

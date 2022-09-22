@@ -21,7 +21,8 @@
 		4FBB7CCC28DA188500648580 /* CustomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBB7CCB28DA188500648580 /* CustomTableViewController.swift */; };
 		4FBB7CCE28DA18BD00648580 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBB7CCD28DA18BD00648580 /* CustomTableViewCell.swift */; };
 		4FBB7CD228DA98D100648580 /* PinFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBB7CD128DA98D100648580 /* PinFunction.swift */; };
-		B90B6B2328D9E56900E999E1 /* CustomButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90B6B2228D9E56900E999E1 /* CustomButtonView.swift */; };
+		B91CE86828DC89960066E2F5 /* ReadJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91CE86728DC89960066E2F5 /* ReadJson.swift */; };
+		B91CE86A28DCAC850066E2F5 /* SpeakDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91CE86928DCAC850066E2F5 /* SpeakDelegate.swift */; };
 		B92300A928D89863001D8C99 /* CardActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92300A828D89863001D8C99 /* CardActivityView.swift */; };
 		B936347A28D4A79300BDC4E6 /* SpeakModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B936347928D4A79300BDC4E6 /* SpeakModelTests.swift */; };
 		B9B55FF028C6235E00B37ED4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B55FEF28C6235E00B37ED4 /* AppDelegate.swift */; };
@@ -67,7 +68,8 @@
 		4FBB7CCB28DA188500648580 /* CustomTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewController.swift; sourceTree = "<group>"; };
 		4FBB7CCD28DA18BD00648580 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		4FBB7CD128DA98D100648580 /* PinFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinFunction.swift; sourceTree = "<group>"; };
-		B90B6B2228D9E56900E999E1 /* CustomButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonView.swift; sourceTree = "<group>"; };
+		B91CE86728DC89960066E2F5 /* ReadJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadJson.swift; sourceTree = "<group>"; };
+		B91CE86928DCAC850066E2F5 /* SpeakDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakDelegate.swift; sourceTree = "<group>"; };
 		B92300A828D89863001D8C99 /* CardActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardActivityView.swift; sourceTree = "<group>"; };
 		B936347928D4A79300BDC4E6 /* SpeakModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakModelTests.swift; sourceTree = "<group>"; };
 		B9B55FEC28C6235E00B37ED4 /* Lazyless.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lazyless.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				4FA74FA428CB65D8005387CF /* ViewCoding.swift */,
+				B91CE86928DCAC850066E2F5 /* SpeakDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -146,6 +149,14 @@
 				4FBB7CD128DA98D100648580 /* PinFunction.swift */,
 			);
 			path = "Extensions ";
+			sourceTree = "<group>";
+		};
+		B91CE86628DC89880066E2F5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B91CE86728DC89960066E2F5 /* ReadJson.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		B936347B28D4A79900BDC4E6 /* Models */ = {
@@ -180,6 +191,7 @@
 		B9B55FEE28C6235E00B37ED4 /* Lazyless */ = {
 			isa = PBXGroup;
 			children = (
+				B91CE86628DC89880066E2F5 /* Services */,
 				4FBB7CD028DA98C000648580 /* Extensions  */,
 				4FA74FA228CB65B7005387CF /* Protocols */,
 				FC8481CD28CF70BB009FFC06 /* ViewModel */,
@@ -223,7 +235,6 @@
 				4FA74FAA28CB6778005387CF /* MainBackgroundView.swift */,
 				4F31D5CB28D2215C0092A2FC /* HeartView.swift */,
 				B92300A828D89863001D8C99 /* CardActivityView.swift */,
-				B90B6B2228D9E56900E999E1 /* CustomButtonView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -403,9 +414,10 @@
 				4FBB7CCC28DA188500648580 /* CustomTableViewController.swift in Sources */,
 				B9B55FF228C6235E00B37ED4 /* SceneDelegate.swift in Sources */,
 				4F31D5CC28D2215C0092A2FC /* HeartView.swift in Sources */,
-				B90B6B2328D9E56900E999E1 /* CustomButtonView.swift in Sources */,
+				B91CE86828DC89960066E2F5 /* ReadJson.swift in Sources */,
 				4FA74FA528CB65D8005387CF /* ViewCoding.swift in Sources */,
 				FC8481CF28CF70CC009FFC06 /* File.swift in Sources */,
+				B91CE86A28DCAC850066E2F5 /* SpeakDelegate.swift in Sources */,
 				4FBB7CCE28DA18BD00648580 /* CustomTableViewCell.swift in Sources */,
 				4FA74FAD28CF721C005387CF /* PersonaModel.swift in Sources */,
 				FC82C2FC28D88FC4009FBAE5 /* (null) in Sources */,

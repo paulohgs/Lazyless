@@ -5,12 +5,12 @@
 //  Created by Paulo Henrique Gomes da Silva on 12/09/22.
 //
 
-struct SpeakModel {
-    var title: String
-    var textSpeak: String
+struct SpeakModel: Codable {
+    var level0: [LevelModel]
+    var level1: [LevelModel]
     
-    init(title: String, textSpeak: String) {
-        self.title = title
-        self.textSpeak = textSpeak
+    struct LevelModel: Codable {
+        var talk: String
+        var buttonLabel: String
     }
 }
