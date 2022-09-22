@@ -93,6 +93,12 @@ class SpeakView: UIView {
 }
 
 extension SpeakView: ViewCoding {
+
+    func resetTextSettings() {
+        speakButton.configuration?.title = speak?.level0[0].buttonLabel
+        textSpeak.text = speak?.level0[0].talk
+    }
+
     func setupView() {
         self.addSubview(stackView)
 
