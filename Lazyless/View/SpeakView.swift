@@ -12,9 +12,7 @@ class SpeakView: UIView {
     weak var delegate: SpeakDelegate?
     
     private lazy var speak = ReadJsonDatabase().loadJson()
-    
     private lazy var arrayViews: [UIView] = [title, textSpeak, speakButton, cancelButton]
-//    private var textos: String = JSONDecoder().decode(String.self, from: database.json)
     
     private var title: UILabel = {
         var label = UILabel()
@@ -51,8 +49,13 @@ class SpeakView: UIView {
     }()
     private var cancelButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Cancelar", for: .normal)
-        button.setTitleColor(UIColor.systemGray, for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        var configuration = UIButton.Configuration.borderedProminent()
+        configuration.baseBackgroundColor = .clear
+        configuration.baseForegroundColor = .systemGray
+        button.configuration = configuration
+        button.configuration?.title = "Cancelar"
+        button.addTarget(self, action: #selector(cancel), for: .touchDown)
         return button
     }()
     
@@ -82,16 +85,18 @@ class SpeakView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    //MARK: - objc funcs
+    
     @objc func actionButton() {
         if textSpeak.text == speak?.level0[1].talk {
-            delegate?.sendSpeakArray(speak: speak)
+            delegate?.isActivityButtonTouched(touch: true)
         }
         textSpeak.text = speak?.level0[1].talk
         speakButton.setTitle(speak?.level0[1].buttonLabel, for: .normal)
     }
-    @objc func createActivity() {
-        print("Tela de Criar Atividades")
+
+    @objc func cancel(){
+        delegate?.isCancelButtonTouched(touch: true)
     }
 }
 
@@ -104,7 +109,6 @@ extension SpeakView: ViewCoding {
 
     func setupView() {
         self.addSubview(stackView)
-
     }
     
     func setupContrainsts() {
@@ -121,8 +125,6 @@ extension SpeakView: ViewCoding {
     func setupHierarchy() {
         // define views hierarchy
     }
-    
-    
 }
 
 

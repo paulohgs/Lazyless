@@ -51,12 +51,16 @@ class MainController: UIViewController {
         opaque.layer.opacity = 0.5
         return opaque
     }()
+
+    private var activityController: ActivityViewController = {
+        let controller = ActivityViewController()
+        return controller
+    }()
     
     override func loadView() {
         super.loadView()
 
         speakView.delegate = self
-
         
         let personaImageTap = UITapGestureRecognizer(
             target: self,
@@ -75,7 +79,6 @@ class MainController: UIViewController {
         
         buildLayout()
     }
-    
 }
 
 extension MainController: ViewCoding {
@@ -140,7 +143,23 @@ extension MainController: ViewCoding {
 }
 
 extension MainController: SpeakDelegate {
-    func sendSpeakArray(speak: SpeakModel?){
-        print(speak?.level0.first?.talk ?? "")
+    func isCancelButtonTouched(touch: Bool){
+        speakView.removeFromSuperview()
+        opaqueView.removeFromSuperview()
+        speakView.resetTextSettings()
+    }
+
+    func isActivityButtonTouched(touch: Bool) {
+        if touch {
+            speakView.removeFromSuperview()
+            opaqueView.removeFromSuperview()
+            present(
+                activityController,
+                animated: true,
+                completion: {
+                    self.speakView.resetTextSettings()
+                }
+            )
+        }
     }
 }

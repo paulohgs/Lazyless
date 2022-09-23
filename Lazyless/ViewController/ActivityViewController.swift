@@ -2,10 +2,7 @@ import UIKit
 import SwiftUI
 
 class ActivityViewController: UIViewController {
-    
-    
-    
-    
+
     //Componentes
     private lazy var myfield: UITextField = {
         let textField = UITextField()
@@ -37,9 +34,7 @@ class ActivityViewController: UIViewController {
         //To apply padding
         textField.leftView = paddingView
         textField.leftViewMode = UITextField.ViewMode.always
-        
-        
-        
+
         return textField
     }()
     
@@ -48,25 +43,18 @@ class ActivityViewController: UIViewController {
         slider.translatesAutoresizingMaskIntoConstraints = false
         return slider
     }()
-    
-    
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Crie sua Atividade"
         
         buildLayout()
     }
-    
-    
 }
+
 extension ActivityViewController: ViewCoding {
     func setupView() {
         view.backgroundColor = UIColor(named: "bgColor")
-        
-        
-        
     }
     
     func setupContrainsts() {
@@ -81,10 +69,7 @@ extension ActivityViewController: ViewCoding {
             slider.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: view.bounds.width/40),
             slider.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -view.bounds.width/40),
             slider.heightAnchor.constraint(equalToConstant: view.bounds.height*0.10),
-            
         ])
-        
-        
     }
     
     func setupHierarchy() {

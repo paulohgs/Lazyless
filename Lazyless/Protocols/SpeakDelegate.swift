@@ -8,5 +8,6 @@
 import Foundation
 
 protocol SpeakDelegate: AnyObject {
-    func sendSpeakArray(speak: SpeakModel?)
+    func isCancelButtonTouched(touch: Bool)
+    func isActivityButtonTouched(touch: Bool)
 }
