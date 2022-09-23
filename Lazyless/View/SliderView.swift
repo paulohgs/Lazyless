@@ -9,6 +9,8 @@ import UIKit
 
 class SliderView: UIView {
     
+    weak var delegate: ActivityViewDelegate?
+    
     private lazy var slider: UISlider = {
 //        let slider = UISlider(frame: CGRect(x: 0, y: 0, width: 150, height: 200))
         let slider = UISlider(frame: .zero)
@@ -87,14 +89,11 @@ class SliderView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    
-
 }
 
 extension SliderView: ViewCoding {
     func setupView() {
-        self.backgroundColor = .systemBackground
+        self.backgroundColor = UIColor(named: "cardColor")
         self.layer.cornerRadius = 18
     }
     
