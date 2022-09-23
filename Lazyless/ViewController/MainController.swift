@@ -54,6 +54,9 @@ class MainController: UIViewController {
     
     override func loadView() {
         super.loadView()
+
+        speakView.delegate = self
+
         
         let personaImageTap = UITapGestureRecognizer(
             target: self,
@@ -133,5 +136,11 @@ extension MainController: ViewCoding {
             ])
             opaqueView.pin(to: view) //Contraints 
         }
+    }
+}
+
+extension MainController: SpeakDelegate {
+    func sendSpeakArray(speak: SpeakModel?){
+        print(speak?.level0.first?.talk ?? "")
     }
 }

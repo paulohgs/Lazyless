@@ -228,8 +228,8 @@
 		B9B5602428C6306B00B37ED4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FC82C2FF28DB4BE2009FBAE5 /* SliderView.swift */,
 				4FBB7CCF28DA18C700648580 /* Cell */,
+				FC82C2FF28DB4BE2009FBAE5 /* SliderView.swift */,
 				4F5076DB28D36EAD00DAEF80 /* SpeakView.swift */,
 				4FA74FB328CF75D7005387CF /* CircularProgressView.swift */,
 				4FA74FAA28CB6778005387CF /* MainBackgroundView.swift */,

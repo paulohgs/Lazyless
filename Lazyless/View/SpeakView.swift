@@ -8,6 +8,8 @@
 import UIKit
 
 class SpeakView: UIView {
+
+    weak var delegate: SpeakDelegate?
     
     private lazy var speak = ReadJsonDatabase().loadJson()
     
@@ -16,7 +18,7 @@ class SpeakView: UIView {
     
     private var title: UILabel = {
         var label = UILabel()
-        label.text = "Preguiça-swan:"
+        label.text = "\(preguicaModel.personaName):"
         label.textAlignment = .left
         label.textColor = UIColor(named: "titleColor")
         label.font = UIFont.systemFont(ofSize: 22)
@@ -82,21 +84,22 @@ class SpeakView: UIView {
     }
 
     @objc func actionButton() {
+        if textSpeak.text == speak?.level0[1].talk {
+            delegate?.sendSpeakArray(speak: speak)
+        }
         textSpeak.text = speak?.level0[1].talk
         speakButton.setTitle(speak?.level0[1].buttonLabel, for: .normal)
-        speakButton.addTarget(self, action: #selector(createActivity), for: .touchDown)
     }
     @objc func createActivity() {
         print("Tela de Criar Atividades")
     }
-
 }
 
 extension SpeakView: ViewCoding {
 
     func resetTextSettings() {
-        speakButton.configuration?.title = speak?.level0[0].buttonLabel
         textSpeak.text = speak?.level0[0].talk
+        speakButton.setTitle(speak?.level0[0].buttonLabel, for: .normal)
     }
 
     func setupView() {
@@ -122,10 +125,4 @@ extension SpeakView: ViewCoding {
     
 }
 
-extension SpeakView: SpeakDelegate {
-    func sendSpeakArray(speak: SpeakModel?) {
-        //
-    }
-    
-}
 

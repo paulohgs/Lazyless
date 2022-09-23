@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol SpeakDelegate {
+protocol SpeakDelegate: AnyObject {
     func sendSpeakArray(speak: SpeakModel?)
 }
