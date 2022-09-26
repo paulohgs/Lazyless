@@ -9,22 +9,24 @@ import UIKit
 
 class CardActivityView: UIView {
     
+    var cardTitle: String
+    var pontuation: Float
+    
     private var isChecked: Bool = false
     
     private lazy var activityLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Nome da atividade"
+        label.text = cardTitle
         label.textColor = UIColor(named: "darkGrey")
         label.font = UIFont.systemFont(ofSize: 24)
         return label
     }()
     
     private lazy var pontuacaoLabel: UILabel = {
-        let pontuacao: Int = 0
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Pontuação: \(pontuacao)"
+        label.text = "Pontuação: \(pontuation)"
         label.textColor = UIColor.gray
         label.font = UIFont.systemFont(ofSize: 18)
         return label
@@ -41,7 +43,9 @@ class CardActivityView: UIView {
         return button
     }()
     
-    init() {
+    init(cardTitle: String, pontuation: Float) {
+        self.pontuation = pontuation
+        self.cardTitle = cardTitle
         super.init(frame: UIScreen.main.bounds)
         buildLayout()
     }
@@ -86,18 +90,12 @@ extension CardActivityView: ViewCoding {
             checkboxButton.widthAnchor.constraint(equalToConstant: 35),
 
             // Constraints do texto da atividae
-//            activityLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
-//            activityLabel.bottomAnchor.constraint(equalTo: self.centerYAnchor, constant: -5),
-//            activityLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 15),
             activityLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
             activityLabel.bottomAnchor.constraint(equalTo: self.centerYAnchor),
             activityLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
             activityLabel.trailingAnchor.constraint(equalTo: checkboxButton.leadingAnchor),
             
             // Constraints da pontuacao
-//            pontuacaoLabel.topAnchor.constraint(equalTo: self.centerYAnchor, constant: 5),
-//            pontuacaoLabel.leadingAnchor.constraint(equalTo: activityLabel.leadingAnchor),
-//            pontuacaoLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 10),
             pontuacaoLabel.topAnchor.constraint(equalTo: activityLabel.bottomAnchor),
             pontuacaoLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor),
             pontuacaoLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),

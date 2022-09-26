@@ -2,6 +2,8 @@ import UIKit
 import SwiftUI
 
 class ActivityViewController: UIViewController {
+    
+    weak var delegate: ActivityToTableViewDelegate?
 
     //Componentes
     private lazy var myfield: UITextField = {
@@ -41,21 +43,7 @@ class ActivityViewController: UIViewController {
     private lazy var slider: SliderView = {
         let slider = SliderView()
         slider.translatesAutoresizingMaskIntoConstraints = false
-        slider.delegate = self
         return slider
-    }()
-    
-    private lazy var saveActivityButton: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        var configuration = UIButton.Configuration.borderedProminent()
-        configuration.baseForegroundColor = UIColor.darkGray
-        configuration.baseBackgroundColor = UIColor(named: "secondColor")
-        button.configuration = configuration
-        button.setTitle("Salvar atividade", for: .normal)
-        button.layer.cornerRadius = 10
-        button.addTarget(self, action: #selector(saveActivity), for: .touchDown)
-        return button
     }()
 
     override func viewDidLoad() {
@@ -67,7 +55,7 @@ class ActivityViewController: UIViewController {
     }
 
     private func configureItems(){
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem (title: "Confirmar", style: .done, target: self, action: nil)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem (title: "Confirmar", style: .done, target: self, action: #selector(saveActivity))
     }
 }
 
@@ -89,35 +77,21 @@ extension ActivityViewController: ViewCoding {
             slider.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -view.bounds.width/40),
             slider.heightAnchor.constraint(equalToConstant: view.bounds.height*0.10),
         ])
-        NSLayoutConstraint.activate([
-            saveActivityButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -50),
-            saveActivityButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
-            saveActivityButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10)
-        ])
     }
     
     func setupHierarchy() {
         view.addSubview(myfield)
         view.addSubview(slider)
-        view.addSubview(saveActivityButton)
     }
     
     @objc func saveActivity() {
         //
-        print(myfield.text ?? "erro")
+//        print(myfield.text ?? "erro")
+        delegate?.createActivity(text: myfield.text!, value: slider.sliderValue)
+//        print(slider.sliderValue)
+        navigationController?.popViewController(animated: true)
+        dismiss(animated: true)
     }
-    
-}
-
-extension ActivityViewController: ActivityViewDelegate {
-    func getTextInput(text: String) -> String {
-        return text
-    }
-    
-    func getSliderValue(val: Int) -> Int {
-        return val
-    }
-    
     
 }
 

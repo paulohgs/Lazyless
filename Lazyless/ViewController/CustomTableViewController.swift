@@ -8,6 +8,11 @@
 import UIKit
 
 class CustomTableViewController: UIViewController {
+    
+    private var activityVC: ActivityViewController = ActivityViewController()
+    private var text: String = "erro"
+    private var value: Float = 0.0
+    private lazy var lista: [CustomTableViewCell] = []
 
     private lazy var tableViewController: UITableView = {
         let tvc = UITableView(frame: .zero, style: .plain)
@@ -19,6 +24,8 @@ class CustomTableViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
+        activityVC.delegate = self
+        
     }
 
     func configureTableView() {
@@ -45,16 +52,23 @@ class CustomTableViewController: UIViewController {
 
 extension CustomTableViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        10
+        lista.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: CustomTableViewCell = CustomTableViewCell()
+        let cell: CustomTableViewCell = lista[indexPath.row]
         cell.backgroundColor = UIColor(named: "bgColor")
         return cell
     }
 
-
 }
 
-
+extension CustomTableViewController: ActivityToTableViewDelegate {
+    func createActivity(text: String, value: Float) {
+        // criar
+        // recarregar a tableview
+        let cell = CustomTableViewCell(titleCard: text, pontuationValue: value)
+        lista.append(cell)
+        tableViewController.reloadData()
+    }
+}
