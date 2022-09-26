@@ -10,8 +10,6 @@ import Lottie
 
 class MainController: UIViewController {
     
-    private let cardActivityView: CardActivityView = CardActivityView()
-    
     private var tableView: CustomTableViewController = {
         var tvc = CustomTableViewController()
         tvc.view.translatesAutoresizingMaskIntoConstraints = false
@@ -160,8 +158,10 @@ extension MainController: SpeakDelegate {
 //                    self.speakView.resetTextSettings()
 //                }
 //            )
-            let vc = ActivityViewController()
-            navigationController?.pushViewController(vc, animated: true)
+           
+            activityController.delegate = tableView
+            navigationController?.pushViewController(activityController, animated: true)
+            
         }
     }
 }
