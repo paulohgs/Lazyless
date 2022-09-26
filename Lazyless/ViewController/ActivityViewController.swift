@@ -2,10 +2,7 @@ import UIKit
 import SwiftUI
 
 class ActivityViewController: UIViewController {
-    
-    
-    
-    
+
     //Componentes
     private lazy var myfield: UITextField = {
         let textField = UITextField()
@@ -17,7 +14,7 @@ class ActivityViewController: UIViewController {
         
         //Basic texfield Setup
         textField.borderStyle = .none
-        textField.backgroundColor = .systemBackground
+        textField.backgroundColor = UIColor(named: "cardColor")
 
         //To apply corner radius
 //        textField.layer.cornerRadius = textField.frame.size.height / 2
@@ -37,36 +34,46 @@ class ActivityViewController: UIViewController {
         //To apply padding
         textField.leftView = paddingView
         textField.leftViewMode = UITextField.ViewMode.always
-        
-        
-        
+
         return textField
     }()
     
     private lazy var slider: SliderView = {
         let slider = SliderView()
         slider.translatesAutoresizingMaskIntoConstraints = false
+        slider.delegate = self
         return slider
     }()
     
-    
-    
-    
+    private lazy var saveActivityButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        var configuration = UIButton.Configuration.borderedProminent()
+        configuration.baseForegroundColor = UIColor.darkGray
+        configuration.baseBackgroundColor = UIColor(named: "secondColor")
+        button.configuration = configuration
+        button.setTitle("Salvar atividade", for: .normal)
+        button.layer.cornerRadius = 10
+        button.addTarget(self, action: #selector(saveActivity), for: .touchDown)
+        return button
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Crie sua Atividade"
-        
+
+        configureItems()
         buildLayout()
     }
-    
-    
+
+    private func configureItems(){
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem (title: "Confirmar", style: .done, target: self, action: nil)
+    }
 }
+
 extension ActivityViewController: ViewCoding {
     func setupView() {
         view.backgroundColor = UIColor(named: "bgColor")
-        
-        
-        
     }
     
     func setupContrainsts() {
@@ -81,15 +88,34 @@ extension ActivityViewController: ViewCoding {
             slider.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: view.bounds.width/40),
             slider.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -view.bounds.width/40),
             slider.heightAnchor.constraint(equalToConstant: view.bounds.height*0.10),
-            
         ])
-        
-        
+        NSLayoutConstraint.activate([
+            saveActivityButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -50),
+            saveActivityButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
+            saveActivityButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10)
+        ])
     }
     
     func setupHierarchy() {
         view.addSubview(myfield)
         view.addSubview(slider)
+        view.addSubview(saveActivityButton)
+    }
+    
+    @objc func saveActivity() {
+        //
+        print(myfield.text ?? "erro")
+    }
+    
+}
+
+extension ActivityViewController: ActivityViewDelegate {
+    func getTextInput(text: String) -> String {
+        return text
+    }
+    
+    func getSliderValue(val: Int) -> Int {
+        return val
     }
     
     

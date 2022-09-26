@@ -8,10 +8,15 @@
 import UIKit
 
 class SpeakView: UIView {
+
+    weak var delegate: SpeakDelegate?
+    
+    private lazy var speak = ReadJsonDatabase().loadJson()
+    private lazy var arrayViews: [UIView] = [title, textSpeak, speakButton, cancelButton]
     
     private var title: UILabel = {
         var label = UILabel()
-        label.text = "Preguiça-swan:"
+        label.text = "\(preguicaModel.personaName):"
         label.textAlignment = .left
         label.textColor = UIColor(named: "titleColor")
         label.font = UIFont.systemFont(ofSize: 22)
@@ -19,9 +24,9 @@ class SpeakView: UIView {
         return label
     }()
     
-    private var textSpeak: UILabel = {
+    private lazy var textSpeak: UILabel = {
         var label = UILabel()
-        label.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ante dolor, vestibulum vel ex sit amet, dignissim vulputate ante. Integer lobortis ante ut risus molestie imperdiet."
+        label.text = speak?.level0[0].talk
         label.textColor = UIColor(named: "textColor")
         label.textAlignment = .justified
         label.font = UIFont.systemFont(ofSize: 18)
@@ -30,11 +35,11 @@ class SpeakView: UIView {
         return label
     }()
     
-    private var speakButton: UIButton = {
+    private lazy var speakButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         var configuration = UIButton.Configuration.borderedProminent()
-        configuration.title = "Falar..."
+        configuration.title = speak?.level0[0].buttonLabel
         configuration.baseForegroundColor = UIColor(named: "darkGrey")
         configuration.baseBackgroundColor = UIColor(named: "secondColor")
         button.configuration = configuration
@@ -42,15 +47,20 @@ class SpeakView: UIView {
         button.addTarget(self, action: #selector(actionButton), for: .touchDown)
         return button
     }()
-    private var habitButton: UIButton = {
+    private var cancelButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Cancelar", for: .normal)
-        button.setTitleColor(UIColor.systemGray, for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        var configuration = UIButton.Configuration.borderedProminent()
+        configuration.baseBackgroundColor = .clear
+        configuration.baseForegroundColor = .systemGray
+        button.configuration = configuration
+        button.configuration?.title = "Cancelar"
+        button.addTarget(self, action: #selector(cancel), for: .touchDown)
         return button
     }()
     
     private lazy var stackView: UIStackView = {
-        let stack = UIStackView(arrangedSubviews: [title, textSpeak, speakButton, habitButton])
+        let stack = UIStackView(arrangedSubviews: [arrayViews[0], arrayViews[1], arrayViews[2], arrayViews[3]])
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.axis = .vertical
         stack.spacing = 15
@@ -75,17 +85,30 @@ class SpeakView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    //MARK: - objc funcs
+    
     @objc func actionButton() {
-        print(#function)
+        if textSpeak.text == speak?.level0[1].talk {
+            delegate?.isActivityButtonTouched(touch: true)
+        }
+        textSpeak.text = speak?.level0[1].talk
+        speakButton.setTitle(speak?.level0[1].buttonLabel, for: .normal)
     }
 
+    @objc func cancel(){
+        delegate?.isCancelButtonTouched(touch: true)
+    }
 }
 
 extension SpeakView: ViewCoding {
+
+    func resetTextSettings() {
+        textSpeak.text = speak?.level0[0].talk
+        speakButton.setTitle(speak?.level0[0].buttonLabel, for: .normal)
+    }
+
     func setupView() {
         self.addSubview(stackView)
-
     }
     
     func setupContrainsts() {
@@ -102,6 +125,6 @@ extension SpeakView: ViewCoding {
     func setupHierarchy() {
         // define views hierarchy
     }
-    
-    
 }
+
+

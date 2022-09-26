@@ -22,7 +22,7 @@ struct Persona {
 }
 
 var preguicaModel = Persona(
-    personaName: "Preguica-Oneswan",
+    personaName: "Preguica-swan",
     personaImageName: "preguica",
     heartLevel: 1 ,
     heartImageName: "heart"

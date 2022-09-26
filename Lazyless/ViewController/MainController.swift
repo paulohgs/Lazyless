@@ -10,26 +10,25 @@ import Lottie
 
 class MainController: UIViewController {
     
-    private var amount: Int = 0
     private let cardActivityView: CardActivityView = CardActivityView()
-
+    
     private var tableView: CustomTableViewController = {
         var tvc = CustomTableViewController()
         tvc.view.translatesAutoresizingMaskIntoConstraints = false
         return tvc
     }()
-
+    
     private let backgroundView: MainBackgroundView = {
         let root = MainBackgroundView()
         return root
     }()
-
+    
     private lazy var personaImage: UIImageView = {
         var imagev = UIImageView(image: UIImage(named: preguicaModel.personaImageName))
         imagev.translatesAutoresizingMaskIntoConstraints = false
         return imagev
     }()
-
+    
     private var imageHeart: HeartView = {
         var heart = HeartView()
         heart.layer.shadowOpacity = 0.70
@@ -38,13 +37,13 @@ class MainController: UIViewController {
         heart.translatesAutoresizingMaskIntoConstraints = false
         return heart
     }()
-
-    private let speakView: SpeakView = {
+    
+    private var speakView: SpeakView = {
         var speakView = SpeakView()
         speakView.translatesAutoresizingMaskIntoConstraints = false
         return speakView
     }()
-
+    
     private let opaqueView: UIView = {
         var opaque = UIView()
         opaque.translatesAutoresizingMaskIntoConstraints = false
@@ -53,108 +52,116 @@ class MainController: UIViewController {
         return opaque
     }()
 
+    private var activityController: ActivityViewController = {
+        let controller = ActivityViewController()
+        return controller
+    }()
+    
     override func loadView() {
         super.loadView()
+
+        speakView.delegate = self
         
-        let tapGR = UITapGestureRecognizer(
+        let personaImageTap = UITapGestureRecognizer(
             target: self,
             action: #selector(imageTapped)
         )
         
-        personaImage.addGestureRecognizer(tapGR)
+        let opaqueViewTap = UITapGestureRecognizer(
+            target: self,
+            action: #selector(touchedOpaqueView)
+        )
+        
+        opaqueView.addGestureRecognizer(opaqueViewTap)
+        opaqueView.isUserInteractionEnabled = true
+        personaImage.addGestureRecognizer(personaImageTap)
         personaImage.isUserInteractionEnabled = true
         
         buildLayout()
     }
-
 }
 
 extension MainController: ViewCoding {
-
+    
     func setupHierarchy() {
-        print(#function)
         self.addChild(tableView)
         self.view.addSubview(tableView.view!)
         self.view.addSubview(personaImage)
-        self.view.addSubview(imageHeart) 
+        self.view.addSubview(imageHeart)
     }
-
-  
-
+    
+    
+    
     func setupContrainsts() {
-
+        
         imageHeart.contentMode = .scaleAspectFit
         personaImage.contentMode = .scaleAspectFit
-
+        
         NSLayoutConstraint.activate([
             personaImage.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
             personaImage.centerYAnchor.constraint(equalTo: self.backgroundView.rectBar.bottomAnchor, constant: -25),
             personaImage.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.60),
             personaImage.heightAnchor.constraint(equalTo: self.personaImage.widthAnchor),
-
+            
             imageHeart.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
             imageHeart.centerYAnchor.constraint(equalTo: self.personaImage.bottomAnchor),
             imageHeart.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.15),
             imageHeart.heightAnchor.constraint(equalTo: self.imageHeart.widthAnchor),
-
-//            speakView.topAnchor.constraint(equalTo: imageHeart.bottomAnchor),
-//            speakView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-//            speakView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-
+            
             tableView.view.topAnchor.constraint(equalTo: imageHeart.bottomAnchor, constant: 12),
             tableView.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             tableView.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             tableView.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-
-//            opaqueView.topAnchor.constraint(equalTo: view.topAnchor),
-//            opaqueView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-//            opaqueView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-//            opaqueView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
         ])
     }
     func setupView() {
         self.view = backgroundView
     }
+
     //  MARK: -objc funcs
+
+    @objc func touchedOpaqueView (sender: UITapGestureRecognizer){
+        if sender.state == .ended {
+            opaqueView.removeFromSuperview()
+            speakView.removeFromSuperview()
+            speakView.resetTextSettings()
+        }
+    }
     @objc func imageTapped(sender: UITapGestureRecognizer) {
         if sender.state == .ended {
-             
-//            let activityViewController = ActivityViewController()
-//            navigationController?.pushViewController(activityViewController , animated: true)
-//
-//
-//            activityViewController.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Confirmar", style: .done, target: self, action: nil)
-////            self.present(UINavigationController(rootViewController: ActivityViewController()), animated: true, completion: nil)
-////
-////            activityViewController.loadViewIfNeeded()
-//
-//            let appearance = UINavigationBarAppearance()
-//            appearance.configureWithOpaqueBackground()
-//            appearance.backgroundColor = .brown
-            
-            if amount == 0 {
-                view.insertSubview(speakView, belowSubview: personaImage)
-                view.insertSubview(opaqueView, belowSubview: speakView)
-                NSLayoutConstraint.activate([
-                    speakView.topAnchor.constraint(equalTo: imageHeart.bottomAnchor),
-                    speakView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-                    speakView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-                ])
-                opaqueView.pin(to: view) //Contraints
-            }else if amount < 5 {
-                print(amount)
-            }
-            else if amount == 5 {
-                opaqueView.removeFromSuperview()
-                speakView.removeFromSuperview()
-                amount = -2
-            }
-            amount += 1
+            view.insertSubview(speakView, belowSubview: personaImage)
+            view.insertSubview(opaqueView, belowSubview: speakView)
+
+            NSLayoutConstraint.activate([
+                speakView.topAnchor.constraint(equalTo: imageHeart.bottomAnchor),
+                speakView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+                speakView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            ])
+            opaqueView.pin(to: view) //Contraints 
         }
-            else if amount == 5 {
-                opaqueView.removeFromSuperview()
-                speakView.removeFromSuperview()
-                amount = -2
-            }
+    }
+}
+
+extension MainController: SpeakDelegate {
+    func isCancelButtonTouched(touch: Bool){
+        speakView.removeFromSuperview()
+        opaqueView.removeFromSuperview()
+        speakView.resetTextSettings()
+    }
+
+    func isActivityButtonTouched(touch: Bool) {
+        if touch {
+            speakView.removeFromSuperview()
+            opaqueView.removeFromSuperview()
+//            present(
+//                activityController,
+//                animated: true,
+//                completion: {
+//                    self.speakView.resetTextSettings()
+//                }
+//            )
+            let vc = ActivityViewController()
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
 }
