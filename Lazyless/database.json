@@ -11,11 +11,101 @@
     ],
     "level1":[
         {
-            "talk":"loren impsun 4",
+            "talk":"Eu vim de um mundo que as pessoas são agraciadas pelos seus pecados, e representavam eles no mundo, acabei saindo de lá, não aguentava mais aquelas pessoas, o irmão Ira insuportavel.",
             "buttonLabel":"Falar..."
         },
         {
-            "talk":"loren impsun 5",
+            "talk":"Quero mudar um pouco, provar novas coisas, vamos fazer algo diferente? ",
+            "buttonLabel":"Criar Atividade"
+        }
+    ]
+    "level2":[
+        {
+            "talk":"Sempre tive muita curiosidade de saber como ser diferente, fazer além daquilo que eu imagino, sair daquele mundo foi o melhor que eu podia fazer, já me sinto outra pessoa",
+            "buttonLabel":"Falar..."
+        },
+        {
+            "talk":"Vamos fazer algo, andar pela cidade, praticar um esporte diferente, levantar ferro kkkkk?",
+            "buttonLabel":"Criar Atividade"
+        }
+    ],
+    "level3":[
+        {
+            "talk":"Será que algum dia você vai conhecer meus irmãos, eles so tinham uma função e faziam ela o dia todo, ser aquilo que os outros disseram que eles tinham que ser sem nunca sair dessa ideia",
+            "buttonLabel":"Falar..."
+        },
+        {
+            "talk":"Aniki vamos estudar algo hoje? Queria entender porque o bocejo é contagioso, Yaaawnn",
+            "buttonLabel":"Criar Atividade"
+        }
+    ]
+    "level4":[
+        {
+            "talk":"O Irmão gula vivia cozinhando coisas novas para comer o bolo de banana dele era uma delica hmm que fome",
+            "buttonLabel":"Falar..."
+        },
+        {
+            "talk":"Vamos fazer que atividade hoje? Já sei podemos cozinhar algo novo!",
+            "buttonLabel":"Criar Atividade"
+        }
+    ],
+    "level5":[
+        {
+            "talk":"No meu mundo todas as familias tinham 7 filhos cada um embuido de 1 pecado para seguir, vivo me pergutando porque me definiram como a preguiça, eu poderia muito bem ser a avareza, HUM",
+            "buttonLabel":"Falar..."
+        },
+        {
+            "talk":"Vamos criar uma atividade, estava pensando em mudar meu estilo de cabelo. O que você acha?",
+            "buttonLabel":"Criar Atividade"
+        }
+    ]
+    "level6":[
+        {
+            "talk":"sabe nos moravamos em um pequena vila meus pais e meus irmãos, eramos instigados a sair de casa e conhecer o mundo da sua maneira, um dia a irmã avareza saiu de casa e nunca mais voltou, mas o pais disseram que era normal pro seu aspecto, será que algum dia eu sairei de casa também",
+            "buttonLabel":"Falar..."
+        },
+        {
+            "talk":"Eu quero andar pela cidade hoje, para onde podemos ir?",
+            "buttonLabel":"Criar Atividade"
+        }
+    ],
+    "level7":[
+        {
+            "talk":"O irmão ira tinha o mesmo aspecto do pai, os dois eram bizarramente fortes, sempre faziam a segurança de onde nós moravamos, ele tinha o dom de ficar cada vez mais forte com a raiva, eu ja vi ele destruir uma arvore com um soco. Meu aspecto so me permite fazer os outros dormirem, ywan e eu também!",
+            "buttonLabel":"Falar..."
+        },
+        {
+            "talk":"Será que eu consigo ficar forte como ele algum dia? Vamos fazer algum exercício hoje!!!",
+            "buttonLabel":"Criar Atividade"
+        }
+    ]
+    "level8":[
+        {
+            "talk":"Você um dia gostaria de conhecer o meu mundo? Talvez eles até te nomeariam com algum aspecto. A é mesmo nunca te falei como eu vim pro seu mundo, lá existia algo chamado Polo, muito similar a magia daqui. Eu robei um artefato que me teleportou para cá e perdi ele na viagem, me pergunto onde ele está agora?",
+            "buttonLabel":"Falar..."
+        },
+        {
+            "talk":"Será que algum dia podemos fazer alguma viagem juntos?",
+            "buttonLabel":"Criar Atividade"
+        }
+    ],
+    "level9":[
+        {
+            "talk":"Faz tempo que eu moro aqui, Me pergunto se meus irmãos ainda me reconheceriam?",
+            "buttonLabel":"Falar..."
+        },
+        {
+            "talk":"Quero ler algo hoje, será que poderiamos ler algum livro?",
+            "buttonLabel":"Criar Atividade"
+        }
+    ]
+    "level10":[
+        {
+            "talk":"já somos grandes amigos, Algum dia quero te apresentar meus irmãos, sinto que esse dia está chegando",
+            "buttonLabel":"Falar..."
+        },
+        {
+            "talk":"Me sinto incrível hoje,VAMOS FAZER ALGO!!?!!",
             "buttonLabel":"Criar Atividade"
         }
     ]
