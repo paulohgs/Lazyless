@@ -153,13 +153,15 @@ extension MainController: SpeakDelegate {
         if touch {
             speakView.removeFromSuperview()
             opaqueView.removeFromSuperview()
-            present(
-                activityController,
-                animated: true,
-                completion: {
-                    self.speakView.resetTextSettings()
-                }
-            )
+//            present(
+//                activityController,
+//                animated: true,
+//                completion: {
+//                    self.speakView.resetTextSettings()
+//                }
+//            )
+            let vc = ActivityViewController()
+            navigationController?.pushViewController(vc, animated: true)
         }
     }
 }

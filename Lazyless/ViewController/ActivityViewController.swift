@@ -61,9 +61,14 @@ class ActivityViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Crie sua Atividade"
+
+        configureItems()
         buildLayout()
     }
-    
+
+    private func configureItems(){
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem (title: "Confirmar", style: .done, target: self, action: nil)
+    }
 }
 
 extension ActivityViewController: ViewCoding {
