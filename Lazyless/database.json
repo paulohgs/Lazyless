@@ -1,11 +1,11 @@
 {
     "level0":[
         {
-            "talk":"Oiii, tudo bem? Como vc tá? Nao como vc, mas gostariaaaa!",
+            "talk":"Aaaahh, quem é você? Pq eu to aqui? Não consigo nem ao menos respirar direito! Você poderia me ajudar?",
             "buttonLabel":"Falar..."
         },
         {
-            "talk":"Vamos criar uma atividade? Que tal?",
+            "talk":"Obrigado por querer me ajudar, mas acontece que pra eu conseguir melhorar, você precisa fazer alguma atividade, básica mesmo, assim eu vou conseguindo energia novamente! Cria uma atividade, por favor!",
             "buttonLabel":"Criar Atividade"
         }
     ],
