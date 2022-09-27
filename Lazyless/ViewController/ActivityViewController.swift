@@ -2,6 +2,8 @@ import UIKit
 import SwiftUI
 
 class ActivityViewController: UIViewController {
+    
+    weak var delegate: ActivityToTableViewDelegate?
 
     //Componentes
     private lazy var myfield: UITextField = {
@@ -42,7 +44,6 @@ class ActivityViewController: UIViewController {
     private lazy var slider: SliderView = {
         let slider = SliderView()
         slider.translatesAutoresizingMaskIntoConstraints = false
-        slider.delegate = self
         return slider
     }()
     
@@ -69,6 +70,7 @@ class ActivityViewController: UIViewController {
     }()
     
 
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Crie sua Atividade"
@@ -78,7 +80,7 @@ class ActivityViewController: UIViewController {
     }
 
     private func configureItems(){
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem (title: "Confirmar", style: .done, target: self, action: nil)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem (title: "Confirmar", style: .done, target: self, action: #selector(saveActivity))
     }
 }
 
@@ -122,7 +124,6 @@ extension ActivityViewController: ViewCoding {
     func setupHierarchy() {
         view.addSubview(myfield)
         view.addSubview(slider)
-        
         view.addSubview(headerTextInput)
         view.addSubview(footerSlider)
         view.addSubview(headerSlider)
@@ -130,20 +131,12 @@ extension ActivityViewController: ViewCoding {
     
     @objc func saveActivity() {
         //
-        print(myfield.text ?? "erro")
+//        print(myfield.text ?? "erro")
+        delegate?.createActivity(text: myfield.text!, value: slider.sliderValue)
+//        print(slider.sliderValue)
+        navigationController?.popViewController(animated: true)
+        dismiss(animated: true)
     }
-    
-}
-
-extension ActivityViewController: ActivityViewDelegate {
-    func getTextInput(text: String) -> String {
-        return text
-    }
-    
-    func getSliderValue(val: Int) -> Int {
-        return val
-    }
-    
     
 }
 

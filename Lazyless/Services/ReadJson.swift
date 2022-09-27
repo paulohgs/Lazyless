@@ -19,7 +19,6 @@ struct ReadJsonDatabase {
             } catch {
                 print("error:\(error)")
             }
-
         }
         return nil
     }

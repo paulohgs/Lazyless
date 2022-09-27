@@ -31,11 +31,12 @@ final class SpeakModelTests: XCTestCase {
     }
     
     func test_activityModelInit_activityInstanceIsNotNil() {
-        let activity = ActvityModel(
+        let activity = ActivityModel(
             name: "Beber água",
             affectionPoint: 30,
             date: nil
         )
+        
         XCTAssertNotNil(activity)
     }
     

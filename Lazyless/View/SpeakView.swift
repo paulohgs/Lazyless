@@ -47,7 +47,7 @@ class SpeakView: UIView {
         button.addTarget(self, action: #selector(actionButton), for: .touchDown)
         return button
     }()
-    private var cancelButton: UIButton = {
+    private lazy var cancelButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         var configuration = UIButton.Configuration.borderedProminent()

@@ -10,8 +10,6 @@ import Lottie
 
 class MainController: UIViewController {
     
-    private let cardActivityView: CardActivityView = CardActivityView()
-    
     private var tableView: CustomTableViewController = {
         var tvc = CustomTableViewController()
         tvc.view.translatesAutoresizingMaskIntoConstraints = false
@@ -28,8 +26,18 @@ class MainController: UIViewController {
         imagev.translatesAutoresizingMaskIntoConstraints = false
         return imagev
     }()
-    
-    private var imageHeart: HeartView = {
+
+    private let circularProgressBar: CircularProgressView = {
+        let circularProgressBar = CircularProgressView(frame: .zero, lineWidth: 15, rounded: true)
+        circularProgressBar.progressColor = .systemPink
+        circularProgressBar.trackColor = UIColor(red: 255/255, green: 230/255, blue: 240/255, alpha: 1)
+        circularProgressBar.progress = 1
+        circularProgressBar.backgroundColor = .red.withAlphaComponent(0.5)
+        circularProgressBar.translatesAutoresizingMaskIntoConstraints = false
+        return circularProgressBar
+    }()
+
+    private lazy var imageHeart: HeartView = {
         var heart = HeartView()
         heart.layer.shadowOpacity = 0.70
         heart.layer.shadowRadius = 8
@@ -85,6 +93,7 @@ extension MainController: ViewCoding {
     
     func setupHierarchy() {
         self.addChild(tableView)
+        self.view.addSubview(circularProgressBar)
         self.view.addSubview(tableView.view!)
         self.view.addSubview(personaImage)
         self.view.addSubview(imageHeart)
@@ -112,6 +121,11 @@ extension MainController: ViewCoding {
             tableView.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             tableView.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             tableView.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+
+            circularProgressBar.centerXAnchor.constraint(equalTo: self.personaImage.centerXAnchor),
+            circularProgressBar.centerYAnchor.constraint(equalTo: self.personaImage.centerYAnchor),
+            circularProgressBar.widthAnchor.constraint(equalTo: self.personaImage.widthAnchor, multiplier: 0.98),
+            circularProgressBar.heightAnchor.constraint(equalTo: self.personaImage.heightAnchor, multiplier: 0.98)
         ])
     }
     func setupView() {
@@ -160,8 +174,10 @@ extension MainController: SpeakDelegate {
 //                    self.speakView.resetTextSettings()
 //                }
 //            )
-            let vc = ActivityViewController()
-            navigationController?.pushViewController(vc, animated: true)
+           
+            activityController.delegate = tableView
+            navigationController?.pushViewController(activityController, animated: true)
+            
         }
     }
 }
