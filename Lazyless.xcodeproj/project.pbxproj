@@ -35,7 +35,6 @@
 		FC82C2FC28D88FC4009FBAE5 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		FC82C30028DB4BE2009FBAE5 /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC82C2FF28DB4BE2009FBAE5 /* SliderView.swift */; };
 		FC82C30228DB4BFB009FBAE5 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC82C30128DB4BFB009FBAE5 /* ActivityViewController.swift */; };
-		FC8481CF28CF70CC009FFC06 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8481CE28CF70CC009FFC06 /* File.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,10 +83,8 @@
 		B9B5600C28C6235F00B37ED4 /* LazylessUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LazylessUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9B5601028C6235F00B37ED4 /* LazylessUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazylessUITests.swift; sourceTree = "<group>"; };
 		B9B5601228C6235F00B37ED4 /* LazylessUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazylessUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		B9C90BA928D0BD39007AE6F9 /* SpeakViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakViewModel.swift; sourceTree = "<group>"; };
 		FC82C2FF28DB4BE2009FBAE5 /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
 		FC82C30128DB4BFB009FBAE5 /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
-		FC8481CE28CF70CC009FFC06 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		FCCEC7AB28D0CA93001C3BE2 /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -263,8 +260,6 @@
 		FC8481CD28CF70BB009FFC06 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				B9C90BA928D0BD39007AE6F9 /* SpeakViewModel.swift */,
-				FC8481CE28CF70CC009FFC06 /* File.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -420,7 +415,6 @@
 				B91CE86828DC89960066E2F5 /* ReadJson.swift in Sources */,
 				4FA74FA528CB65D8005387CF /* ViewCoding.swift in Sources */,
 				B901B9E928E1DC2E00947F69 /* ActivityToTableViewDelegate.swift in Sources */,
-				FC8481CF28CF70CC009FFC06 /* File.swift in Sources */,
 				B91CE86A28DCAC850066E2F5 /* SpeakDelegate.swift in Sources */,
 				4FBB7CCE28DA18BD00648580 /* CustomTableViewCell.swift in Sources */,
 				4FA74FAD28CF721C005387CF /* PersonaModel.swift in Sources */,
