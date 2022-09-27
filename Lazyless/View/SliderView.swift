@@ -19,7 +19,7 @@ class SliderView: UIView {
         slider.center = self.center
         slider.minimumValue = 10
         slider.maximumValue = 50
-        slider.value = 10
+        slider.value = 30
         slider.tintColor = UIColor(named: "secondColor")
         slider.translatesAutoresizingMaskIntoConstraints = false
         
@@ -95,7 +95,7 @@ class SliderView: UIView {
 
 extension SliderView: ViewCoding {
     func setupView() {
-        self.backgroundColor = UIColor(named: "cardColor")
+        self.backgroundColor = .systemBackground
         self.layer.cornerRadius = 18
     }
     
