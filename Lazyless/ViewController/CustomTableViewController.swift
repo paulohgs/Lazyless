@@ -14,6 +14,18 @@ class CustomTableViewController: UIViewController {
     private var value: Float = 0.0
     private lazy var lista: [CustomTableViewCell] = []
 
+    private let nothingLabel: UILabel = {
+        let label = UILabel()
+//        label.text = "Não Tem Nada Meu Amor!!"
+        label.text = "Não há nenhuma atividade!"
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.numberOfLines = 0
+        label.font = UIFont(name: "Arial", size: UIScreen.main.bounds.width/11.5)
+        label.textColor = .systemGray
+        label.textAlignment = .center
+        return label
+    }()
+
     private lazy var tableViewController: UITableView = {
         let tvc = UITableView(frame: .zero, style: .plain)
         tvc.backgroundColor = UIColor(named: "bgColor")
@@ -32,6 +44,14 @@ class CustomTableViewController: UIViewController {
         view.addSubview(tableViewController)
         setTableViewDelegate()
         doConstraints()
+        if lista.isEmpty {
+            view.addSubview(nothingLabel)
+            NSLayoutConstraint.activate([
+                nothingLabel.centerXAnchor.constraint(equalTo: tableViewController.centerXAnchor),
+                nothingLabel.centerYAnchor.constraint(equalTo: tableViewController.centerYAnchor, constant: -100),
+                nothingLabel.widthAnchor.constraint(equalToConstant: view.bounds.width/1.4)
+            ])
+        }
     }
 
     func setTableViewDelegate() {
@@ -70,5 +90,8 @@ extension CustomTableViewController: ActivityToTableViewDelegate {
         let cell = CustomTableViewCell(titleCard: text, pontuationValue: value)
         lista.append(cell)
         tableViewController.reloadData()
+        if lista.isEmpty == false {
+            nothingLabel.removeFromSuperview()
+        }
     }
 }

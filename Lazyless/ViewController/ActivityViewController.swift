@@ -12,7 +12,7 @@ class ActivityViewController: UIViewController {
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.backgroundColor = .white
         textField.placeholder = " Ex: Beber 1500ml de água"
-        textField.textColor = .black
+        textField.textColor = UIColor(named: "textColor")
         
         //Basic texfield Setup
         textField.borderStyle = .none
