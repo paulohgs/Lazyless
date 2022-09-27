@@ -13,6 +13,17 @@ class CustomTableViewController: UIViewController {
     private var text: String = "erro"
     private var value: Float = 0.0
     private lazy var lista: [CustomTableViewCell] = []
+    
+    weak var affinityDelegate: AffinityDelegate! // guarda instancia de main controller
+    
+    init(delegate: AffinityDelegate) {
+        super.init(nibName: nil, bundle: nil)
+        self.affinityDelegate = delegate
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     private let nothingLabel: UILabel = {
         let label = UILabel()
@@ -25,7 +36,7 @@ class CustomTableViewController: UIViewController {
         label.textAlignment = .center
         return label
     }()
-
+    
     private lazy var tableViewController: UITableView = {
         let tvc = UITableView(frame: .zero, style: .plain)
         tvc.backgroundColor = UIColor(named: "bgColor")
@@ -77,6 +88,7 @@ extension CustomTableViewController: UITableViewDelegate, UITableViewDataSource 
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: CustomTableViewCell = lista[indexPath.row]
+        cell.cardActivity?.delegate = affinityDelegate
         cell.backgroundColor = UIColor(named: "bgColor")
         return cell
     }

@@ -10,8 +10,8 @@ import Lottie
 
 class MainController: UIViewController {
     
-    private var tableView: CustomTableViewController = {
-        var tvc = CustomTableViewController()
+    private lazy var tableView: CustomTableViewController = {
+        var tvc = CustomTableViewController(delegate: self)
         tvc.view.translatesAutoresizingMaskIntoConstraints = false
         return tvc
     }()
@@ -29,11 +29,11 @@ class MainController: UIViewController {
 
     private let circularProgressBar: CircularProgressView = {
         let circularProgressBar = CircularProgressView(frame: .zero, lineWidth: 15, rounded: true)
+        circularProgressBar.translatesAutoresizingMaskIntoConstraints = false
         circularProgressBar.progressColor = .systemPink
         circularProgressBar.trackColor = UIColor(red: 255/255, green: 230/255, blue: 240/255, alpha: 1)
-        circularProgressBar.progress = 1
+        circularProgressBar.progress = 0
         circularProgressBar.backgroundColor = .red.withAlphaComponent(0.5)
-        circularProgressBar.translatesAutoresizingMaskIntoConstraints = false
         return circularProgressBar
     }()
 
@@ -125,7 +125,7 @@ extension MainController: ViewCoding {
             circularProgressBar.centerXAnchor.constraint(equalTo: self.personaImage.centerXAnchor),
             circularProgressBar.centerYAnchor.constraint(equalTo: self.personaImage.centerYAnchor),
             circularProgressBar.widthAnchor.constraint(equalTo: self.personaImage.widthAnchor, multiplier: 0.98),
-            circularProgressBar.heightAnchor.constraint(equalTo: self.personaImage.heightAnchor, multiplier: 0.98)
+            circularProgressBar.heightAnchor.constraint(equalTo: self.personaImage.heightAnchor, multiplier: 0.98),
         ])
     }
     func setupView() {
@@ -179,5 +179,11 @@ extension MainController: SpeakDelegate {
             navigationController?.pushViewController(activityController, animated: true)
             
         }
+    }
+}
+
+extension MainController: AffinityDelegate {
+    func incrementProgress(value: Float) {
+        circularProgressBar.progress += CGFloat(value/100)
     }
 }
