@@ -26,7 +26,7 @@ class CardActivityView: UIView {
     private lazy var pontuacaoLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Pontuação: \(pontuation)"
+        label.text = "Pontuação: \(String(Int(pontuation)))"
         label.textColor = UIColor.gray
         label.font = UIFont.systemFont(ofSize: 18)
         return label
