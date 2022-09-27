@@ -12,7 +12,7 @@ class CustomTableViewCell: UITableViewCell {
     var titleCard: String
     var pontuationValue: Float
     
-    private var cardActivity: CardActivityView?
+    var cardActivity: CardActivityView?
 
     init(titleCard: String, pontuationValue: Float){
         self.titleCard = titleCard

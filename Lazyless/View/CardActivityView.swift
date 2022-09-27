@@ -9,9 +9,10 @@ import UIKit
 
 class CardActivityView: UIView {
     
+    var delegate: AffinityDelegate?
+    
     var cardTitle: String
     var pontuation: Float
-    
     private var isChecked: Bool = false
     
     private lazy var activityLabel: UILabel = {
@@ -35,11 +36,9 @@ class CardActivityView: UIView {
     private lazy var checkboxButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.backgroundColor = UIColor.systemGray2
+        button.backgroundColor = UIColor.systemGray5
         button.layer.cornerRadius = 10
         button.addTarget(self, action: #selector(toggle) , for: .touchDown)
-        button.layer.borderColor = UIColor.systemGray2.cgColor
-        button.layer.borderWidth = 1.5
         return button
     }()
     
@@ -59,8 +58,9 @@ class CardActivityView: UIView {
         
         if self.isChecked {
             checkboxButton.backgroundColor = UIColor(named: "secondColor")
+            delegate?.incrementProgress(value: pontuation)
         } else {
-            checkboxButton.backgroundColor = UIColor.systemGray2
+            checkboxButton.backgroundColor = UIColor.systemGray5
         }
     }
 

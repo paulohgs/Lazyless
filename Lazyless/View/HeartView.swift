@@ -17,8 +17,9 @@ class HeartView: UIView {
     lazy var label: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "1"
+        label.text = String(preguicaModel.heartLevel)
         label.font = .systemFont(ofSize: UIScreen.main.bounds.width/19)
+        label.textColor = UIColor.black
         return label
     }()
 

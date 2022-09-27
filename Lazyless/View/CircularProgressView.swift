@@ -19,11 +19,7 @@ class CircularProgressView: UIView {
 
     fileprivate let lineWidth: CGFloat?
 
-
-
     var timeToFill = 5.3
-
-
 
     var progressColor = UIColor.white {
         didSet{
@@ -39,9 +35,9 @@ class CircularProgressView: UIView {
 
 
     var progress: CGFloat {
-        didSet{
+        didSet {
             var pathMoved = progress - oldValue
-            if pathMoved < 0{
+            if pathMoved < 0 {
                 pathMoved = 0 - pathMoved
             }
 
@@ -54,7 +50,7 @@ class CircularProgressView: UIView {
 
         progress = 0
 
-        if lineWidth == nil{
+        if lineWidth == nil {
             self.filled = true
             self.rounded = false
         }else{
@@ -125,6 +121,7 @@ class CircularProgressView: UIView {
 
         // MARK: - Progress Layer
         progressLayer.path = circularPath.cgPath
+        
         // sempre que estamos criando layers, precisamos setar esses dois valores
         progressLayer.bounds = circularPath.bounds
         progressLayer.position = CGPoint(
@@ -144,13 +141,14 @@ class CircularProgressView: UIView {
         if rounded{
             progressLayer.lineCap = .round
         }
+        
+        progressLayer.transform = CATransform3DMakeAffineTransform(CGAffineTransform(rotationAngle: -.pi/2))
+        trackLayer.transform = CATransform3DMakeAffineTransform(CGAffineTransform(rotationAngle: -.pi/2))
+        
         layer.addSublayer(progressLayer)
-
     }
 
-
-
-    func setProgress(duration: TimeInterval = 3, to newProgress: CGFloat) -> Void{
+    func setProgress(duration: TimeInterval = 3, to newProgress: CGFloat) -> Void {
 
         progressLayer.strokeEnd = newProgress
 
@@ -170,5 +168,4 @@ class CircularProgressView: UIView {
             }
         }
     }
-
 }
