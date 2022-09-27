@@ -16,7 +16,7 @@ class ActivityViewController: UIViewController {
         
         //Basic texfield Setup
         textField.borderStyle = .none
-        textField.backgroundColor = UIColor(named: "cardColor")
+        textField.backgroundColor = .systemBackground
 
         //To apply corner radius
 //        textField.layer.cornerRadius = textField.frame.size.height / 2
@@ -36,6 +36,7 @@ class ActivityViewController: UIViewController {
         //To apply padding
         textField.leftView = paddingView
         textField.leftViewMode = UITextField.ViewMode.always
+        
 
         return textField
     }()
@@ -45,6 +46,30 @@ class ActivityViewController: UIViewController {
         slider.translatesAutoresizingMaskIntoConstraints = false
         return slider
     }()
+    
+    private lazy var headerTextInput: UILabel = {
+        let header = UILabel()
+        header.translatesAutoresizingMaskIntoConstraints = false
+        header.text = "Nome da atividade"
+        return header
+    }()
+    
+    private var footerSlider: UILabel = {
+        let footer = UILabel()
+        footer.translatesAutoresizingMaskIntoConstraints = false
+        footer.text = "Mostra a aprioridade da atividade pelos pontos"
+        footer.textColor = .systemGray
+        return footer
+    }()
+    
+    private var headerSlider: UILabel = {
+        let header = UILabel()
+        header.translatesAutoresizingMaskIntoConstraints = false
+        header.text = "Pontos de afetividade"
+        return header
+    }()
+    
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,7 +86,7 @@ class ActivityViewController: UIViewController {
 
 extension ActivityViewController: ViewCoding {
     func setupView() {
-        view.backgroundColor = UIColor(named: "bgColor")
+        view.backgroundColor = UIColor(named: "cardColor")
     }
     
     func setupContrainsts() {
@@ -77,11 +102,31 @@ extension ActivityViewController: ViewCoding {
             slider.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -view.bounds.width/40),
             slider.heightAnchor.constraint(equalToConstant: view.bounds.height*0.10),
         ])
+        
+        NSLayoutConstraint.activate([
+            headerTextInput.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
+            headerTextInput.bottomAnchor.constraint(equalTo: self.myfield.topAnchor, constant: -5),
+            headerTextInput.leadingAnchor.constraint(equalTo: self.myfield.leadingAnchor, constant: 10),
+            headerTextInput.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0)
+        ])
+        NSLayoutConstraint.activate([
+            footerSlider.topAnchor.constraint(equalTo: self.slider.bottomAnchor, constant: 5),
+            footerSlider.leadingAnchor.constraint(equalTo: self.headerTextInput.leadingAnchor, constant: 0),
+            footerSlider.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0)
+        ])
+        NSLayoutConstraint.activate([
+            headerSlider.bottomAnchor.constraint(equalTo: slider.topAnchor, constant: -5),
+            headerSlider.leadingAnchor.constraint(equalTo: headerTextInput.leadingAnchor),
+            headerSlider.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0)
+        ])
     }
     
     func setupHierarchy() {
         view.addSubview(myfield)
         view.addSubview(slider)
+        view.addSubview(headerTextInput)
+        view.addSubview(footerSlider)
+        view.addSubview(headerSlider)
     }
     
     @objc func saveActivity() {
