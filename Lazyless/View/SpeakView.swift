@@ -13,10 +13,12 @@ class SpeakView: UIView {
     
     private lazy var speak = ReadJsonDatabase().loadJson()
     private lazy var arrayViews: [UIView] = [title, textSpeak, speakButton, cancelButton]
-    
-    private var title: UILabel = {
+
+    // Injetar o personaName via init
+    var personaName: String = ""
+    private lazy var title: UILabel = {
         var label = UILabel()
-        label.text = "\(preguicaModel.personaName):"
+        label.text = personaName
         label.textAlignment = .left
         label.textColor = UIColor(named: "titleColor")
         label.font = UIFont.systemFont(ofSize: 22)
@@ -77,9 +79,10 @@ class SpeakView: UIView {
         return stack
     }()
     
-    init() {
+    init(personaName: String) {
         super.init(frame: UIScreen.main.bounds)
         buildLayout()
+        self.personaName = personaName
     }
     
     required init?(coder: NSCoder) {

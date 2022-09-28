@@ -20,10 +20,3 @@ struct Persona {
         self.heartImageName = heartImageName
     }
 }
-
-var preguicaModel = Persona(
-    personaName: "Preguica-swan",
-    personaImageName: "preguica",
-    heartLevel: 1,
-    heartImageName: "heart"
-)

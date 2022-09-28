@@ -8,22 +8,26 @@
 import UIKit
 
 class HeartView: UIView {
-    lazy var imageHeart: UIImageView = {
+
+    var heartLevel: Int = 1
+
+    let imageHeart: UIImageView = {
         let heart: UIImageView = UIImageView(image: UIImage(named: "heart"))
         heart.translatesAutoresizingMaskIntoConstraints = false
         heart.contentMode = .scaleToFill
         return heart
     }()
+
     lazy var label: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = String(preguicaModel.heartLevel)
         label.font = .systemFont(ofSize: UIScreen.main.bounds.width/19)
         label.textColor = UIColor.black
+        label.text = "\(self.heartLevel)"
         return label
     }()
 
-    override init(frame: CGRect) {
+    init(heartLevel: Int) {
         super.init(frame: .zero)
 
         self.addSubview(imageHeart)
@@ -40,7 +44,8 @@ class HeartView: UIView {
             label.centerYAnchor.constraint(equalTo: imageHeart.centerYAnchor),
             label.centerXAnchor.constraint(equalTo: imageHeart.centerXAnchor)
         ])
-//        imageHeart.bounds
+
+        self.heartLevel = heartLevel
     }
 
     required init?(coder: NSCoder) {
