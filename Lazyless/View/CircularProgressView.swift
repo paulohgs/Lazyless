@@ -9,15 +9,14 @@ import UIKit
 
 class CircularProgressView: UIView {
 
-
     fileprivate var progressLayer = CAShapeLayer()
     fileprivate var trackLayer = CAShapeLayer()
     fileprivate var didConfigureLabel = false
     fileprivate var rounded: Bool
     fileprivate var filled: Bool
-
-
     fileprivate let lineWidth: CGFloat?
+
+    var delegate: NextLevelDelegate?
 
     var timeToFill = 5.3
 
@@ -33,15 +32,14 @@ class CircularProgressView: UIView {
         }
     }
 
-
     var progress: CGFloat {
-        didSet {
+        didSet { // property observers
             var pathMoved = progress - oldValue
             if pathMoved < 0 {
                 pathMoved = 0 - pathMoved
             }
 
-            setProgress(duration: timeToFill * Double(pathMoved), to: progress)
+            setProgress(duration: timeToFill * Double(pathMoved), from: oldValue, to: progress)
         }
     }
 
@@ -148,23 +146,28 @@ class CircularProgressView: UIView {
         layer.addSublayer(progressLayer)
     }
 
-    func setProgress(duration: TimeInterval = 3, to newProgress: CGFloat) -> Void {
+    func setProgress(duration: TimeInterval = 3, from oldProgress: CGFloat, to newProgress: CGFloat) -> Void {
 
         progressLayer.strokeEnd = newProgress
 
         let animation = CABasicAnimation(keyPath: "strokeEnd")
         animation.duration = duration
-        animation.fromValue = progressLayer.strokeStart
+        animation.fromValue = oldProgress
         animation.toValue = newProgress
         animation.fillMode = .forwards
         animation.isRemovedOnCompletion = false
 
         progressLayer.add(animation, forKey: "animationProgress")
 
-        if self.progress == 1 {
-            DispatchQueue.main.asyncAfter(deadline: .now() + duration + 1) {
+        if self.progress >= 1 {
+            DispatchQueue.main.asyncAfter(deadline: .now() + duration + 1) { [weak self] in
                 // delegate?.nextLevel()
-                self.setProgress(to: 0)
+                self?.progress = 0
+                let shakeFeedback: UINotificationFeedbackGenerator = UINotificationFeedbackGenerator()
+                shakeFeedback.notificationOccurred(.success)
+
+                // Fazer delegate pra atualizar heartLevel la na maincontroller (preguicaModel.heartLevel)
+                self!.delegate?.nextLevel(levelUp: 1)
             }
         }
     }

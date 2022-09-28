@@ -9,7 +9,18 @@ import UIKit
 import Lottie
 
 class MainController: UIViewController {
-    
+
+    var preguicaModel = Persona(
+        personaName: "Preguica-swan",
+        personaImageName: "preguica",
+        heartLevel: 1,
+        heartImageName: "heart"
+    ) {
+        didSet {
+            imageHeart.label.text = "\(preguicaModel.heartLevel)"
+        }
+    }
+
     private lazy var tableView: CustomTableViewController = {
         var tvc = CustomTableViewController(delegate: self)
         tvc.view.translatesAutoresizingMaskIntoConstraints = false
@@ -38,7 +49,7 @@ class MainController: UIViewController {
     }()
 
     private lazy var imageHeart: HeartView = {
-        var heart = HeartView()
+        var heart = HeartView(heartLevel: preguicaModel.heartLevel)
         heart.layer.shadowOpacity = 0.70
         heart.layer.shadowRadius = 8
         heart.layer.shadowOffset = CGSize(width: 0, height: 5)
@@ -46,8 +57,8 @@ class MainController: UIViewController {
         return heart
     }()
     
-    private var speakView: SpeakView = {
-        var speakView = SpeakView()
+    private lazy var speakView: SpeakView = {
+        var speakView = SpeakView(personaName: preguicaModel.personaName)
         speakView.translatesAutoresizingMaskIntoConstraints = false
         return speakView
     }()
@@ -65,10 +76,11 @@ class MainController: UIViewController {
         return controller
     }()
     
-    override func loadView() {
-        super.loadView()
+    override func viewDidLoad() {
+        super.viewDidLoad()
 
         speakView.delegate = self
+        circularProgressBar.delegate = self
         
         let personaImageTap = UITapGestureRecognizer(
             target: self,
@@ -98,8 +110,6 @@ extension MainController: ViewCoding {
         self.view.addSubview(personaImage)
         self.view.addSubview(imageHeart)
     }
-    
-    
     
     func setupContrainsts() {
         
@@ -174,7 +184,6 @@ extension MainController: SpeakDelegate {
 //                    self.speakView.resetTextSettings()
 //                }
 //            )
-           
             activityController.delegate = tableView
             navigationController?.pushViewController(activityController, animated: true)
             
@@ -185,5 +194,13 @@ extension MainController: SpeakDelegate {
 extension MainController: AffinityDelegate {
     func incrementProgress(value: Float) {
         circularProgressBar.progress += CGFloat(value/100)
+    }
+}
+
+extension MainController: NextLevelDelegate {
+    func nextLevel(levelUp: Int) {
+        preguicaModel.heartLevel += 1
+        print(levelUp)
+        imageHeart.reloadInputViews()
     }
 }

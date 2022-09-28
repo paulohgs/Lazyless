@@ -21,6 +21,7 @@
 		4FBB7CCC28DA188500648580 /* CustomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBB7CCB28DA188500648580 /* CustomTableViewController.swift */; };
 		4FBB7CCE28DA18BD00648580 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBB7CCD28DA18BD00648580 /* CustomTableViewCell.swift */; };
 		4FBB7CD228DA98D100648580 /* PinFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBB7CD128DA98D100648580 /* PinFunction.swift */; };
+		4FC5606E28E4850200D5931A /* NextLevelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC5606D28E4850200D5931A /* NextLevelDelegate.swift */; };
 		B901B9E928E1DC2E00947F69 /* ActivityToTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B901B9E828E1DC2E00947F69 /* ActivityToTableViewDelegate.swift */; };
 		B901B9EB28E33AED00947F69 /* AffinityDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B901B9EA28E33AED00947F69 /* AffinityDelegate.swift */; };
 		B91CE86828DC89960066E2F5 /* ReadJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91CE86728DC89960066E2F5 /* ReadJson.swift */; };
@@ -69,6 +70,7 @@
 		4FBB7CCB28DA188500648580 /* CustomTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewController.swift; sourceTree = "<group>"; };
 		4FBB7CCD28DA18BD00648580 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		4FBB7CD128DA98D100648580 /* PinFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinFunction.swift; sourceTree = "<group>"; };
+		4FC5606D28E4850200D5931A /* NextLevelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextLevelDelegate.swift; sourceTree = "<group>"; };
 		B901B9E828E1DC2E00947F69 /* ActivityToTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityToTableViewDelegate.swift; sourceTree = "<group>"; };
 		B901B9EA28E33AED00947F69 /* AffinityDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AffinityDelegate.swift; sourceTree = "<group>"; };
 		B91CE86728DC89960066E2F5 /* ReadJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadJson.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				B91CE86928DCAC850066E2F5 /* SpeakDelegate.swift */,
 				B901B9E828E1DC2E00947F69 /* ActivityToTableViewDelegate.swift */,
 				B901B9EA28E33AED00947F69 /* AffinityDelegate.swift */,
+				4FC5606D28E4850200D5931A /* NextLevelDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -420,6 +423,7 @@
 				4FA74FA528CB65D8005387CF /* ViewCoding.swift in Sources */,
 				B901B9E928E1DC2E00947F69 /* ActivityToTableViewDelegate.swift in Sources */,
 				B91CE86A28DCAC850066E2F5 /* SpeakDelegate.swift in Sources */,
+				4FC5606E28E4850200D5931A /* NextLevelDelegate.swift in Sources */,
 				4FBB7CCE28DA18BD00648580 /* CustomTableViewCell.swift in Sources */,
 				4FA74FAD28CF721C005387CF /* PersonaModel.swift in Sources */,
 				FC82C2FC28D88FC4009FBAE5 /* (null) in Sources */,
