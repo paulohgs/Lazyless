@@ -55,6 +55,7 @@ class CustomTableViewController: UIViewController {
         view.addSubview(tableViewController)
         setTableViewDelegate()
         doConstraints()
+
         if lista.isEmpty {
             view.addSubview(nothingLabel)
             NSLayoutConstraint.activate([
