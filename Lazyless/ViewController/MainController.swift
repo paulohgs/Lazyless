@@ -76,7 +76,7 @@ class MainController: UIViewController {
     }()
     
     private lazy var speakView: SpeakView = {
-        var speakView = SpeakView(personaName: preguicaModel.personaName)
+        var speakView = SpeakView(personaName: preguicaModel.personaName, level: preguicaModel.heartLevel)
         speakView.translatesAutoresizingMaskIntoConstraints = false
         return speakView
     }()
@@ -229,7 +229,7 @@ extension MainController: AffinityDelegate {
 extension MainController: NextLevelDelegate {
     func nextLevel(levelUp: Int) {
         preguicaModel.heartLevel += 1
-        print(levelUp)
+//        print(levelUp)
         imageHeart.reloadInputViews()
     }
 }

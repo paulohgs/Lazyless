@@ -10,10 +10,17 @@ import UIKit
 class SpeakView: UIView {
 
     weak var delegate: SpeakDelegate?
+    var level: Int
     
-    private lazy var speak = ReadJsonDatabase().loadJson()
+    private lazy var speaks: [SpeakModel] = ReadJsonDatabase().loadJson() ?? []
     private lazy var arrayViews: [UIView] = [title, textSpeak, speakButton, cancelButton]
 
+    func speakModel(for id: Int) -> SpeakModel? {
+        speaks.first(where: {
+            $0.id == id
+        })
+    }
+    
     // Injetar o personaName via init
     var personaName: String = ""
     private lazy var title: UILabel = {
@@ -28,7 +35,7 @@ class SpeakView: UIView {
     
     private lazy var textSpeak: UILabel = {
         var label = UILabel()
-        label.text = speak?.level0[0].talk
+        label.text = speakModel(for: level)?.levelModels[0].talk ?? ""
         label.textColor = UIColor(named: "textColor")
         label.textAlignment = .justified
         label.font = UIFont.systemFont(ofSize: 18)
@@ -41,7 +48,7 @@ class SpeakView: UIView {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         var configuration = UIButton.Configuration.borderedProminent()
-        configuration.title = speak?.level0[0].buttonLabel
+        configuration.title = speakModel(for: level)?.levelModels[0].buttonLabel ?? ""// speak?.level0[0].buttonLabel
         configuration.baseForegroundColor = UIColor(named: "darkGrey")
         configuration.baseBackgroundColor = UIColor(named: "secondColor")
         button.configuration = configuration
@@ -79,10 +86,12 @@ class SpeakView: UIView {
         return stack
     }()
     
-    init(personaName: String) {
+    init(personaName: String, level: Int) {
+        self.level = level
         super.init(frame: UIScreen.main.bounds)
         buildLayout()
         self.personaName = personaName
+        
     }
     
     required init?(coder: NSCoder) {
@@ -91,11 +100,11 @@ class SpeakView: UIView {
     //MARK: - objc funcs
     
     @objc func actionButton() {
-        if textSpeak.text == speak?.level0[1].talk {
+        if textSpeak.text == speakModel(for: level)?.levelModels[1].talk ?? "" {
             delegate?.isActivityButtonTouched(touch: true)
         }
-        textSpeak.text = speak?.level0[1].talk
-        speakButton.setTitle(speak?.level0[1].buttonLabel, for: .normal)
+        textSpeak.text = speakModel(for: level)?.levelModels[1].talk
+        speakButton.setTitle(speakModel(for: level)?.levelModels[1].buttonLabel, for: .normal)
     }
 
     @objc func cancel(){
@@ -106,8 +115,8 @@ class SpeakView: UIView {
 extension SpeakView: ViewCoding {
 
     func resetTextSettings() {
-        textSpeak.text = speak?.level0[0].talk
-        speakButton.setTitle(speak?.level0[0].buttonLabel, for: .normal)
+        textSpeak.text = speakModel(for: level)?.levelModels[1].talk
+        speakButton.setTitle(speakModel(for: level)?.levelModels[1].buttonLabel, for: .normal)
     }
 
     func setupView() {

@@ -9,12 +9,12 @@ import Foundation
 
 struct ReadJsonDatabase {
     
-    func loadJson() -> SpeakModel? {
+    func loadJson() -> [SpeakModel]? {
         if let url = Bundle.main.url(forResource: "database", withExtension: "json") {
             do {
                 let data = try Data(contentsOf: url)
                 let decoder = JSONDecoder()
-                let jsonData: SpeakModel = try decoder.decode(SpeakModel.self, from: data)
+                let jsonData: [SpeakModel] = try decoder.decode([SpeakModel].self, from: data)
                 return jsonData
             } catch {
                 print("error:\(error)")
