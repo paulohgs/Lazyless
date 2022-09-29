@@ -21,6 +21,20 @@ class MainController: UIViewController {
         }
     }
 
+    private lazy var questionMark: AnimationView = {
+        let animation = AnimationView()
+        animation.translatesAutoresizingMaskIntoConstraints = false
+        animation.animation = Animation.named("questionMark")
+        animation.contentMode = .scaleAspectFit
+        animation.loopMode = .repeat(3)
+        animation.play()
+        animation.layer.shadowOpacity = 0.70
+        animation.layer.shadowRadius = 4
+        animation.layer.shadowOffset = CGSize(width: 0, height: 5)
+        animation.animationSpeed = 0.80
+        return animation
+    }()
+
     private lazy var tableView: CustomTableViewController = {
         var tvc = CustomTableViewController(delegate: self)
         tvc.view.translatesAutoresizingMaskIntoConstraints = false
@@ -35,6 +49,10 @@ class MainController: UIViewController {
     private lazy var personaImage: UIImageView = {
         var imagev = UIImageView(image: UIImage(named: preguicaModel.personaImageName))
         imagev.translatesAutoresizingMaskIntoConstraints = false
+        imagev.layer.shadowOpacity = 1
+        imagev.layer.shadowRadius = 3
+        imagev.layer.shadowOffset = CGSize(width: 0, height: 0)
+        imagev.layer.shadowColor = UIColor(named: "mainColor")?.cgColor
         return imagev
     }()
 
@@ -51,14 +69,14 @@ class MainController: UIViewController {
     private lazy var imageHeart: HeartView = {
         var heart = HeartView(heartLevel: preguicaModel.heartLevel)
         heart.layer.shadowOpacity = 0.70
-        heart.layer.shadowRadius = 8
-        heart.layer.shadowOffset = CGSize(width: 0, height: 5)
+        heart.layer.shadowRadius = 2
+        heart.layer.shadowOffset = CGSize(width: 0, height: 0)
         heart.translatesAutoresizingMaskIntoConstraints = false
         return heart
     }()
     
     private lazy var speakView: SpeakView = {
-        var speakView = SpeakView(personaName: preguicaModel.personaName)
+        var speakView = SpeakView(personaName: preguicaModel.personaName, level: preguicaModel.heartLevel)
         speakView.translatesAutoresizingMaskIntoConstraints = false
         return speakView
     }()
@@ -81,6 +99,7 @@ class MainController: UIViewController {
 
         speakView.delegate = self
         circularProgressBar.delegate = self
+
         
         let personaImageTap = UITapGestureRecognizer(
             target: self,
@@ -98,6 +117,7 @@ class MainController: UIViewController {
         personaImage.isUserInteractionEnabled = true
         
         buildLayout()
+
     }
 }
 
@@ -108,11 +128,13 @@ extension MainController: ViewCoding {
         self.view.addSubview(circularProgressBar)
         self.view.addSubview(tableView.view!)
         self.view.addSubview(personaImage)
+        self.view.addSubview(questionMark)
         self.view.addSubview(imageHeart)
+
     }
     
     func setupContrainsts() {
-        
+
         imageHeart.contentMode = .scaleAspectFit
         personaImage.contentMode = .scaleAspectFit
         
@@ -136,8 +158,14 @@ extension MainController: ViewCoding {
             circularProgressBar.centerYAnchor.constraint(equalTo: self.personaImage.centerYAnchor),
             circularProgressBar.widthAnchor.constraint(equalTo: self.personaImage.widthAnchor, multiplier: 0.98),
             circularProgressBar.heightAnchor.constraint(equalTo: self.personaImage.heightAnchor, multiplier: 0.98),
+
+            questionMark.heightAnchor.constraint(equalToConstant: 120),
+            questionMark.widthAnchor.constraint(equalToConstant: 120),
+            questionMark.leadingAnchor.constraint(equalTo: personaImage.leadingAnchor, constant: -UIScreen.main.bounds.width/6),
+            questionMark.topAnchor.constraint(equalTo: personaImage.topAnchor),
         ])
     }
+
     func setupView() {
         self.view = backgroundView
     }
@@ -155,6 +183,7 @@ extension MainController: ViewCoding {
         if sender.state == .ended {
             view.insertSubview(speakView, belowSubview: personaImage)
             view.insertSubview(opaqueView, belowSubview: speakView)
+            questionMark.removeFromSuperview()
 
             NSLayoutConstraint.activate([
                 speakView.topAnchor.constraint(equalTo: imageHeart.bottomAnchor),
@@ -200,7 +229,7 @@ extension MainController: AffinityDelegate {
 extension MainController: NextLevelDelegate {
     func nextLevel(levelUp: Int) {
         preguicaModel.heartLevel += 1
-        print(levelUp)
+//        print(levelUp)
         imageHeart.reloadInputViews()
     }
 }
