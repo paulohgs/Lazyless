@@ -159,8 +159,8 @@ extension MainController: ViewCoding {
             circularProgressBar.widthAnchor.constraint(equalTo: self.personaImage.widthAnchor, multiplier: 0.98),
             circularProgressBar.heightAnchor.constraint(equalTo: self.personaImage.heightAnchor, multiplier: 0.98),
 
-            questionMark.heightAnchor.constraint(equalToConstant: 120),
-            questionMark.widthAnchor.constraint(equalToConstant: 120),
+            questionMark.heightAnchor.constraint(equalTo: personaImage.heightAnchor, multiplier: 0.5),
+            questionMark.widthAnchor.constraint(equalTo: personaImage.heightAnchor, multiplier: 0.5),
             questionMark.leadingAnchor.constraint(equalTo: personaImage.leadingAnchor, constant: -UIScreen.main.bounds.width/6),
             questionMark.topAnchor.constraint(equalTo: personaImage.topAnchor),
         ])
