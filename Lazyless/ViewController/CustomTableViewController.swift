@@ -94,6 +94,21 @@ extension CustomTableViewController: UITableViewDelegate, UITableViewDataSource 
         return cell
     }
 
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete
+    }
+
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+
+        if editingStyle == .delete{
+            tableView.beginUpdates()
+            lista.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            tableView.endUpdates()
+        }
+
+    }
+
 }
 
 extension CustomTableViewController: ActivityToTableViewDelegate {

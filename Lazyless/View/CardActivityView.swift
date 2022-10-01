@@ -61,6 +61,7 @@ class CardActivityView: UIView {
             checkboxButton.backgroundColor = UIColor(named: "secondColor")
             delegate?.incrementProgress(value: pontuation)
             feedback.selectionChanged()
+
         } else {
             checkboxButton.backgroundColor = UIColor.systemGray5
         }
