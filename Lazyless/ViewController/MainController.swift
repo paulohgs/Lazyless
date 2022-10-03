@@ -134,31 +134,56 @@ extension MainController: ViewCoding {
     }
     
     func setupContrainsts() {
-
         imageHeart.contentMode = .scaleAspectFit
         personaImage.contentMode = .scaleAspectFit
-        
+        setConstraintsPersonaImage()
+        setConstraintsImageHeart()
+        setConstraintsTableView()
+        setConstraintsCircularProgressBar()
+        setConstraintsQuestionMark()
+    }
+    func setConstraintsPersonaImage(){
         NSLayoutConstraint.activate([
             personaImage.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
             personaImage.centerYAnchor.constraint(equalTo: self.backgroundView.rectBar.bottomAnchor, constant: -25),
             personaImage.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.60),
             personaImage.heightAnchor.constraint(equalTo: self.personaImage.widthAnchor),
-            
+        ])
+    }
+    
+    func setConstraintsImageHeart(){
+        NSLayoutConstraint.activate([
             imageHeart.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
             imageHeart.centerYAnchor.constraint(equalTo: self.personaImage.bottomAnchor),
             imageHeart.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.15),
             imageHeart.heightAnchor.constraint(equalTo: self.imageHeart.widthAnchor),
-            
+        ])
+    }
+    
+    
+    func setConstraintsTableView(){
+        NSLayoutConstraint.activate([
             tableView.view.topAnchor.constraint(equalTo: imageHeart.bottomAnchor, constant: 12),
             tableView.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             tableView.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             tableView.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-
+        ])
+    }
+    
+    
+    func setConstraintsCircularProgressBar(){
+        NSLayoutConstraint.activate([
             circularProgressBar.centerXAnchor.constraint(equalTo: self.personaImage.centerXAnchor),
             circularProgressBar.centerYAnchor.constraint(equalTo: self.personaImage.centerYAnchor),
             circularProgressBar.widthAnchor.constraint(equalTo: self.personaImage.widthAnchor, multiplier: 0.98),
             circularProgressBar.heightAnchor.constraint(equalTo: self.personaImage.heightAnchor, multiplier: 0.98),
 
+        ])
+    }
+    
+    
+    func setConstraintsQuestionMark(){
+        NSLayoutConstraint.activate([
             questionMark.heightAnchor.constraint(equalToConstant: 120),
             questionMark.widthAnchor.constraint(equalToConstant: 120),
             questionMark.leadingAnchor.constraint(equalTo: personaImage.leadingAnchor, constant: -UIScreen.main.bounds.width/6),
