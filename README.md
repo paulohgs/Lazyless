@@ -2,8 +2,8 @@
 
 An iOS app for habit management and tracking.
 
-###Built with
-![swift](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swift/swift-original-wordmark.svg)
+###Built with  
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swift/swift-original-wordmark.svg" width="250" />
 
 ## Contributing
 
