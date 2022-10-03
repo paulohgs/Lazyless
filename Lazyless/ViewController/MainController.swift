@@ -179,12 +179,17 @@ extension MainController: ViewCoding {
             speakView.resetTextSettings()
         }
     }
+    
+//haptics
     @objc func imageTapped(sender: UITapGestureRecognizer) {
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(.success)
+        
         if sender.state == .ended {
             view.insertSubview(speakView, belowSubview: personaImage)
             view.insertSubview(opaqueView, belowSubview: speakView)
             questionMark.removeFromSuperview()
-
+            
             NSLayoutConstraint.activate([
                 speakView.topAnchor.constraint(equalTo: imageHeart.bottomAnchor),
                 speakView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
