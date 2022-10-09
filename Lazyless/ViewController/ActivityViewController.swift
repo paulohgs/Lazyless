@@ -6,7 +6,7 @@ class ActivityViewController: UIViewController {
     weak var delegate: ActivityToTableViewDelegate?
 
     //Componentes
-    private lazy var myfield: UITextField = {
+    private let myfield: UITextField = {
         let textField = UITextField()
         let paddingView : UIView = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: textField.frame.height))
         textField.translatesAutoresizingMaskIntoConstraints = false
@@ -41,13 +41,13 @@ class ActivityViewController: UIViewController {
         return textField
     }()
     
-    private lazy var slider: SliderView = {
+    private let slider: SliderView = {
         let slider = SliderView()
         slider.translatesAutoresizingMaskIntoConstraints = false
         return slider
     }()
     
-    private lazy var headerTextInput: UILabel = {
+    private let headerTextInput: UILabel = {
         let header = UILabel()
         header.translatesAutoresizingMaskIntoConstraints = false
         header.text = "Nome da atividade"

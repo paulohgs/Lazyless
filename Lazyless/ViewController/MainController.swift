@@ -21,7 +21,7 @@ class MainController: UIViewController {
         }
     }
 
-    private lazy var questionMark: AnimationView = {
+    private let questionMark: AnimationView = {
         let animation = AnimationView()
         animation.translatesAutoresizingMaskIntoConstraints = false
         animation.animation = Animation.named("questionMark")
