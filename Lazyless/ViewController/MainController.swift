@@ -17,7 +17,12 @@ class MainController: UIViewController {
         heartImageName: "heart"
     ) {
         didSet {
-            imageHeart.label.text = "\(preguicaModel.heartLevel)"
+            DispatchQueue.main.async { [weak self] in
+                if let self {
+                    self.imageHeart.label.text = "\(self.preguicaModel.heartLevel)"
+                }
+            }
+
         }
     }
 

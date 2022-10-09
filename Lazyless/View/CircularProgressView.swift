@@ -22,24 +22,39 @@ class CircularProgressView: UIView {
 
     var progressColor = UIColor.white {
         didSet{
-            progressLayer.strokeColor = progressColor.cgColor
+            DispatchQueue.main.async { [weak self] in
+                if let self {
+                    self.progressLayer.strokeColor = self.progressColor.cgColor
+                }
+            }
+
         }
     }
 
     var trackColor = UIColor.white {
         didSet{
-            trackLayer.strokeColor = trackColor.cgColor
+            DispatchQueue.main.async { [weak self] in
+                if let self {
+                    self.trackLayer.strokeColor = self.trackColor.cgColor
+                }
+            }
+
         }
     }
 
     var progress: CGFloat {
-        didSet { // property observers
+        didSet {
             var pathMoved = progress - oldValue
             if pathMoved < 0 {
                 pathMoved = 0 - pathMoved
             }
+            DispatchQueue.main.async { [weak self] in
+                if let self {
+                    self.setProgress(duration: self.timeToFill * Double(pathMoved), from: oldValue, to: self.progress)
+                }
+            }
 
-            setProgress(duration: timeToFill * Double(pathMoved), from: oldValue, to: progress)
+
         }
     }
 
