@@ -17,11 +17,16 @@ class MainController: UIViewController {
         heartImageName: "heart"
     ) {
         didSet {
-            imageHeart.label.text = "\(preguicaModel.heartLevel)"
+            DispatchQueue.main.async { [weak self] in
+                if let self {
+                    self.imageHeart.label.text = "\(self.preguicaModel.heartLevel)"
+                }
+            }
+
         }
     }
 
-    private lazy var questionMark: AnimationView = {
+    private let questionMark: AnimationView = {
         let animation = AnimationView()
         animation.translatesAutoresizingMaskIntoConstraints = false
         animation.animation = Animation.named("questionMark")

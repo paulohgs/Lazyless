@@ -202,7 +202,6 @@
 				B91CE86628DC89880066E2F5 /* Services */,
 				4FBB7CD028DA98C000648580 /* Extensions  */,
 				4FA74FA228CB65B7005387CF /* Protocols */,
-				FC8481CD28CF70BB009FFC06 /* ViewModel */,
 				FC8481C828CF5CD7009FFC06 /* Model */,
 				4FA74FA628CB6639005387CF /* ViewController */,
 				B9B5602428C6306B00B37ED4 /* View */,
@@ -264,13 +263,6 @@
 				4F31D5C728D1FD480092A2FC /* ActivityModel.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		FC8481CD28CF70BB009FFC06 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
