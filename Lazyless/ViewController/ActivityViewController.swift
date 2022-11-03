@@ -18,6 +18,7 @@ class ActivityViewController: UIViewController {
         textField.borderStyle = .none
         textField.backgroundColor = .systemBackground
         //parece magica
+        //quequeissohein
         //To apply corner radius
 //        textField.layer.cornerRadius = textField.frame.size.height / 2
         textField.layer.cornerRadius = 18
