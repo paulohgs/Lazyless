@@ -17,11 +17,16 @@ class MainController: UIViewController {
         heartImageName: "heart"
     ) {
         didSet {
-            imageHeart.label.text = "\(preguicaModel.heartLevel)"
+            DispatchQueue.main.async { [weak self] in
+                if let self {
+                    self.imageHeart.label.text = "\(self.preguicaModel.heartLevel)"
+                }
+            }
+
         }
     }
 
-    private lazy var questionMark: AnimationView = {
+    private let questionMark: AnimationView = {
         let animation = AnimationView()
         animation.translatesAutoresizingMaskIntoConstraints = false
         animation.animation = Animation.named("questionMark")
@@ -134,33 +139,58 @@ extension MainController: ViewCoding {
     }
     
     func setupContrainsts() {
-
         imageHeart.contentMode = .scaleAspectFit
         personaImage.contentMode = .scaleAspectFit
-        
+        setConstraintsPersonaImage()
+        setConstraintsImageHeart()
+        setConstraintsTableView()
+        setConstraintsCircularProgressBar()
+        setConstraintsQuestionMark()
+    }
+    func setConstraintsPersonaImage(){
         NSLayoutConstraint.activate([
             personaImage.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
             personaImage.centerYAnchor.constraint(equalTo: self.backgroundView.rectBar.bottomAnchor, constant: -25),
             personaImage.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.60),
             personaImage.heightAnchor.constraint(equalTo: self.personaImage.widthAnchor),
-            
+        ])
+    }
+    
+    func setConstraintsImageHeart(){
+        NSLayoutConstraint.activate([
             imageHeart.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
             imageHeart.centerYAnchor.constraint(equalTo: self.personaImage.bottomAnchor),
             imageHeart.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.15),
             imageHeart.heightAnchor.constraint(equalTo: self.imageHeart.widthAnchor),
-            
+        ])
+    }
+    
+    
+    func setConstraintsTableView(){
+        NSLayoutConstraint.activate([
             tableView.view.topAnchor.constraint(equalTo: imageHeart.bottomAnchor, constant: 12),
             tableView.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             tableView.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             tableView.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-
+        ])
+    }
+    
+    
+    func setConstraintsCircularProgressBar(){
+        NSLayoutConstraint.activate([
             circularProgressBar.centerXAnchor.constraint(equalTo: self.personaImage.centerXAnchor),
             circularProgressBar.centerYAnchor.constraint(equalTo: self.personaImage.centerYAnchor),
             circularProgressBar.widthAnchor.constraint(equalTo: self.personaImage.widthAnchor, multiplier: 0.98),
             circularProgressBar.heightAnchor.constraint(equalTo: self.personaImage.heightAnchor, multiplier: 0.98),
 
-            questionMark.heightAnchor.constraint(equalTo: personaImage.heightAnchor, multiplier: 0.5),
-            questionMark.widthAnchor.constraint(equalTo: personaImage.heightAnchor, multiplier: 0.5),
+        ])
+    }
+    
+    
+    func setConstraintsQuestionMark(){
+        NSLayoutConstraint.activate([
+            questionMark.heightAnchor.constraint(equalToConstant: 120),
+            questionMark.widthAnchor.constraint(equalToConstant: 120),
             questionMark.leadingAnchor.constraint(equalTo: personaImage.leadingAnchor, constant: -UIScreen.main.bounds.width/6),
             questionMark.topAnchor.constraint(equalTo: personaImage.topAnchor),
         ])
@@ -179,12 +209,17 @@ extension MainController: ViewCoding {
             speakView.resetTextSettings()
         }
     }
+    
+//haptics
     @objc func imageTapped(sender: UITapGestureRecognizer) {
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(.success)
+        
         if sender.state == .ended {
             view.insertSubview(speakView, belowSubview: personaImage)
             view.insertSubview(opaqueView, belowSubview: speakView)
             questionMark.removeFromSuperview()
-
+            
             NSLayoutConstraint.activate([
                 speakView.topAnchor.constraint(equalTo: imageHeart.bottomAnchor),
                 speakView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
