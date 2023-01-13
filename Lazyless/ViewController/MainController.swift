@@ -22,7 +22,6 @@ class MainController: UIViewController {
                     self.imageHeart.label.text = "\(self.preguicaModel.heartLevel)"
                 }
             }
-
         }
     }
 
