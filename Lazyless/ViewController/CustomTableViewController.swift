@@ -37,7 +37,7 @@ class CustomTableViewController: UIViewController {
         return label
     }()
     
-    private lazy var tableViewController: UITableView = {
+    private let tableViewController: UITableView = {
         let tvc = UITableView(frame: .zero, style: .plain)
         tvc.backgroundColor = UIColor(named: "bgColor")
         tvc.allowsSelection = false
@@ -92,6 +92,21 @@ extension CustomTableViewController: UITableViewDelegate, UITableViewDataSource 
         cell.cardActivity?.delegate = affinityDelegate
         cell.backgroundColor = UIColor(named: "bgColor")
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete
+    }
+
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+
+        if editingStyle == .delete{
+            tableView.beginUpdates()
+            lista.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            tableView.endUpdates()
+        }
+
     }
 
 }
