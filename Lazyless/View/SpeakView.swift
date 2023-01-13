@@ -120,7 +120,7 @@ extension SpeakView: ViewCoding {
     }
 
     func setupView() {
-        self.addSubview(stackView)
+        // setup this view
     }
     
     func setupContrainsts() {
@@ -136,6 +136,7 @@ extension SpeakView: ViewCoding {
     
     func setupHierarchy() {
         // define views hierarchy
+        self.addSubview(stackView)
     }
 }
 

@@ -25,6 +25,7 @@
 		4FC5606E28E4850200D5931A /* NextLevelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC5606D28E4850200D5931A /* NextLevelDelegate.swift */; };
 		B901B9E928E1DC2E00947F69 /* ActivityToTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B901B9E828E1DC2E00947F69 /* ActivityToTableViewDelegate.swift */; };
 		B901B9EB28E33AED00947F69 /* AffinityDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B901B9EA28E33AED00947F69 /* AffinityDelegate.swift */; };
+		B90DC61328EC7C3F00CCBFD0 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90DC61228EC7C3F00CCBFD0 /* ActivityView.swift */; };
 		B91CE86828DC89960066E2F5 /* ReadJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91CE86728DC89960066E2F5 /* ReadJson.swift */; };
 		B91CE86A28DCAC850066E2F5 /* SpeakDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91CE86928DCAC850066E2F5 /* SpeakDelegate.swift */; };
 		B92300A928D89863001D8C99 /* CardActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92300A828D89863001D8C99 /* CardActivityView.swift */; };
@@ -75,6 +76,7 @@
 		4FC5606D28E4850200D5931A /* NextLevelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextLevelDelegate.swift; sourceTree = "<group>"; };
 		B901B9E828E1DC2E00947F69 /* ActivityToTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityToTableViewDelegate.swift; sourceTree = "<group>"; };
 		B901B9EA28E33AED00947F69 /* AffinityDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AffinityDelegate.swift; sourceTree = "<group>"; };
+		B90DC61228EC7C3F00CCBFD0 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		B91CE86728DC89960066E2F5 /* ReadJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadJson.swift; sourceTree = "<group>"; };
 		B91CE86928DCAC850066E2F5 /* SpeakDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakDelegate.swift; sourceTree = "<group>"; };
 		B92300A828D89863001D8C99 /* CardActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardActivityView.swift; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 				4FA74FAA28CB6778005387CF /* MainBackgroundView.swift */,
 				4F31D5CB28D2215C0092A2FC /* HeartView.swift */,
 				B92300A828D89863001D8C99 /* CardActivityView.swift */,
+				B90DC61228EC7C3F00CCBFD0 /* ActivityView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -408,6 +411,7 @@
 				FC82C30028DB4BE2009FBAE5 /* SliderView.swift in Sources */,
 				4F5076E128D3766000DAEF80 /* MainController.swift in Sources */,
 				4FBB7CD228DA98D100648580 /* PinFunction.swift in Sources */,
+				B90DC61328EC7C3F00CCBFD0 /* ActivityView.swift in Sources */,
 				4F5076DE28D36EC000DAEF80 /* SpeakModel.swift in Sources */,
 				4F5076DC28D36EAD00DAEF80 /* SpeakView.swift in Sources */,
 				4F31D5C828D1FD480092A2FC /* ActivityModel.swift in Sources */,

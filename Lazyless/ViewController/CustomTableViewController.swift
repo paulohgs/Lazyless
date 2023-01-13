@@ -106,9 +106,7 @@ extension CustomTableViewController: UITableViewDelegate, UITableViewDataSource 
             tableView.deleteRows(at: [indexPath], with: .fade)
             tableView.endUpdates()
         }
-
     }
-
 }
 
 extension CustomTableViewController: ActivityToTableViewDelegate {

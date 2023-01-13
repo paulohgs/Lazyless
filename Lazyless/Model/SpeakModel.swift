@@ -28,5 +28,4 @@ struct SpeakModel: Decodable {
         self.id = id
         levelModels = dict[key] ?? []
     }
-    
 }
