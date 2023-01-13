@@ -238,16 +238,24 @@
 		B9B5602428C6306B00B37ED4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B9FA67C02970F65C00B9FFD8 /* Components */,
 				4FBB7CCF28DA18C700648580 /* Cell */,
-				FC82C2FF28DB4BE2009FBAE5 /* SliderView.swift */,
 				4F5076DB28D36EAD00DAEF80 /* SpeakView.swift */,
-				4FA74FB328CF75D7005387CF /* CircularProgressView.swift */,
-				4FA74FAA28CB6778005387CF /* MainBackgroundView.swift */,
-				4F31D5CB28D2215C0092A2FC /* HeartView.swift */,
 				B92300A828D89863001D8C99 /* CardActivityView.swift */,
 				B90DC61228EC7C3F00CCBFD0 /* ActivityView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		B9FA67C02970F65C00B9FFD8 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FC82C2FF28DB4BE2009FBAE5 /* SliderView.swift */,
+				4FA74FB328CF75D7005387CF /* CircularProgressView.swift */,
+				4FA74FAA28CB6778005387CF /* MainBackgroundView.swift */,
+				4F31D5CB28D2215C0092A2FC /* HeartView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		FC82C2FE28DB4BBC009FBAE5 /* Recovered References */ = {
