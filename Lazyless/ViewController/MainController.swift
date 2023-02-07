@@ -25,10 +25,10 @@ class MainController: UIViewController {
         }
     }
 
-    private let questionMark: AnimationView = {
-        let animation = AnimationView()
+    private let questionMark: LottieAnimationView = {
+        let animation = LottieAnimationView()
         animation.translatesAutoresizingMaskIntoConstraints = false
-        animation.animation = Animation.named("questionMark")
+        animation.animation = LottieAnimation.named("questionMark")
         animation.contentMode = .scaleAspectFit
         animation.loopMode = .repeat(3)
         animation.play()
